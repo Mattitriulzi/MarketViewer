@@ -10,7 +10,6 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
 
 
 
-
 int Stock_Data(void)
 {
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
@@ -61,11 +60,8 @@ int Stock_Data(void)
         CURLMcode mc = curl_multi_perform(multi_curl, &still_running);
         // start reading the easy curls
 
-        if (!mc && still_running)
+        if (!mc && still_running)mc = curl_multi_poll(multi_curl, NULL, 0, 1000, NULL);
         /*perform the easy curls*/
-        {
-            mc = curl_multi_poll(multi_curl, NULL, 0, 1000, NULL);
-        }
 
         if (mc)
         /*error checking*/
