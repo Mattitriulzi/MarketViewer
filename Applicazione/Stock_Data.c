@@ -61,7 +61,7 @@ int Stock_Data(void)
         CURLMcode mc = curl_multi_perform(multi_curl, &still_running);
         // start reading the easy curls
 
-        if (!mc && still_running)mc = curl_multi_poll(multi_curl, NULL, 0, 1000, NULL);
+        if (!mc && still_running) mc = curl_multi_poll(multi_curl, NULL, 0, 1000, NULL);
         /*perform the easy curls*/
 
         if (mc)
