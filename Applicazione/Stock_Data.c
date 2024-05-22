@@ -10,7 +10,6 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
 
 
 
-
 int Stock_Data(void)
 {
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
