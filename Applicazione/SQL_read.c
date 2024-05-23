@@ -86,6 +86,6 @@ int callback(void *p, int argc, char** argv, char** azColName)
     {
         if(!strcmp(*(azColName + date_position), "date")) break;
     }
-    if (!strcmp(*(argv + date_position, date))) already_opened = 1;
+    if (!strcmp(*(argv + date_position), date)) already_opened = 1;
     return 0;
 }
