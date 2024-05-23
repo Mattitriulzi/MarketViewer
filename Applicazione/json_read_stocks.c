@@ -1,8 +1,6 @@
 #include "stock.h"
-#define buffer_len 4096
-#define FEED_INDEX 3
-#define MOST_ACTIVE_INDEX 4
-#define TICKERS_INDEX 
+
+
 
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
@@ -163,14 +161,16 @@ int json(void)
         volume = json_string_value(volume_json);
         (active_stocks + i)->volume = strdup(volume);
         json_decref(volume_json);
-    }
-    /*freeing all the variables used until now, leaving only the struct with all the values needed*/
     free(ticker);
     free(price);
     free(price_change);
     free(change_percentage);
     free(volume);
     json_decref(most_active);
+    }
+    /*freeing all the variables used until now, leaving only the struct with all the values needed*/
+    
+    json_decref(most_actively_traded);
     json_decref(root_active);
 
 
@@ -317,72 +317,21 @@ int json(void)
             } 
             (sentiments + i)->tickers = strdup(tickers);
         }
-    }
-    /*freeing all variables*/
-    free(title);
+        free(title);
     free(url);
     free(summary);
     free(sentiment);
     free(tickers);
     json_decref(tickers_array);
     json_decref(feed);
+    }
+    /*freeing all variables*/
+    
+    
+    json_decref(feed_array);
     json_decref(root_news);
     
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
 }
 
-
-
-
-
-
-
-
-
-
-
-char *read_file(FILE *file, int length)
-{
-    char *s = (char *) calloc(length + 1, sizeof(char));
-    if (!s)
-    {
-        perror("Unable to allocate memory");
-        return NULL;
-    }
-    char *buffer = (char *) calloc(length + 1, sizeof(char));
-    if (!s)
-    {
-        perror("Unable to allocate memory");
-        return NULL;
-    }
-    int n = 0; // number of iterations
-
-    if(!(char *buffer = (char *) calloc()))
-    {
-        perror("Unable to allocate");
-    }
-
-    size_t read;
-    while ((read = fread(&buffer, sizeof(char), length, file)) > 0)
-    {
-        *(buffer + read) = '\0';
-        if (!n)
-        {
-            strcpy(s, buffer);
-        }
-        else 
-        {
-            s = (char *)realloc(s, (strlen(s) +  strlen(buffer)) * sizeof(char));
-            if (!s)
-            {
-                perror("Unable to allocate memory");
-                return NULL;
-            }
-            strcat(s, buffer);
-        }
-        n++;
-    }
-    free(buffer);
-    return s;
-}

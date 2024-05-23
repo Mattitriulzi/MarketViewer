@@ -5,9 +5,11 @@
 #include <curl/multi.h> 
 #include <sqlite3.h>
 #include <curl/curl.h>
+#include <unistd.h>
 
 #define LENGTH_STOCKS  20
 #define LENGTH_NEWS 10
+#define buffer_len 4096
 
 typedef struct stock
 {

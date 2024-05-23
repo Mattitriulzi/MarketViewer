@@ -5,7 +5,11 @@
       "includePath": [
         "${workspaceFolder}/**",
         "/opt/local/include",
-        "/opt/homebrew/include"
+        "/opt/homebrew/include",
+        "/opt/homebrew/opt/qt6/include/**",
+        "/opt/homebrew/opt/qt/include/**",
+        "/opt/homebrew/opt/qt@5/include/**",
+        "/opt/homebrew/opt/qt@6/include/**"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",

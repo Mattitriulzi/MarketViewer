@@ -57,6 +57,8 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "curl.h": "c"
+    "curl.h": "c",
+    "read_file_implementation": "c",
+    "multi.h": "c"
   }
 }
