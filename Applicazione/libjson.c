@@ -18,7 +18,7 @@ int json(void)
     }
 
 
-    // load the json strings via jansson
+    // load the json strings via jansson, aka create objects for each file
     json_error_t *error;
     json_t *root_active = json_loads(json_active, 0, &error);
     json_t *root_news = json_loads(json_news, 0, &error);
@@ -40,14 +40,34 @@ int json(void)
         return 8;
     }
 
+    // Get the date so that we are able to avoid duplications
+    const char* last_updated = json_string_value(json_get_object(root_active, "last_updated"));
+    if (!(json_is_string(last_updated)))
+    {
+        perror("Error when reading json file");
+        return 8;
+    }
+    /*Read the last_updated string to be able to check for the first space and keep
+    only the date rather than the whole string, this is the format:
+    "last_updated": "2024-05-22 16:15:59 US/Eastern"
+    We wish to keep only the date. However we have to first copy the string into another 
+    variable as this one is a constant*/
+    date = strdup(last_updated);
+    for (int i = 0; i < len(date); i++)
+    {
+        if (*(date + i) == ' ')
+        {
+            *(date + i) = '\0';
+            break;
+        }
+    }
+    free(last_updated);
 
 
 
 
 
-
-
-    // check if what the object contains is an array
+    // get the most_actively_traded array and check if what the object contains is an array
     json_t *most_active = json_array_get(root_active, "most_actively_traded");
     if (!json_is_array(most_active))
     {
@@ -70,7 +90,7 @@ int json(void)
 
 
         ticker = json_string_value(json_object_get(most_active, "ticker"));
-        if (!json_is_string((active_stocks + i)->ticker))
+        if (!json_is_string((ticker))
         {
             perror("Error when reading object array");
             json_decref(most_active);
@@ -82,7 +102,7 @@ int json(void)
 
 
         price = json_string_value(json_object_get(most_active, "price"));
-        if (!json_is_string((active_stocks + i)->price))
+        if (!json_is_string(price))
         {
             perror("Error when reading object array");
             json_decref(most_active);
@@ -93,7 +113,7 @@ int json(void)
 
 
         price_change = json_string_value(json_object_get(most_active, "change_amount"));
-        if (!json_is_string((active_stocks + i)->price_change))
+        if (!json_is_string(price_change))
         {
             perror("Error when reading object array");
             json_decref(most_active);
@@ -104,7 +124,7 @@ int json(void)
 
 
         change_percentage = json_string_value(json_object_get(most_active, "change_percentage"))
-        if (!json_is_string((active_stocks + i)->change_percentage))
+        if (!json_is_string(change_percentage)
         {
             perror("Error when reading object array");
             json_decref(most_active);
@@ -115,7 +135,7 @@ int json(void)
 
 
         volume = json_string_value(json_object_get(most_active, "volume"));
-        if (!json_is_string((active_stocks + i)->volume))
+        if (!json_is_string(volume))
         {
             perror("Error when reading object array");
             json_decref(most_active);

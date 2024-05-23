@@ -45,7 +45,8 @@ int create_database(sqlite3 *db)
                         "Price FLOAT NOT NULL," \
                         "Price_Change FLOAT NOT NULL," \
                         "Change_Percentage TEXT NOT NULL," \
-                        "Volume LONG NOT NULL)";
+                        "Volume LONG NOT NULL", \
+                        "Date TEXT NOT NULL)";
 
     char *table_news = "CREATE TABLE News(" \
                         "Title TEXT NOT NULL," \

@@ -38,3 +38,4 @@ FILE *stock_data_active;
 
 sqlite3 *db;
 
+char *date;
