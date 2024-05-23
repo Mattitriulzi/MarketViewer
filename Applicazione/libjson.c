@@ -1,7 +1,9 @@
 #include "stock.h"
 #define buffer_len 4096
+#define FEED_INDEX 3
+#define MOST_ACTIVE_INDEX 4
+#define TICKERS_INDEX 
 
-char *read_file(FILE *file, int length);
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
 /*structs were created in the header, respectively (stock) active_stocks and (news) sentiments*/
@@ -20,8 +22,8 @@ int json(void)
 
     // load the json strings via jansson, aka create objects for each file
     json_error_t *error;
-    json_t *root_active = json_loads(json_active, 0, &error);
-    json_t *root_news = json_loads(json_news, 0, &error);
+    json_t *root_active = json_loads(json_active, 0, error);
+    json_t *root_news = json_loads(json_news, 0, error);
     if (!root_active || !root_news)
     {
         perror("Unable to load json string");
@@ -66,9 +68,9 @@ int json(void)
 
 
 
-    // get the most_actively_traded array and check if what the object contains is an array
-    json_t *most_active = json_array_get(root_active, "most_actively_traded");
-    if (!json_is_array(most_active))
+    // get the most_actively_traded object and check if what the object contains is an array
+    json_t *most_actively_traded = json_object_get(root_active, "most_actively_traded");
+    if (!json_is_object(most_active))
     {
         perror("Root object is not an array");
         json_decref(most_active);
@@ -79,13 +81,24 @@ int json(void)
     active_stocks = (stock *) calloc(LENGTH_STOCKS, sizeof(stock));
     // iterate over the object array and store the data inside our arrays of stock
     
-    for (int i = 0; json_array_size(most_active); i++)
+    for (int i = 0; json_array_size(most_actively_traded); i++)
     {
         /*read the array, array contains objects (key value pairs) that must be read (with already known keys) and then stored into
         the predisposed structs, there are 20 most_active stocks theoretically ordered in their activity in the API
         Error checking checks if each pair is a string(already known type) and if not then has to print error and free both the array 
         and the original object*/
         const char *ticker, *price, *price_change, *change_percentage, *volume;
+
+        json_t* most_active = json_array_get(most_actively_traded, i);
+        if (!json_is_object(most_active))
+        {
+            perror("Error when reading object array");
+            json_decref(most_active);
+            json_decref(most_actively_traded);
+        }
+
+
+
 
         json_t *ticker_json = json_object_get(most_active, "ticker");
         if (!json_is_string((ticker_json)))
@@ -171,11 +184,11 @@ int json(void)
 
     /*Time to star the deloading for the news json file, first we will extract the array containing the news and then
     take what interests us */
-    json_t *feed = json_array_get(root_news, "feed"); // extract the feed from the json giant object
-    if (!json_is_array(feed))
+    json_t *feed_array = json_object_get(root_news, "feed"); // extract the feed from the json giant object
+    if (!json_is_array(feed_array))
     {
         perror("Feed is not an object");
-        json_decref(feed);
+        json_decref(feed_array);
         json_decref(root_news);
         return 11;
     }
@@ -183,6 +196,14 @@ int json(void)
     for (int i = 0; i < LENGTH_NEWS; i++)
     {
         const char *title, *url, *summary, *sentiment; // tickers is a special case, hence will initialise later
+        json_t *feed = json_array_get(feed_array, i);
+        if (!json_is_object(feed))
+        {
+            perror("Error when reading object array");
+            json_decref(feed);
+            json_decref(feed_array);
+        }
+
 
         json_t *title_json = json_object_get(feed, "title");
         if (!json_is_string(title_json))

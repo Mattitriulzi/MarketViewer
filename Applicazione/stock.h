@@ -39,3 +39,5 @@ FILE *stock_data_active;
 sqlite3 *db;
 
 char *date;
+
+char *read_file(FILE *file, int length);
