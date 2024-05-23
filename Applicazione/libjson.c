@@ -70,10 +70,10 @@ int json(void)
 
     // get the most_actively_traded object and check if what the object contains is an array
     json_t *most_actively_traded = json_object_get(root_active, "most_actively_traded");
-    if (!json_is_object(most_active))
+    if (!json_is_object(most_actively_traded))
     {
         perror("Root object is not an array");
-        json_decref(most_active);
+        json_decref(most_actively_traded);
         json_decref(root_active);
         return 9;
     }
