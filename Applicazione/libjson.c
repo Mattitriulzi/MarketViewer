@@ -351,7 +351,7 @@ char *read_file(FILE *file, int length)
         return NULL;
     }
     char *buffer = (char *) calloc(length + 1, sizeof(char));
-    if (!s)
+    if (!buffer)
     {
         perror("Unable to allocate memory");
         return NULL;
