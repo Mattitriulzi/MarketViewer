@@ -59,6 +59,10 @@
   "files.associations": {
     "curl.h": "c",
     "read_file_implementation": "c",
-    "multi.h": "c"
+    "multi.h": "c",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "vector": "cpp"
   }
 }
