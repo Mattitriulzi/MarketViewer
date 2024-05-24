@@ -4,12 +4,8 @@
       "name": "macos-gcc-arm64",
       "includePath": [
         "${workspaceFolder}/**",
-        "/opt/local/include",
-        "/opt/homebrew/include",
-        "/opt/homebrew/opt/qt6/include/**",
-        "/opt/homebrew/opt/qt/include/**",
-        "/opt/homebrew/opt/qt@5/include/**",
-        "/opt/homebrew/opt/qt@6/include/**"
+        "/opt/local/include/**",
+        "/opt/local/**"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",
