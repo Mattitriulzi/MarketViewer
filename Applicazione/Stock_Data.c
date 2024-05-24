@@ -19,14 +19,14 @@ int Stock_Data(void)
     if (stock_data_active == NULL)
     {
             perror("Unable to create Temporary File, probably missing memory");
-            return 1;
+            return 100;
     }
 
     stock_data_sentiment = tmpfile();
     if (stock_data_sentiment == NULL)
     {
-    perror("Unable to create Temporary File, probably missing memory");
-    return 1;
+        perror("Unable to create Temporary File, probably missing memory");
+        return 100;
     }
 
     // generate the curls which will be used to transfer the stock info and initialise them + check for error
@@ -36,7 +36,7 @@ int Stock_Data(void)
     if (curl1 == NULL || curl2 == NULL || multi_curl == NULL)
     {
         perror("Unable to initiate research, probably missing memory");
-        return 2;
+        return 101;
     }
     // get the settings for the transfers
     // first gets the TOP_GAINERS_LOSERS and most active stocks, both write into temporary files
@@ -67,7 +67,7 @@ int Stock_Data(void)
         /*error checking*/
         {
             perror("curl_multi_poll function was unable to perform transfers");
-            return 3;
+            return 103;
         }
     } while(still_running);
     /*continue until there are no more tranfers to be done*/

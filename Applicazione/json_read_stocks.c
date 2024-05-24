@@ -14,7 +14,7 @@ int json(void)
     if (json_active == NULL || json_news == NULL)
     {
         perror("Unable to read files");
-        return 6;
+        return 300;
     }
 
 
@@ -25,7 +25,7 @@ int json(void)
     if (!root_active || !root_news)
     {
         perror("Unable to load json string");
-        return 7;
+        return 301;
     }
     free(json_active);
     free(json_news);
@@ -36,14 +36,14 @@ int json(void)
         perror("Root is not an object");
         json_decref(root_active);
         json_decref(root_news);
-        return 8;
+        return 302;
     }
     json_t *last_updated_json = json_object_get(root_active, "last_updated");
     // Get the date so that we are able to avoid duplications
     if (!(json_is_string(last_updated_json)))
     {
         perror("Error when reading json file");
-        return 8;
+        return 303;
     }
     const char* last_updated = json_string_value(last_updated_json);
     /*Read the last_updated string to be able to check for the first space and keep
@@ -73,7 +73,7 @@ int json(void)
         perror("Root object is not an array");
         json_decref(most_actively_traded);
         json_decref(root_active);
-        return 9;
+        return 304;
     }
     // array of stock structs is declared in the header file "stock.h"
     active_stocks = (stock *) calloc(LENGTH_STOCKS, sizeof(stock));
@@ -93,6 +93,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(most_active);
             json_decref(most_actively_traded);
+            return 305;
         }
 
 
@@ -104,7 +105,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(most_active);
             json_decref(root_active);
-            return 10;
+            return 306;
         }
         ticker = json_string_value(json_object_get(most_active, "ticker"));
         (active_stocks + i)->ticker = strdup(ticker);
@@ -117,7 +118,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(most_active);
             json_decref(root_active);
-            return 10;
+            return 307;
         }
         price = json_string_value(price_json);
         (active_stocks + i)->price = strdup(price);
@@ -130,7 +131,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(most_active);
             json_decref(root_active);
-            return 10;
+            return 308;
         }
         price_change = json_string_value(price_change_json);
         (active_stocks + i)->price_change = strdup(price_change);
@@ -143,7 +144,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(most_active);
             json_decref(root_active);
-            return 10;
+            return 309;
         }
         change_percentage = json_string_value(change_percentage_json);
         (active_stocks + i)->change_percentage = strdup(change_percentage);
@@ -156,7 +157,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(most_active);
             json_decref(root_active);
-            return 10;
+            return 310;
         }
         volume = json_string_value(volume_json);
         (active_stocks + i)->volume = strdup(volume);
@@ -190,7 +191,7 @@ int json(void)
         perror("Feed is not an object");
         json_decref(feed_array);
         json_decref(root_news);
-        return 11;
+        return 311;
     }
 
     for (int i = 0; i < LENGTH_NEWS; i++)
@@ -202,6 +203,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(feed);
             json_decref(feed_array);
+            return 312;
         }
 
 
@@ -211,7 +213,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(feed);
             json_decref(root_news);
-            return 11;
+            return 313;
         }
         title = json_string_value(title_json);
         (sentiments + i)->title = strdup(title);
@@ -224,7 +226,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(feed);
             json_decref(root_news);
-            return 11;
+            return 314;
         }
         url = json_string_value(url_json);
         (sentiments + i)->URL = strdup(url);
@@ -237,7 +239,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(feed);
             json_decref(root_news);
-            return 11;
+            return 315;
         }
         summary = json_string_value(summary_json);
         (sentiments + i)->summary = strdup(summary);
@@ -250,7 +252,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(feed);
             json_decref(root_news);
-            return 11;
+            return 316;
         }
         sentiment = json_string_value(sentiment_json);
         (sentiments + i)->sentiment = strdup(sentiment);
@@ -263,7 +265,7 @@ int json(void)
             perror("Error when reading object array");
             json_decref(feed);
             json_decref(root_news);
-            return 12;
+            return 317;
         }
 
 
@@ -279,7 +281,7 @@ int json(void)
                 json_decref(feed);
                 json_decref(root_news);
                 json_decref(current_ticker);
-                return 13;
+                return 318;
             }
             
 
@@ -293,7 +295,7 @@ int json(void)
                 json_decref(tickers_array);
                 json_decref(feed);
                 json_decref(root_news);
-                return 12;
+                return 319;
             }
             const char *temp_ticker = json_string_value(temp_ticker_json);
 
@@ -310,7 +312,7 @@ int json(void)
                 if (tickers == NULL)
                 {
                     perror("Unable to allocate memory");
-                    return 12;
+                    return 320;
                 }
                 
                 strcat(tickers, temp_ticker); 

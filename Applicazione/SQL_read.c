@@ -37,29 +37,30 @@ int SQL_read(void)
     if (rd)
     {
         perror("Unable to access database");
-        return 20;
+        return 400;
     }
-    if(!already_opened) goto(Stock_read);
+    if(!already_opened) goto Stock_read;
 
 
 
     Stock_read:
         for (int i = 0; i < LENGTH_STOCKS; i++)
         {
-        char *command = sqlite3_mprintf("INSERT INTO %s Values ('%q', '%q', '%q', '%q', '%q', '%q')",
-        table_active,
-        (active_stocks + i)->ticker, (active_stocks + i)->price,
-        (active_stocks + i)->price_change, (active_stocks + i)->change_percentage,
-        (active_stocks + i)->volume, date);
+            char *command = sqlite3_mprintf("INSERT INTO %s Values ('%q', '%q', '%q', '%q', '%q', '%q')",
+            table_active,
+            (active_stocks + i)->ticker, (active_stocks + i)->price,
+            (active_stocks + i)->price_change, (active_stocks + i)->change_percentage,
+            (active_stocks + i)->volume, date);
 
-        int rc = sqlite3_exec(db, command, NULL, 0, &errmsg);
-        if (rc)
-        {
-            perror("Unable to access database");
-            return 20;
+            int rc = sqlite3_exec(db, command, NULL, 0, &errmsg);
+            if (rc)
+            {
+                perror("Unable to access database");
+                return 20;
+            }
+            sqlite3_free(command);
         }
-        }
-        sqlite3_free(command);
+        
         
         for (int i = 0; i < LENGTH_NEWS; i++)
         {
@@ -74,8 +75,9 @@ int SQL_read(void)
                 perror("Unable to access database");
                 return 20;
             }
+            sqlite3_free(command);
         }
-        sqlite3_free(command);
+        
         free(date);
 }
 
