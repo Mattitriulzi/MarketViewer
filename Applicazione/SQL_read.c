@@ -65,9 +65,9 @@ int SQL_read(void)
         {
             char *command = sqlite3_mprintf("INSERT INTO %s VALUES ('%q', '%q', '%q', '%q', '%q')", 
             table_news,
-            (news + i)->title, (news + i)->URL,
-            (news + i)->summary, (news + i)->sentiment,
-            (news + i)->tickers);
+            (sentiments + i)->title, (sentiments + i)->URL,
+            (sentiments + i)->summary, (sentiments + i)->sentiment,
+            (sentiments + i)->tickers);
             int rc = sqlite3_exec(db, command, NULL, 0,  &errmsg);
             if (rc)
             {
