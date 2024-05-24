@@ -4,8 +4,7 @@
       "name": "macos-gcc-arm64",
       "includePath": [
         "${workspaceFolder}/**",
-        "/opt/local/include/**",
-        "/opt/local/**"
+        "/opt/**"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",
