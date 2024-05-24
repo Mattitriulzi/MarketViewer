@@ -29,11 +29,11 @@ bool already_opened = 0;
 int callback(void *p, int argc, char **argv, char**azColName);
 int SQL_read(void)
 {
-    char *errmsg;
+    char *errmsg = NULL;
     const char *table_active = "Most_active";
     const char *table_news = "News";
 
-    int rd = sqlite3_exec(db, "SELECT date FROM table_active LIMIT 1 ", callback, &errmsg);
+    int rd = sqlite3_exec(db, "SELECT date FROM table_active LIMIT 1 ", callback, 0, &errmsg);
     if (rd)
     {
         perror("Unable to access database");
@@ -52,7 +52,7 @@ int SQL_read(void)
         (active_stocks + i)->price_change, (active_stocks + i)->change_percentage,
         (active_stocks + i)->volume, date);
 
-        int rc = sqlite3_exec(db, command, NULL, &errmsg);
+        int rc = sqlite3_exec(db, command, NULL, 0, &errmsg);
         if (rc)
         {
             perror("Unable to access database");
@@ -66,9 +66,9 @@ int SQL_read(void)
             char *command = sqlite3_mprintf("INSERT INTO %s VALUES ('%q', '%q', '%q', '%q', '%q')", 
             table_news,
             (news + i)->title, (news + i)->URL,
-            (news + i)->summary; (news + i)->sentiment,
+            (news + i)->summary, (news + i)->sentiment,
             (news + i)->tickers);
-            int rc = sqlite3_exec(db, command, NULL, &errmsg);
+            int rc = sqlite3_exec(db, command, NULL, 0,  &errmsg);
             if (rc)
             {
                 perror("Unable to access database");
