@@ -4,7 +4,8 @@
       "name": "macos-gcc-arm64",
       "includePath": [
         "${workspaceFolder}/**",
-        "/opt/**"
+        "/opt/**",
+        "/opt/local/libexec/qt6/lib/QtWidgets.framework/Versions/A/Headers/*"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",

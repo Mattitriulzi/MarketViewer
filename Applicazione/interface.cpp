@@ -1,6 +1,6 @@
 #include <iostream>
 #include <QApplication>
-#include <QmainWindow>
+#include <QMainWindow>
 
 int interface(void)
 {

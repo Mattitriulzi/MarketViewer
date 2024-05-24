@@ -43,3 +43,13 @@ sqlite3 *db;
 char *date;
 
 char *read_file(FILE *file, int length);
+
+int Stock_Data(void);
+
+int SQL_read(void);
+
+int SQL(void);
+
+int json(void);
+
+int interface(void);
