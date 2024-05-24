@@ -2,7 +2,7 @@
 #include <QApplication>
 #include <QmainWindow>
 
-int main()
+int interface(void)
 {
     int argc = 1;
     char *argv[] = {"Test", NULL };
