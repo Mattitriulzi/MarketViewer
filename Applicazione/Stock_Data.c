@@ -1,3 +1,7 @@
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include "stock.h"
 
 // API KEY: VVHPQ5BU5N72PSWX. 
@@ -87,3 +91,6 @@ int Stock_Data(void)
 
 
 }
+#ifdef __cplusplus
+}   
+#endif

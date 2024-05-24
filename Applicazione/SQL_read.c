@@ -1,3 +1,6 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include "stock.h"
 
 
@@ -91,3 +94,6 @@ int callback(void *p, int argc, char** argv, char** azColName)
     if (!strcmp(*(argv + date_position), date)) already_opened = 1;
     return 0;
 }
+#ifdef __cplusplus
+}
+#endif

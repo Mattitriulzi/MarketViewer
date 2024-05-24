@@ -42,6 +42,9 @@ sqlite3 *db;
 
 char *date;
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 char *read_file(FILE *file, int length);
 
 int Stock_Data(void);
@@ -53,3 +56,6 @@ int SQL(void);
 int json(void);
 
 int interface(void);
+#ifdef __cplusplus
+}
+#endif

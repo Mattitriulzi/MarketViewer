@@ -1,0 +1,5 @@
+/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch.dir
+/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/edit_cache.dir
+/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/rebuild_cache.dir
+/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch_autogen_timestamp_deps.dir
+/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch_autogen.dir

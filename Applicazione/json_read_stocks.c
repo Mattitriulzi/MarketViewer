@@ -1,3 +1,6 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include "stock.h"
 
 
@@ -336,4 +339,7 @@ int json(void)
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
 }
+#ifdef __cplusplus
+}
+#endif
 

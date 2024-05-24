@@ -57,7 +57,7 @@ int interface(void)
 
    mainwindow.setCentralWidget(centralwidget);
 
-   mainwindow.show();
+   mainwindow.show()
 
 
 
