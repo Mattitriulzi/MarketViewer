@@ -5,7 +5,8 @@
       "includePath": [
         "${workspaceFolder}/**",
         "/opt/**",
-        "/opt/local/libexec/qt6/lib/QtWidgets.framework/Versions/A/Headers/*"
+        "/opt/local/libexec/qt6/lib/QtWidgets.framework/Versions/A/Headers/*",
+        "usr/local/include"
       ],
       "compilerPath": "/usr/bin/clang",
       "cStandard": "${default}",

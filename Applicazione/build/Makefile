@@ -251,6 +251,30 @@ Stock_Data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/Stock_Data.c.s
 .PHONY : Stock_Data.c.s
 
+interface.o: interface.cpp.o
+.PHONY : interface.o
+
+# target to build an object file
+interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/interface.cpp.o
+.PHONY : interface.cpp.o
+
+interface.i: interface.cpp.i
+.PHONY : interface.i
+
+# target to preprocess a source file
+interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/interface.cpp.i
+.PHONY : interface.cpp.i
+
+interface.s: interface.cpp.s
+.PHONY : interface.s
+
+# target to generate assembly for a file
+interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/interface.cpp.s
+.PHONY : interface.cpp.s
+
 json_read_stocks.o: json_read_stocks.c.o
 .PHONY : json_read_stocks.o
 
@@ -346,6 +370,9 @@ help:
 	@echo "... Stock_Data.o"
 	@echo "... Stock_Data.i"
 	@echo "... Stock_Data.s"
+	@echo "... interface.o"
+	@echo "... interface.i"
+	@echo "... interface.s"
 	@echo "... json_read_stocks.o"
 	@echo "... json_read_stocks.i"
 	@echo "... json_read_stocks.s"

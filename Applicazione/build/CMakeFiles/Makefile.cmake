@@ -222,10 +222,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/local/share/cmake-3.29/Modules/Platform/Darwin.cmake"
   "/opt/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake"
   "/opt/local/share/cmake-3.29/Modules/SelectLibraryConfigurations.cmake"
-  "/usr/local/lib/cmake/jansson/JanssonConfig.cmake"
-  "/usr/local/lib/cmake/jansson/JanssonConfigVersion.cmake"
-  "/usr/local/lib/cmake/jansson/janssonTargets-noconfig.cmake"
-  "/usr/local/lib/cmake/jansson/janssonTargets.cmake"
   )
 
 # The corresponding makefile is:

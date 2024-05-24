@@ -6,6 +6,7 @@ StockFetch_autogen/timestamp: \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/read_file_implementation.c \
@@ -220,8 +221,4 @@ StockFetch_autogen/timestamp: \
 	/opt/local/share/cmake-3.29/Modules/Platform/Darwin.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake \
 	/opt/local/share/cmake-3.29/Modules/SelectLibraryConfigurations.cmake \
-	/usr/local/lib/cmake/jansson/JanssonConfig.cmake \
-	/usr/local/lib/cmake/jansson/JanssonConfigVersion.cmake \
-	/usr/local/lib/cmake/jansson/janssonTargets-noconfig.cmake \
-	/usr/local/lib/cmake/jansson/janssonTargets.cmake \
 	/opt/local/bin/cmake

@@ -55,7 +55,7 @@ int SQL(void);
 
 int json(void);
 
-int interface(void);
 #ifdef __cplusplus
 }
 #endif
+int interface(void);

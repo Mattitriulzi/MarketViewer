@@ -4,6 +4,13 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <QScrollArea>
+#ifdef __cplusplus
+extern "C" {
+#endif 
+#include "stock.h"
+#ifdef __cplusplus
+}
+#endif
 
 int interface(void)
 {
@@ -12,7 +19,7 @@ int interface(void)
     char *argv[] = {"", NULL };
     QApplication app(argc,argv);
     QMainWindow mainwindow;
-    mainwindow->resize(1500, 1000);
+    mainwindow.resize(1500, 1000);
 
     //create a central widget to hold the layout
     QWidget *centralwidget = new QWidget(&mainwindow);
@@ -57,7 +64,7 @@ int interface(void)
 
    mainwindow.setCentralWidget(centralwidget);
 
-   mainwindow.show()
+   mainwindow.show();
 
 
 

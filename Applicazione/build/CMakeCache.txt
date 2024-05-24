@@ -273,6 +273,9 @@ CURL_LIBRARY_DEBUG:FILEPATH=CURL_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 CURL_LIBRARY_RELEASE:FILEPATH=/opt/local/lib/libcurl.dylib
 
+//Path to a library.
+JANSSON_LIBRARY:FILEPATH=/usr/local/lib/libjansson.dylib
+
 //The directory containing a CMake configuration file for Jansson.
 Jansson_DIR:PATH=Jansson_DIR-NOTFOUND
 

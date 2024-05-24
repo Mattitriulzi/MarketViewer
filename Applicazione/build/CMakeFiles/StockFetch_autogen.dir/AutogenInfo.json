@@ -283,11 +283,7 @@
 		"/opt/local/share/cmake-3.29/Modules/SelectLibraryConfigurations.cmake",
 		"/opt/local/share/cmake-3.29/Modules/FindSQLite3.cmake",
 		"/opt/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake",
-		"/opt/local/share/cmake-3.29/Modules/FindPackageMessage.cmake",
-		"/usr/local/lib/cmake/jansson/JanssonConfigVersion.cmake",
-		"/usr/local/lib/cmake/jansson/JanssonConfig.cmake",
-		"/usr/local/lib/cmake/jansson/janssonTargets.cmake",
-		"/usr/local/lib/cmake/jansson/janssonTargets-noconfig.cmake"
+		"/opt/local/share/cmake-3.29/Modules/FindPackageMessage.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione",
 	"CROSS_CONFIG" : false,
@@ -371,6 +367,11 @@
 		],
 		[
 			"/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c",
+			"MU",
+			null
+		],
+		[
+			"/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp",
 			"MU",
 			null
 		],
