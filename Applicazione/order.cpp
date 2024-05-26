@@ -12,7 +12,7 @@ int main()
     // order of which functions to perform
     int err;
 
-    err = Stock_Data();
+   err = Stock_Data();
     if(err)
     {
         perror("Error when fetching Stock Data");
