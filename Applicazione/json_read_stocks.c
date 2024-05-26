@@ -348,9 +348,15 @@ int json(void)
     
     json_decref(feed_array);
     json_decref(root_news);
-    
-    fclose(stock_data_active);
-    fclose(stock_data_sentiment);
+    // delete the two files that were created
+    const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
+    for (int i = 0; i < 2; i++){
+        if (!remove(filename[i]))
+        {
+            perror("Unable to remove file");
+            return 321;
+        }
+    }
     return 0;
 }
 
