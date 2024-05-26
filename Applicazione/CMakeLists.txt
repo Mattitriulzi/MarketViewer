@@ -33,8 +33,8 @@ endif()
 
 #Tell Cmake to create the helloworld executable
 add_executable(StockFetch order.cpp json_read_stocks.c
-               read_file_implementation.c SQL_create.c 
-               SQL_read.c Stock_Data.c interface.cpp)
+               SQL_create.c SQL_read.c 
+               Stock_Data.c interface.cpp)
 
 #Link the Widgets module from Qt6 
 link_directories(/usr/local/lib)

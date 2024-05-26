@@ -16,8 +16,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/StockFetch.dir/json_read_stocks.c.o.d"
   "CMakeFiles/StockFetch.dir/order.cpp.o"
   "CMakeFiles/StockFetch.dir/order.cpp.o.d"
-  "CMakeFiles/StockFetch.dir/read_file_implementation.c.o"
-  "CMakeFiles/StockFetch.dir/read_file_implementation.c.o.d"
   "StockFetch"
   "StockFetch.pdb"
   "StockFetch_autogen/mocs_compilation.cpp"

@@ -9,42 +9,46 @@ extern "C" {
 
 int main()
 {
+    // order of which functions to perform
     int err;
 
     err = Stock_Data();
-    if(!err)
+    if(err)
     {
         perror("Error when fetching Stock Data");
-        return 300;
+        return 800;
+    }
+    
+    err = json();
+    if (err)
+    {
+        perror("Error when parsing json file");
+        printf("Error code: %d\n", err);
+        return 802;
     }
     
     err = SQL();
-    if(!err)
+    if(err)
     {
         perror("Error when creating SQL database");
-        return 301;
+        return 801;
     }
 
-    err = json();
-    if (!err)
-    {
-        perror("Error when parsing json file");
-        return 302;
-    }
+    
 
     err = SQL_read();
-    if(!err)
+    if(err)
 
     {
         perror("Error when reading SQL database");
-        return 303;
+        return 803;
     }
 
     err = interface();
-    if(!err)
+    if(err)
     {
         perror("Error when starting interface");
-        return 304;
+        return 804;
     }
 
     return 0;

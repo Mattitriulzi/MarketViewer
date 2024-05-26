@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_read.c" "CMakeFiles/StockFetch.dir/SQL_read.c.o" "gcc" "CMakeFiles/StockFetch.dir/SQL_read.c.o.d"
   "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c" "CMakeFiles/StockFetch.dir/Stock_Data.c.o" "gcc" "CMakeFiles/StockFetch.dir/Stock_Data.c.o.d"
   "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c" "CMakeFiles/StockFetch.dir/json_read_stocks.c.o" "gcc" "CMakeFiles/StockFetch.dir/json_read_stocks.c.o.d"
-  "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/read_file_implementation.c" "CMakeFiles/StockFetch.dir/read_file_implementation.c.o" "gcc" "CMakeFiles/StockFetch.dir/read_file_implementation.c.o.d"
   "" "StockFetch_autogen/timestamp" "custom" "StockFetch_autogen/deps"
   "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/StockFetch_autogen/mocs_compilation.cpp" "CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o.d"
   "/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp" "CMakeFiles/StockFetch.dir/interface.cpp.o" "gcc" "CMakeFiles/StockFetch.dir/interface.cpp.o.d"

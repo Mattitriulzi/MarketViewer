@@ -1,6 +1,3 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
 #include "stock.h"
 
 
@@ -43,6 +40,3 @@ char *read_file(FILE *file, int length)
     free(buffer);
     return s;
 }
-#ifdef __cplusplus
-}
-#endif

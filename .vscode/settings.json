@@ -63,6 +63,7 @@
     "deque": "cpp",
     "list": "cpp",
     "string": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "ios": "c"
   }
 }

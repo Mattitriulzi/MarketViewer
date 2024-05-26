@@ -20,7 +20,7 @@ typedef struct stock
     char *volume; 
 } stock;
 
-stock *active_stocks;
+
 
 typedef struct news
 {
@@ -32,20 +32,22 @@ typedef struct news
 
 } news;
 
-news *sentiments;
+extern stock *active_stocks;
 
-FILE *stock_data_sentiment;
+extern news *sentiments;
 
-FILE *stock_data_active;
+extern FILE *stock_data_sentiment;
 
-sqlite3 *db;
+extern FILE *stock_data_active;
 
-char *date;
+extern sqlite3 *db;
+
+extern char *date;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-char *read_file(FILE *file, int length);
+//char *read_file(FILE *file, int length);
 
 int Stock_Data(void);
 

@@ -9,7 +9,6 @@ StockFetch_autogen/timestamp: \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/read_file_implementation.c \
 	/opt/local/lib/cmake/Qt6/Qt6Config.cmake \
 	/opt/local/lib/cmake/Qt6/Qt6ConfigVersion.cmake \
 	/opt/local/libexec/qt6/lib/cmake/Qt6/FindWrapAtomic.cmake \

@@ -1,6 +1,4 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
+
 #include "stock.h"
 
 
@@ -36,6 +34,7 @@ int SQL_read(void)
     const char *table_active = "Most_active";
     const char *table_news = "News";
 
+    // check the date of the last entry to avoid dup entries
     int rd = sqlite3_exec(db, "SELECT date FROM table_active LIMIT 1 ", callback, 0, &errmsg);
     if (rd)
     {
@@ -43,18 +42,20 @@ int SQL_read(void)
         return 400;
     }
     if(!already_opened) goto Stock_read;
+    return 0;
 
 
 
     Stock_read:
         for (int i = 0; i < LENGTH_STOCKS; i++)
         {
+            // create a sqlite3 formatted string for the command
             char *command = sqlite3_mprintf("INSERT INTO %s Values ('%q', '%q', '%q', '%q', '%q', '%q')",
             table_active,
             (active_stocks + i)->ticker, (active_stocks + i)->price,
             (active_stocks + i)->price_change, (active_stocks + i)->change_percentage,
             (active_stocks + i)->volume, date);
-
+            // execute the command
             int rc = sqlite3_exec(db, command, NULL, 0, &errmsg);
             if (rc)
             {
@@ -82,10 +83,12 @@ int SQL_read(void)
         }
         
         free(date);
+        return 0;
 }
 
 int callback(void *p, int argc, char** argv, char** azColName)
 {
+    // callback functions that is called on each row 
     int date_position;
     for(date_position = 0; date_position < argc; date_position++)
     {
@@ -94,6 +97,3 @@ int callback(void *p, int argc, char** argv, char** azColName)
     if (!strcmp(*(argv + date_position), date)) already_opened = 1;
     return 0;
 }
-#ifdef __cplusplus
-}
-#endif

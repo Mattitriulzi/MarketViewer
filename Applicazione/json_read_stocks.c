@@ -1,9 +1,9 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
+
 #include "stock.h"
 
-
+news *sentiments = NULL;
+stock *active_stocks = NULL;
+char *date = NULL;
 
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
@@ -11,27 +11,27 @@ extern "C" {
 
 int json(void)
 {
-
-    char *json_active = read_file(stock_data_active, buffer_len);
+    // old way of first reading the files into a string and then loading them into jansson instead of directly loading them
+    /*char *json_active = read_file(stock_data_active, buffer_len);
     char *json_news = read_file(stock_data_sentiment, buffer_len);
     if (json_active == NULL || json_news == NULL)
     {
         perror("Unable to read files");
         return 300;
-    }
+    } */
+
+   
 
 
     // load the json strings via jansson, aka create objects for each file
     json_error_t *error;
-    json_t *root_active = json_loads(json_active, 0, error);
-    json_t *root_news = json_loads(json_news, 0, error);
+    json_t *root_active = json_loadf(stock_data_active, 0, error);
+    json_t *root_news = json_loadf(stock_data_sentiment, 0, error);
     if (!root_active || !root_news)
     {
         perror("Unable to load json string");
         return 301;
     }
-    free(json_active);
-    free(json_news);
 
     // check if data is object
     if (!json_is_object(root_active) || !json_is_object(root_news))
@@ -41,6 +41,9 @@ int json(void)
         json_decref(root_news);
         return 302;
     }
+
+
+
     json_t *last_updated_json = json_object_get(root_active, "last_updated");
     // Get the date so that we are able to avoid duplications
     if (!(json_is_string(last_updated_json)))
@@ -80,6 +83,11 @@ int json(void)
     }
     // array of stock structs is declared in the header file "stock.h"
     active_stocks = (stock *) calloc(LENGTH_STOCKS, sizeof(stock));
+    if (!active_stocks)
+    {
+        perror("Unable to allocate memory");
+        return 320;
+    }
     // iterate over the object array and store the data inside our arrays of stock
     
     for (int i = 0; json_array_size(most_actively_traded); i++)
@@ -165,12 +173,12 @@ int json(void)
         volume = json_string_value(volume_json);
         (active_stocks + i)->volume = strdup(volume);
         json_decref(volume_json);
-    free(ticker);
+    /*free(ticker);
     free(price);
     free(price_change);
     free(change_percentage);
     free(volume);
-    json_decref(most_active);
+    json_decref(most_active); */
     }
     /*freeing all the variables used until now, leaving only the struct with all the values needed*/
     
@@ -179,11 +187,13 @@ int json(void)
 
 
 
-
-
-
     // news sentiment struct is declared in the header file.
     sentiments = (news *) calloc(LENGTH_NEWS, sizeof(news));
+    if (!sentiments)
+    {
+        perror("Unable to allocate memory");
+        return 320;
+    }
 
 
     /*Time to star the deloading for the news json file, first we will extract the array containing the news and then
@@ -276,7 +286,8 @@ int json(void)
          + coma + space + null terminator letters P.S. Had to add possibility for CRYPTO:BTC */
         for (int j = 0; j < json_array_size(tickers_array); j++)
         {
-
+            /* since the tickers can be more than one, we have to iterate over the entire array 
+            and add them onto a single string*/
             json_t *current_ticker = json_array_get(tickers_array, j);
             if (!json_is_array(current_ticker))
             {
@@ -305,14 +316,16 @@ int json(void)
 
 
 
-            if (!j){
+            if (!j)
+            // if it is the first ticker, then we have to copy it into the tickers char
+            {
                 strcpy(tickers, temp_ticker);
                 strcat(tickers, ", ");
             }
             else
             {
                 tickers = realloc(tickers, (strlen(tickers) + strlen(temp_ticker)) * sizeof(char) + 2 );
-                if (tickers == NULL)
+                if (!tickers)
                 {
                     perror("Unable to allocate memory");
                     return 320;
@@ -322,13 +335,13 @@ int json(void)
             } 
             (sentiments + i)->tickers = strdup(tickers);
         }
-        free(title);
-    free(url);
+        //free(title);
+    /*free(url);
     free(summary);
     free(sentiment);
     free(tickers);
     json_decref(tickers_array);
-    json_decref(feed);
+    json_decref(feed); */
     }
     /*freeing all variables*/
     
@@ -338,8 +351,7 @@ int json(void)
     
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
+    return 0;
 }
-#ifdef __cplusplus
-}
-#endif
+
 

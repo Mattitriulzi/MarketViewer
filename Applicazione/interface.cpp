@@ -12,6 +12,7 @@ extern "C" {
 }
 #endif
 
+
 int interface(void)
 {
     //creating the application and its main window
@@ -65,7 +66,6 @@ int interface(void)
    mainwindow.setCentralWidget(centralwidget);
 
    mainwindow.show();
-
 
 
     // starting the app loop

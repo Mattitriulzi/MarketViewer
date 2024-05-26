@@ -323,30 +323,6 @@ order.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/order.cpp.s
 .PHONY : order.cpp.s
 
-read_file_implementation.o: read_file_implementation.c.o
-.PHONY : read_file_implementation.o
-
-# target to build an object file
-read_file_implementation.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/read_file_implementation.c.o
-.PHONY : read_file_implementation.c.o
-
-read_file_implementation.i: read_file_implementation.c.i
-.PHONY : read_file_implementation.i
-
-# target to preprocess a source file
-read_file_implementation.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/read_file_implementation.c.i
-.PHONY : read_file_implementation.c.i
-
-read_file_implementation.s: read_file_implementation.c.s
-.PHONY : read_file_implementation.s
-
-# target to generate assembly for a file
-read_file_implementation.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/read_file_implementation.c.s
-.PHONY : read_file_implementation.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -379,9 +355,6 @@ help:
 	@echo "... order.o"
 	@echo "... order.i"
 	@echo "... order.s"
-	@echo "... read_file_implementation.o"
-	@echo "... read_file_implementation.i"
-	@echo "... read_file_implementation.s"
 .PHONY : help
 
 

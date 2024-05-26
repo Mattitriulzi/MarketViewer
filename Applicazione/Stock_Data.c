@@ -1,16 +1,19 @@
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 #include "stock.h"
 
 // API KEY: VVHPQ5BU5N72PSWX. 
+// CLJKYVQVRT3K2MTG
 
 size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_file)
 {
+    printf("writing data to a file\n");
     size_t write = fwrite(buffer, size, nmemb, storing_file);
     return write;
 }
+
+FILE *stock_data_active = NULL;
+FILE *stock_data_sentiment = NULL;
+
 
 
 
@@ -20,12 +23,13 @@ int Stock_Data(void)
 
     /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
     stock_data_active  = tmpfile();
+    //stock_data_active = fopen("stock_data_active.json", "w");
     if (stock_data_active == NULL)
     {
             perror("Unable to create Temporary File, probably missing memory");
             return 100;
     }
-
+    //stock_data_sentiment = fopen("stock_data_sentiment.json", "w");
     stock_data_sentiment = tmpfile();
     if (stock_data_sentiment == NULL)
     {
@@ -49,9 +53,9 @@ int Stock_Data(void)
     curl_easy_setopt(curl1, CURLOPT_WRITEDATA, stock_data_active);
     // second gets the current news on chosen subjects
     curl_easy_setopt(curl2, CURLOPT_URL,
-     "https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=finance&sort=latest,relevance_score_definition&limit=15&apikey=VVHPQ5BU5N72PSWX");
-     curl_easy_setopt(curl2,CURLOPT_WRITEFUNCTION, write_callback);
-     curl_easy_setopt(curl2, CURLOPT_WRITEDATA, stock_data_sentiment);
+    "https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=finance&sort=latest,relevance_score_definition&limit=15&apikey=VVHPQ5BU5N72PSWX");
+    curl_easy_setopt(curl2,CURLOPT_WRITEFUNCTION, write_callback);
+    curl_easy_setopt(curl2, CURLOPT_WRITEDATA, stock_data_sentiment);
 
     // add the singular easy curl transfers to the multi_curl for simultaneaous transfer
     curl_multi_add_handle(multi_curl, curl1);
@@ -74,6 +78,8 @@ int Stock_Data(void)
             return 103;
         }
     } while(still_running);
+
+
     /*continue until there are no more tranfers to be done*/
 
 
@@ -84,13 +90,12 @@ int Stock_Data(void)
     curl_multi_cleanup(multi_curl);
     curl_global_cleanup();
 
-    free(curl1);
-    free(curl2);
-    free(multi_curl);
+
+    fflush(stock_data_active);
+    fflush(stock_data_sentiment);
+
     return 0;
 
 
 }
-#ifdef __cplusplus
-}   
-#endif
+

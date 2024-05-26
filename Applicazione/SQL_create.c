@@ -1,8 +1,8 @@
-#ifdef _cplusplus
-extern "C" {
-    #endif  
+
 
 #include "stock.h"
+
+sqlite3 *db = NULL;
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
 
@@ -77,6 +77,3 @@ int create_database(sqlite3 *db)
 
     return 0;
 }
-#ifdef __cplusplus
-}
-#endif
