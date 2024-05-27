@@ -48,7 +48,7 @@ int SQL_read(void)
         perror("Unable to access database");
         return 400;
         }
-    }
+    } 
     // check the date of the last entry to avoid dup entries
     if(!already_opened) goto Stock_read;
     return 0;
@@ -85,12 +85,14 @@ int SQL_read(void)
             int rc = sqlite3_exec(db, command, NULL, 0,  &errmsg);
             if (rc)
             {
+                printf("Error: %s\n", errmsg);
                 perror("Unable to access database");
                 return 20;
             }
             sqlite3_free(command);
         }
-        
+
+        sqlite3_close(db);
         free(date);
         return 0;
 }
@@ -113,11 +115,11 @@ int is_table_empty(sqlite3 *db, const char *table_name)
     // function that will check whether a table is empty
     char *errmsg = NULL;
     int count = 0;
-    char *command = sqlite3_mprintf("SELECT Count (*) FROM '%q", table_name);
+    char *command = sqlite3_mprintf("SELECT Count (*) FROM '%q'", table_name);
     int rc = sqlite3_exec(db, command, callback_empty, &count, &errmsg);
     if (rc != SQLITE_OK)
     {
-        perror("cannot execut demand");
+        perror("cannot execute demand (table_empty_check)");
         return -1;
     }
     if (!count) return 1;

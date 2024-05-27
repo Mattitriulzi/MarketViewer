@@ -10,19 +10,21 @@ int create_database(sqlite3 *db);
 
 int SQL(void)
 {
-    /*initialise database*/
-    int rc = sqlite3_open("Stock_Data", &db);
-    if (rc)
-    {
-     perror("Unable to create or open database");
-     return 200;
-    }
+    
  
-
+    int rc;
 
     /*Check if database already exists, if not then initialise the tables*/
-    if (access("Stock_Data", R_OK | W_OK))
+    if (access("Stock_Data.db", R_OK | W_OK) == -1)
     {
+    /*initialise database*/
+        rc = sqlite3_open("Stock_Data.db", &db);
+        if (rc)
+        {
+        perror("Unable to create or open database");
+        return 200;
+        }
+
         rc = create_database(db);
         if (rc)
         {
@@ -30,6 +32,17 @@ int SQL(void)
             return 201;
         }
     }
+    else 
+    {
+        rc = sqlite3_open("Stock_Data.db", &db);
+        if(rc)
+        {
+            perror("Unable to create or open database");
+            return 203;
+        }
+    }
+    
+    
 
     return 0;
 
