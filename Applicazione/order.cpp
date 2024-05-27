@@ -16,6 +16,7 @@ int main()
     if(err)
     {
         perror("Error when fetching Stock Data");
+        printf("Error code: %d\n", err);
         return 800;
     }
     
@@ -31,6 +32,7 @@ int main()
     if(err)
     {
         perror("Error when creating SQL database");
+        printf("Error code: %d\n", err);
         return 801;
     }
 
@@ -41,6 +43,7 @@ int main()
 
     {
         perror("Error when reading SQL database");
+        printf("Error code: %d\n", err);
         return 803;
     }
 
@@ -48,6 +51,7 @@ int main()
     if(err)
     {
         perror("Error when starting interface");
+        printf("Error code: %d\n", err);
         return 804;
     }
 
