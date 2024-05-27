@@ -24,9 +24,9 @@ int json(void)
 
 
     // load the json strings via jansson, aka create objects for each file
-    json_error_t *error;
-    json_t *root_active = json_loadf(stock_data_active, 0, error);
-    json_t *root_news = json_loadf(stock_data_sentiment, 0, error);
+    json_error_t error;
+    json_t *root_active = json_loadf(stock_data_active, 0, &error);
+    json_t *root_news = json_loadf(stock_data_sentiment, 0, &error);
     if (!root_active || !root_news)
     {
         perror("Unable to load json string");
@@ -75,7 +75,7 @@ int json(void)
 
     // get the most_actively_traded object and check if what the object contains is an array
     json_t *most_actively_traded = json_object_get(root_active, "most_actively_traded");
-    if (!json_is_object(most_actively_traded))
+    if (!json_is_array(most_actively_traded))
     {
         perror("Root object is not an array");
         json_decref(most_actively_traded);
@@ -91,7 +91,7 @@ int json(void)
     }
     // iterate over the object array and store the data inside our arrays of stock
     
-    for (int i = 0; json_array_size(most_actively_traded); i++)
+    for (int i = 0; i < json_array_size(most_actively_traded); i++)
     {
         /*read the array, array contains objects (key value pairs) that must be read (with already known keys) and then stored into
         the predisposed structs, there are 20 most_active stocks theoretically ordered in their activity in the API
@@ -273,7 +273,7 @@ int json(void)
         json_decref(sentiment_json);
 
 
-        json_t *tickers_array = json_array_get(feed, 13);
+        json_t *tickers_array = json_object_get(feed, "ticker_sentiment");
         if (!json_is_array(tickers_array))
         {
             perror("Error when reading object array");
@@ -290,7 +290,7 @@ int json(void)
             /* since the tickers can be more than one, we have to iterate over the entire array 
             and add them onto a single string*/
             json_t *current_ticker = json_array_get(tickers_array, j);
-            if (!json_is_array(current_ticker))
+            if (!json_is_object(current_ticker))
             {
                 perror("Error when readng object array");
                 json_decref(feed);
@@ -303,7 +303,7 @@ int json(void)
 
 
             // create temporary ticker that will be added to the tickers char to have a long char with all possible tickers
-            json_t *temp_ticker_json = json_object_get(tickers_array, "ticker");
+            json_t *temp_ticker_json = json_object_get(current_ticker, "ticker");
             if (!json_is_string(temp_ticker_json))
             {
                 perror("Error when reading object array");
@@ -350,6 +350,7 @@ int json(void)
     json_decref(feed_array);
     json_decref(root_news);
     // delete the two files that were created
+    /*
     const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
     for (int i = 0; i < 2; i++){
         if (!remove(filename[i]))
@@ -357,7 +358,7 @@ int json(void)
             perror("Unable to remove file");
             return 321;
         }
-    }
+    } */
     return 0;
 }
 
