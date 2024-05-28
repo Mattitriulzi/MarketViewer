@@ -53,10 +53,10 @@ RM = /opt/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/app
+CMAKE_SOURCE_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/app/build
+CMAKE_BINARY_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build
 
 # Utility rule file for StockFetch_autogen.
 
@@ -71,9 +71,9 @@ CMakeFiles/StockFetch_autogen: StockFetch_autogen/timestamp
 StockFetch_autogen/timestamp: /opt/local/libexec/qt6/./libexec/moc
 StockFetch_autogen/timestamp: /opt/local/libexec/qt6/./libexec/uic
 StockFetch_autogen/timestamp: CMakeFiles/StockFetch_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target StockFetch"
-	/opt/local/bin/cmake -E cmake_autogen /Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/StockFetch_autogen.dir/AutogenInfo.json ""
-	/opt/local/bin/cmake -E touch /Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target StockFetch"
+	/opt/local/bin/cmake -E cmake_autogen /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch_autogen.dir/AutogenInfo.json ""
+	/opt/local/bin/cmake -E touch /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/StockFetch_autogen/timestamp
 
 StockFetch_autogen: CMakeFiles/StockFetch_autogen
 StockFetch_autogen: StockFetch_autogen/timestamp
@@ -89,6 +89,6 @@ CMakeFiles/StockFetch_autogen.dir/clean:
 .PHONY : CMakeFiles/StockFetch_autogen.dir/clean
 
 CMakeFiles/StockFetch_autogen.dir/depend:
-	cd /Users/matti/Documents/GitHub/Stock_Fetch/app/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/matti/Documents/GitHub/Stock_Fetch/app /Users/matti/Documents/GitHub/Stock_Fetch/app /Users/matti/Documents/GitHub/Stock_Fetch/app/build /Users/matti/Documents/GitHub/Stock_Fetch/app/build /Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/StockFetch_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/StockFetch_autogen.dir/depend
 

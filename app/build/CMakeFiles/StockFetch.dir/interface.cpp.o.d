@@ -1,5 +1,5 @@
 CMakeFiles/StockFetch.dir/interface.cpp.o: \
-  /Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp \
+  /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__config \
@@ -1054,7 +1054,7 @@ CMakeFiles/StockFetch.dir/interface.cpp.o: \
   /opt/local/libexec/qt6/lib/QtWidgets.framework/Headers/QScrollArea \
   /opt/local/libexec/qt6/lib/QtWidgets.framework/Headers/qscrollarea.h \
   /opt/local/libexec/qt6/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /Users/matti/Documents/GitHub/Stock_Fetch/app/stock.h \
+  /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/stock.h \
   /usr/local/include/jansson.h /usr/local/include/jansson_config.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/curl/multi.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/curl/curl.h \

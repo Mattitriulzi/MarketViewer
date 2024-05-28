@@ -53,10 +53,10 @@ RM = /opt/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/app
+CMAKE_SOURCE_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/app/build
+CMAKE_BINARY_DIR = /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/StockFetch.dir/depend.make
@@ -72,121 +72,121 @@ include CMakeFiles/StockFetch.dir/flags.make
 StockFetch_autogen/timestamp: /opt/local/libexec/qt6/./libexec/moc
 StockFetch_autogen/timestamp: /opt/local/libexec/qt6/./libexec/uic
 StockFetch_autogen/timestamp: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target StockFetch"
-	/opt/local/bin/cmake -E cmake_autogen /Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/StockFetch_autogen.dir/AutogenInfo.json ""
-	/opt/local/bin/cmake -E touch /Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target StockFetch"
+	/opt/local/bin/cmake -E cmake_autogen /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch_autogen.dir/AutogenInfo.json ""
+	/opt/local/bin/cmake -E touch /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/StockFetch_autogen/timestamp
 
 CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o: CMakeFiles/StockFetch.dir/flags.make
 CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o: StockFetch_autogen/mocs_compilation.cpp
 CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o -MF CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o -MF CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/StockFetch_autogen/mocs_compilation.cpp
 
 CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/mocs_compilation.cpp > CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/StockFetch_autogen/mocs_compilation.cpp > CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/mocs_compilation.cpp -o CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/StockFetch_autogen/mocs_compilation.cpp -o CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/StockFetch.dir/order.cpp.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/order.cpp.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp
+CMakeFiles/StockFetch.dir/order.cpp.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp
 CMakeFiles/StockFetch.dir/order.cpp.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/StockFetch.dir/order.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/order.cpp.o -MF CMakeFiles/StockFetch.dir/order.cpp.o.d -o CMakeFiles/StockFetch.dir/order.cpp.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/StockFetch.dir/order.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/order.cpp.o -MF CMakeFiles/StockFetch.dir/order.cpp.o.d -o CMakeFiles/StockFetch.dir/order.cpp.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp
 
 CMakeFiles/StockFetch.dir/order.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StockFetch.dir/order.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp > CMakeFiles/StockFetch.dir/order.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp > CMakeFiles/StockFetch.dir/order.cpp.i
 
 CMakeFiles/StockFetch.dir/order.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StockFetch.dir/order.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp -o CMakeFiles/StockFetch.dir/order.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp -o CMakeFiles/StockFetch.dir/order.cpp.s
 
 CMakeFiles/StockFetch.dir/json_read_stocks.c.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/json_read_stocks.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c
+CMakeFiles/StockFetch.dir/json_read_stocks.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c
 CMakeFiles/StockFetch.dir/json_read_stocks.c.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/StockFetch.dir/json_read_stocks.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/json_read_stocks.c.o -MF CMakeFiles/StockFetch.dir/json_read_stocks.c.o.d -o CMakeFiles/StockFetch.dir/json_read_stocks.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/StockFetch.dir/json_read_stocks.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/json_read_stocks.c.o -MF CMakeFiles/StockFetch.dir/json_read_stocks.c.o.d -o CMakeFiles/StockFetch.dir/json_read_stocks.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c
 
 CMakeFiles/StockFetch.dir/json_read_stocks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/StockFetch.dir/json_read_stocks.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c > CMakeFiles/StockFetch.dir/json_read_stocks.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c > CMakeFiles/StockFetch.dir/json_read_stocks.c.i
 
 CMakeFiles/StockFetch.dir/json_read_stocks.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/StockFetch.dir/json_read_stocks.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c -o CMakeFiles/StockFetch.dir/json_read_stocks.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c -o CMakeFiles/StockFetch.dir/json_read_stocks.c.s
 
 CMakeFiles/StockFetch.dir/SQL_create.c.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/SQL_create.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_create.c
+CMakeFiles/StockFetch.dir/SQL_create.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_create.c
 CMakeFiles/StockFetch.dir/SQL_create.c.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/StockFetch.dir/SQL_create.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/SQL_create.c.o -MF CMakeFiles/StockFetch.dir/SQL_create.c.o.d -o CMakeFiles/StockFetch.dir/SQL_create.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_create.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/StockFetch.dir/SQL_create.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/SQL_create.c.o -MF CMakeFiles/StockFetch.dir/SQL_create.c.o.d -o CMakeFiles/StockFetch.dir/SQL_create.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_create.c
 
 CMakeFiles/StockFetch.dir/SQL_create.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/StockFetch.dir/SQL_create.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_create.c > CMakeFiles/StockFetch.dir/SQL_create.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_create.c > CMakeFiles/StockFetch.dir/SQL_create.c.i
 
 CMakeFiles/StockFetch.dir/SQL_create.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/StockFetch.dir/SQL_create.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_create.c -o CMakeFiles/StockFetch.dir/SQL_create.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_create.c -o CMakeFiles/StockFetch.dir/SQL_create.c.s
 
 CMakeFiles/StockFetch.dir/SQL_read.c.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/SQL_read.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_read.c
+CMakeFiles/StockFetch.dir/SQL_read.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_read.c
 CMakeFiles/StockFetch.dir/SQL_read.c.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/StockFetch.dir/SQL_read.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/SQL_read.c.o -MF CMakeFiles/StockFetch.dir/SQL_read.c.o.d -o CMakeFiles/StockFetch.dir/SQL_read.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_read.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/StockFetch.dir/SQL_read.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/SQL_read.c.o -MF CMakeFiles/StockFetch.dir/SQL_read.c.o.d -o CMakeFiles/StockFetch.dir/SQL_read.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_read.c
 
 CMakeFiles/StockFetch.dir/SQL_read.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/StockFetch.dir/SQL_read.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_read.c > CMakeFiles/StockFetch.dir/SQL_read.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_read.c > CMakeFiles/StockFetch.dir/SQL_read.c.i
 
 CMakeFiles/StockFetch.dir/SQL_read.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/StockFetch.dir/SQL_read.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_read.c -o CMakeFiles/StockFetch.dir/SQL_read.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_read.c -o CMakeFiles/StockFetch.dir/SQL_read.c.s
 
 CMakeFiles/StockFetch.dir/free.c.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/free.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/free.c
+CMakeFiles/StockFetch.dir/free.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c
 CMakeFiles/StockFetch.dir/free.c.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/StockFetch.dir/free.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/free.c.o -MF CMakeFiles/StockFetch.dir/free.c.o.d -o CMakeFiles/StockFetch.dir/free.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/free.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/StockFetch.dir/free.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/free.c.o -MF CMakeFiles/StockFetch.dir/free.c.o.d -o CMakeFiles/StockFetch.dir/free.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c
 
 CMakeFiles/StockFetch.dir/free.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/StockFetch.dir/free.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/free.c > CMakeFiles/StockFetch.dir/free.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c > CMakeFiles/StockFetch.dir/free.c.i
 
 CMakeFiles/StockFetch.dir/free.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/StockFetch.dir/free.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/free.c -o CMakeFiles/StockFetch.dir/free.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c -o CMakeFiles/StockFetch.dir/free.c.s
 
 CMakeFiles/StockFetch.dir/Stock_Data.c.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/Stock_Data.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/Stock_Data.c
+CMakeFiles/StockFetch.dir/Stock_Data.c.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c
 CMakeFiles/StockFetch.dir/Stock_Data.c.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/StockFetch.dir/Stock_Data.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/Stock_Data.c.o -MF CMakeFiles/StockFetch.dir/Stock_Data.c.o.d -o CMakeFiles/StockFetch.dir/Stock_Data.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/Stock_Data.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/StockFetch.dir/Stock_Data.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/Stock_Data.c.o -MF CMakeFiles/StockFetch.dir/Stock_Data.c.o.d -o CMakeFiles/StockFetch.dir/Stock_Data.c.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c
 
 CMakeFiles/StockFetch.dir/Stock_Data.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/StockFetch.dir/Stock_Data.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/Stock_Data.c > CMakeFiles/StockFetch.dir/Stock_Data.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c > CMakeFiles/StockFetch.dir/Stock_Data.c.i
 
 CMakeFiles/StockFetch.dir/Stock_Data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/StockFetch.dir/Stock_Data.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/Stock_Data.c -o CMakeFiles/StockFetch.dir/Stock_Data.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c -o CMakeFiles/StockFetch.dir/Stock_Data.c.s
 
 CMakeFiles/StockFetch.dir/interface.cpp.o: CMakeFiles/StockFetch.dir/flags.make
-CMakeFiles/StockFetch.dir/interface.cpp.o: /Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp
+CMakeFiles/StockFetch.dir/interface.cpp.o: /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp
 CMakeFiles/StockFetch.dir/interface.cpp.o: CMakeFiles/StockFetch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/StockFetch.dir/interface.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/interface.cpp.o -MF CMakeFiles/StockFetch.dir/interface.cpp.o.d -o CMakeFiles/StockFetch.dir/interface.cpp.o -c /Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/StockFetch.dir/interface.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StockFetch.dir/interface.cpp.o -MF CMakeFiles/StockFetch.dir/interface.cpp.o.d -o CMakeFiles/StockFetch.dir/interface.cpp.o -c /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp
 
 CMakeFiles/StockFetch.dir/interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StockFetch.dir/interface.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp > CMakeFiles/StockFetch.dir/interface.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp > CMakeFiles/StockFetch.dir/interface.cpp.i
 
 CMakeFiles/StockFetch.dir/interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StockFetch.dir/interface.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp -o CMakeFiles/StockFetch.dir/interface.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp -o CMakeFiles/StockFetch.dir/interface.cpp.s
 
 # Object files for target StockFetch
 StockFetch_OBJECTS = \
@@ -218,7 +218,7 @@ StockFetch: /opt/local/lib/libsqlite3.dylib
 StockFetch: /opt/local/libexec/qt6/lib/QtGui.framework/Versions/A/QtGui
 StockFetch: /opt/local/libexec/qt6/lib/QtCore.framework/Versions/A/QtCore
 StockFetch: CMakeFiles/StockFetch.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable StockFetch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable StockFetch"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StockFetch.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -230,6 +230,6 @@ CMakeFiles/StockFetch.dir/clean:
 .PHONY : CMakeFiles/StockFetch.dir/clean
 
 CMakeFiles/StockFetch.dir/depend: StockFetch_autogen/timestamp
-	cd /Users/matti/Documents/GitHub/Stock_Fetch/app/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/matti/Documents/GitHub/Stock_Fetch/app /Users/matti/Documents/GitHub/Stock_Fetch/app /Users/matti/Documents/GitHub/Stock_Fetch/app/build /Users/matti/Documents/GitHub/Stock_Fetch/app/build /Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/StockFetch.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/StockFetch.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/StockFetch.dir/depend
 

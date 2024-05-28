@@ -1,5 +1,5 @@
-CMakeFiles/StockFetch.dir/free.c.o: \
-  /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c \
+CMakeFiles/StockFetch.dir/read_file_implementation.c.o: \
+  /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/read_file_implementation.c \
   /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/stock.h \
   /usr/local/include/jansson.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
