@@ -29,7 +29,7 @@ It is therefore possible to access the database using sqlite3 in the terminal to
    *ex: button that asks for a date, news or stocks and prints all that info*
     
 **Better-looking interface** \
-**possibly more requests on the API**
-**Crypto Information**
+**possibly more requests on the API**\
+**Crypto Information**\
 **Forex Information**
         
