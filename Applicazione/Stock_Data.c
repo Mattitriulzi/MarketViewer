@@ -24,14 +24,14 @@ int Stock_Data(void)
     /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
 
     stock_data_active = fopen("stock_data_active.json", "w+");
-    if (stock_data_active == NULL)
+    if (!stock_data_active)
     {
             perror("Unable to create Temporary File, probably missing memory");
             return 100;
     }
 
     stock_data_sentiment = fopen("stock_data_sentiment.json", "w+");
-    if (stock_data_sentiment == NULL)
+    if (!stock_data_sentiment)
     {
         perror("Unable to create Temporary File, probably missing memory");
         return 100;
@@ -91,8 +91,16 @@ int Stock_Data(void)
     curl_global_cleanup();
 
 
-    fflush(stock_data_active);
-    fflush(stock_data_sentiment);
+    fclose(stock_data_active);
+    fclose(stock_data_sentiment);
+
+    stock_data_active = fopen("stock_data_active.json", "r");
+    stock_data_sentiment = fopen("stock_data_sentiment.json", "r");
+    if (!stock_data_active || !stock_data_sentiment)
+    {
+        perror("Unable to reopen files for reading");
+        return 104;
+    }
 
     return 0;
 

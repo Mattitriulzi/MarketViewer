@@ -4,6 +4,49 @@
     "relevance_score_definition": "0 < x <= 1, with a higher score indicating higher relevance.",
     "feed": [
         {
+            "title": "WORLD BUSINESS CHICAGO & GREENWOOD PROJECT HOST 'FINTECH FEST,' EMPOWERING THE NEXT GENERATION WITH ACCESS TO FINTECH CAREERS",
+            "url": "https://www.prnewswire.com/news-releases/world-business-chicago--greenwood-project-host-fintech-fest-empowering-the-next-generation-with-access-to-fintech-careers-302156817.html",
+            "time_published": "20240528T140200",
+            "authors": [
+                "World Business Chicago"
+            ],
+            "summary": "WORLD BUSINESS CHICAGO & GREENWOOD PROJECT HOST 'FINTECH FEST,' EMPOWERING THE NEXT ... PR ...",
+            "banner_image": "https://mma.prnewswire.com/media/1824898/World_Business_Chicago_Logo.jpg?p=facebook",
+            "source": "PR Newswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.prnewswire.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Blockchain",
+                    "relevance_score": "0.576289"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.266143"
+                }
+            ],
+            "overall_sentiment_score": 0.266175,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "DSSMY",
+                    "relevance_score": "0.065506",
+                    "ticker_sentiment_score": "0.113302",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "CME",
+                    "relevance_score": "0.130571",
+                    "ticker_sentiment_score": "0.134212",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
             "title": "2 Bank Stocks To Watch Before June 2024",
             "url": "https://stockmarket.com/featured/2-bank-stocks-to-watch-before-june-2024-2024-05-28",
             "time_published": "20240528T133032",
@@ -893,132 +936,59 @@
             ]
         },
         {
-            "title": "Inter&Co doubles down on SMEs through acquisition of Granito - Inter & Co  ( NASDAQ:INTR ) ",
-            "url": "https://www.benzinga.com/pressreleases/24/05/g39035755/inter-co-doubles-down-on-smes-through-acquisition-of-granito",
-            "time_published": "20240528T113317",
+            "title": "Kiplinger Readers' Choice Awards 2024: Hotel Credit Card Rewards Programs",
+            "url": "https://www.kiplinger.com/personal-finance/kiplinger-readers-choice-awards-2024-hotel-credit-card-rewards-programs",
+            "time_published": "20240528T135840",
             "authors": [
-                "Globe Newswire"
+                "Emma Patch",
+                "Ellen Kennedy",
+                "Lisa Gerstner"
             ],
-            "summary": "BELO HORIZONTE, Brazil, May 28, 2024 ( GLOBE NEWSWIRE ) -- Inter&Co Inc. INTR B3: INBR32 ) ) ) , announces that Banco Inter S.A. entered into a share purchase agreement to acquire the remaining 50 percent of Granito, a merchant acquirer that provides financial services to more than 100,000 SMEs ...",
-            "banner_image": "https://www.benzinga.com/next-assets/images/schema-image-default.png",
-            "source": "Benzinga",
-            "category_within_source": "Mergers",
-            "source_domain": "www.benzinga.com",
-            "topics": [
-                {
-                    "topic": "Economy - Monetary",
-                    "relevance_score": "0.158519"
-                },
-                {
-                    "topic": "Financial Markets",
-                    "relevance_score": "0.161647"
-                },
-                {
-                    "topic": "Mergers & Acquisitions",
-                    "relevance_score": "0.158519"
-                },
-                {
-                    "topic": "Finance",
-                    "relevance_score": "1.0"
-                }
-            ],
-            "overall_sentiment_score": 0.451367,
-            "overall_sentiment_label": "Bullish",
-            "ticker_sentiment": [
-                {
-                    "ticker": "INTR",
-                    "relevance_score": "0.663374",
-                    "ticker_sentiment_score": "0.636316",
-                    "ticker_sentiment_label": "Bullish"
-                }
-            ]
-        },
-        {
-            "title": "Inter&Co doubles down on SMEs through acquisition of Granito",
-            "url": "https://www.globenewswire.com/news-release/2024/05/28/2888932/0/en/Inter-Co-doubles-down-on-SMEs-through-acquisition-of-Granito.html",
-            "time_published": "20240528T113300",
-            "authors": [
-                "Inc",
-                "Inter&Co"
-            ],
-            "summary": "BELO HORIZONTE, Brazil, May 28, 2024 ( GLOBE NEWSWIRE ) -- Inter&Co Inc. ( NASDAQ: INTR | B3: INBR32 ) , announces that Banco Inter S.A. entered into a share purchase agreement to acquire the remaining 50 percent of Granito, a merchant acquirer that provides financial services to more than ...",
-            "banner_image": "https://ml.globenewswire.com/Resource/Download/10a8aebd-1f0e-4156-8511-5ba1c8b00846",
-            "source": "GlobeNewswire",
+            "summary": "The Kiplinger Readers' Choice Awards aim to recognize and celebrate the best products and services in the personal finance arena. We asked you, our Kiplinger community, to help us name the products and services you think have delivered excellent value in the past year.",
+            "banner_image": "https://cdn.mos.cms.futurecdn.net/N3CJRKLijbxpmXUUgAJpz6-415-80.jpg",
+            "source": "Kiplinger",
             "category_within_source": "n/a",
-            "source_domain": "www.globenewswire.com",
+            "source_domain": "www.kiplinger.com",
             "topics": [
-                {
-                    "topic": "Economy - Monetary",
-                    "relevance_score": "0.158519"
-                },
-                {
-                    "topic": "Financial Markets",
-                    "relevance_score": "0.108179"
-                },
-                {
-                    "topic": "Mergers & Acquisitions",
-                    "relevance_score": "0.158519"
-                },
-                {
-                    "topic": "Finance",
-                    "relevance_score": "1.0"
-                }
-            ],
-            "overall_sentiment_score": 0.461955,
-            "overall_sentiment_label": "Bullish",
-            "ticker_sentiment": [
-                {
-                    "ticker": "INTR",
-                    "relevance_score": "0.700945",
-                    "ticker_sentiment_score": "0.660965",
-                    "ticker_sentiment_label": "Bullish"
-                }
-            ]
-        },
-        {
-            "title": "Leading Proxy Advisor ISS Recommends Medallion Shareholders Vote \"FOR\" Both of the Board's Director Nominees on the BLUE Proxy Card",
-            "url": "https://www.globenewswire.com/news-release/2024/05/28/2888928/0/en/Leading-Proxy-Advisor-ISS-Recommends-Medallion-Shareholders-Vote-FOR-Both-of-the-Board-s-Director-Nominees-on-the-BLUE-Proxy-Card.html",
-            "time_published": "20240528T113000",
-            "authors": [
-                "Medallion Financial Corp."
-            ],
-            "summary": "Also Recommends in Favor of Say-on-Pay Also Recommends in Favor of ...",
-            "banner_image": "https://ml.globenewswire.com/Resource/Download/ccb1d8b9-da4d-4901-b441-645ff1c7ad3f",
-            "source": "GlobeNewswire",
-            "category_within_source": "n/a",
-            "source_domain": "www.globenewswire.com",
-            "topics": [
-                {
-                    "topic": "Economy - Monetary",
-                    "relevance_score": "0.158519"
-                },
-                {
-                    "topic": "Financial Markets",
-                    "relevance_score": "0.214378"
-                },
                 {
                     "topic": "Earnings",
-                    "relevance_score": "0.451494"
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Real Estate & Construction",
+                    "relevance_score": "0.5"
                 },
                 {
                     "topic": "Finance",
-                    "relevance_score": "1.0"
+                    "relevance_score": "0.5"
                 }
             ],
-            "overall_sentiment_score": 0.18615,
-            "overall_sentiment_label": "Somewhat-Bullish",
+            "overall_sentiment_score": 0.563172,
+            "overall_sentiment_label": "Bullish",
             "ticker_sentiment": [
                 {
-                    "ticker": "MBNKP",
-                    "relevance_score": "0.03916",
-                    "ticker_sentiment_score": "0.104572",
-                    "ticker_sentiment_label": "Neutral"
+                    "ticker": "H",
+                    "relevance_score": "0.05833",
+                    "ticker_sentiment_score": "0.169",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
                 },
                 {
-                    "ticker": "MFIN",
-                    "relevance_score": "0.155702",
-                    "ticker_sentiment_score": "0.116791",
-                    "ticker_sentiment_label": "Neutral"
+                    "ticker": "AXP",
+                    "relevance_score": "0.05833",
+                    "ticker_sentiment_score": "0.383319",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "MA",
+                    "relevance_score": "0.116348",
+                    "ticker_sentiment_score": "0.314245",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.05833",
+                    "ticker_sentiment_score": "0.276339",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
                 }
             ]
         },
@@ -2622,6 +2592,143 @@
                     "relevance_score": "0.23281",
                     "ticker_sentiment_score": "-0.215416",
                     "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Netflix To Rally Over 8%? Here Are 10 Top Analyst Forecasts For Tuesday",
+            "url": "https://markets.businessinsider.com/news/stocks/netflix-to-rally-over-8-here-are-10-top-analyst-forecasts-for-tuesday-1033426682",
+            "time_published": "20240528T120232",
+            "authors": [
+                "Avi Kapoor"
+            ],
+            "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades and downgrades, please see our analyst ratings page. • Mizuho boosted the price target for Norwegian Cruise Line Holdings Ltd. ( NYSE:NCLH ) from $21 to $24.",
+            "banner_image": "https://cdn.benzinga.com/files/imagecache/1024x768xUP/images/story/2024/05/28/Netflix-House.jpeg",
+            "source": "Business Insider",
+            "category_within_source": "GoogleRSS",
+            "source_domain": "markets.businessinsider.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.166667"
+                },
+                {
+                    "topic": "Energy & Transportation",
+                    "relevance_score": "0.166667"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.166667"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.166667"
+                },
+                {
+                    "topic": "Retail & Wholesale",
+                    "relevance_score": "0.166667"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.999999"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.166667"
+                }
+            ],
+            "overall_sentiment_score": 0.171689,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "DD",
+                    "relevance_score": "0.082677",
+                    "ticker_sentiment_score": "0.075922",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "EVR",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NFLX",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "CRWD",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NCLH",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NIO",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ZUO",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "DECK",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "TDG",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GLOB",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ZS",
+                    "relevance_score": "0.164468",
+                    "ticker_sentiment_score": "0.102629",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GME",
+                    "relevance_score": "0.082677",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
                 }
             ]
         }
