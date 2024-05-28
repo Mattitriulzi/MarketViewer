@@ -6,6 +6,7 @@ StockFetch_autogen/timestamp: \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp \

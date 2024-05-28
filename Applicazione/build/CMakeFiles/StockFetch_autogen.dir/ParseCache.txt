@@ -6,3 +6,4 @@
 /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp
 /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c
 /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_create.c
+/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c

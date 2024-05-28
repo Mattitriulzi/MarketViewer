@@ -251,6 +251,30 @@ Stock_Data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/Stock_Data.c.s
 .PHONY : Stock_Data.c.s
 
+free.o: free.c.o
+.PHONY : free.o
+
+# target to build an object file
+free.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/free.c.o
+.PHONY : free.c.o
+
+free.i: free.c.i
+.PHONY : free.i
+
+# target to preprocess a source file
+free.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/free.c.i
+.PHONY : free.c.i
+
+free.s: free.c.s
+.PHONY : free.s
+
+# target to generate assembly for a file
+free.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/free.c.s
+.PHONY : free.c.s
+
 interface.o: interface.cpp.o
 .PHONY : interface.o
 
@@ -346,6 +370,9 @@ help:
 	@echo "... Stock_Data.o"
 	@echo "... Stock_Data.i"
 	@echo "... Stock_Data.s"
+	@echo "... free.o"
+	@echo "... free.i"
+	@echo "... free.s"
 	@echo "... interface.o"
 	@echo "... interface.i"
 	@echo "... interface.s"

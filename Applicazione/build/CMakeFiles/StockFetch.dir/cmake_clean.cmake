@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/StockFetch.dir/StockFetch_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/StockFetch.dir/Stock_Data.c.o"
   "CMakeFiles/StockFetch.dir/Stock_Data.c.o.d"
+  "CMakeFiles/StockFetch.dir/free.c.o"
+  "CMakeFiles/StockFetch.dir/free.c.o.d"
   "CMakeFiles/StockFetch.dir/interface.cpp.o"
   "CMakeFiles/StockFetch.dir/interface.cpp.o.d"
   "CMakeFiles/StockFetch.dir/json_read_stocks.c.o"

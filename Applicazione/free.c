@@ -19,4 +19,6 @@ int free_structs(void){
         if ((active_stocks + i)->volume) free((active_stocks + i)->volume);
     }
     if(active_stocks) free(active_stocks);
+
+    return 0;
 }
