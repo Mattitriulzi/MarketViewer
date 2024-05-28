@@ -6,7 +6,6 @@
 
 size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_file)
 {
-    printf("writing data to a file\n");
     size_t write = fwrite(buffer, size, nmemb, storing_file);
     return write;
 }
