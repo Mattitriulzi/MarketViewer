@@ -308,7 +308,7 @@ int json(void)
     
     const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
     for (int i = 0; i < 2; i++){
-        if (!remove(filename[i]))
+        if (remove(filename[i]))
         {
             perror("Unable to remove file");
             return 321;
