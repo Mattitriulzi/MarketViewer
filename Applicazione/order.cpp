@@ -11,15 +11,13 @@ int main()
 {
     // order of which functions to perform
     int err;
-
-   err = Stock_Data();
+    err = Stock_Data();
     if(err)
     {
         perror("Error when fetching Stock Data");
         printf("Error code: %d\n", err);
         return 800;
     }
-    
     err = json();
     if (err)
     {
@@ -27,7 +25,7 @@ int main()
         printf("Error code: %d\n", err);
         return 802;
     }
-    
+
     err = SQL();
     if(err)
     {
@@ -35,7 +33,7 @@ int main()
         printf("Error code: %d\n", err);
         return 801;
     }
-
+    printf("Done with creating database");
     
 
     err = SQL_read();
@@ -53,6 +51,13 @@ int main()
         perror("Error when starting interface");
         printf("Error code: %d\n", err);
         return 804;
+    }
+
+    err = free_structs();
+    if (err)
+    {
+        perror("Error when freeing the structs");
+        return 805;
     }
 
     return 0;

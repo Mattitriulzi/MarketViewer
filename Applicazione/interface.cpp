@@ -49,13 +49,13 @@ int interface(void)
         .arg(sentiments[i].summary).arg(sentiments[i].sentiment).arg(sentiments[i].tickers);
     }
 
-    // initiate label + scroll area
+    // Initiate the two different labels and then create two scrollable areas
    QLabel *stock_info = new QLabel(ticker);
    QLabel *news_info = new QLabel(news);
    QScrollArea *scroll_stock = new QScrollArea;
    QScrollArea *scroll_news = new QScrollArea;
 
-   //set the labels as scrollable
+   //Put the labels inside of the scrollable are
    scroll_stock->setWidget(stock_info);
    scroll_news->setWidget(news_info);
 

@@ -39,7 +39,7 @@ int SQL_read(void)
     const char *table_active = "Most_active";
     const char *table_news = "News";
 
-    
+    printf("hasdasdads");
     if (!is_table_empty(db, table_active))
     {
         int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1 ", callback, 0, &errmsg);
@@ -50,6 +50,7 @@ int SQL_read(void)
         }
     } 
     // check the date of the last entry to avoid dup entries
+    if (date) free(date);
     if(!already_opened) goto Stock_read;
     return 0;
 
@@ -71,7 +72,7 @@ int SQL_read(void)
                 perror("Unable to access database");
                 return 20;
             }
-            sqlite3_free(command);
+            if (command) sqlite3_free(command);
         }
         
         
@@ -89,11 +90,10 @@ int SQL_read(void)
                 perror("Unable to access database");
                 return 20;
             }
-            sqlite3_free(command);
+            if (command )sqlite3_free(command);
         }
 
-        sqlite3_close(db);
-        free(date);
+        if (db) sqlite3_close(db);
         return 0;
 }
 
@@ -103,9 +103,10 @@ int callback(void *p, int argc, char** argv, char** azColName)
     int date_position;
     for(date_position = 0; date_position < argc; date_position++)
     {
-        if(!strcmp(*(azColName + date_position), "date")) break;
+        if(!strcasecmp(azColName[date_position], "Date")) break;
     }
-    if (!strcmp(*(argv + date_position), date)) already_opened = 1;
+    printf("%i", date_position);
+    if (!strcasecmp(argv[date_position], date)) already_opened = 1;
     return 0;
 }
 
@@ -116,12 +117,14 @@ int is_table_empty(sqlite3 *db, const char *table_name)
     char *errmsg = NULL;
     int count = 0;
     char *command = sqlite3_mprintf("SELECT Count (*) FROM '%q'", table_name);
-    int rc = sqlite3_exec(db, command, callback_empty, &count, &errmsg);
+    int rc = sqlite3_exec(db, "SELECT Count (*) FROM Most_active", callback_empty, &count, &errmsg);
     if (rc != SQLITE_OK)
     {
         perror("cannot execute demand (table_empty_check)");
+        if (command) sqlite3_free(command);
         return -1;
     }
+    if (command) sqlite3_free(command);
     if (!count) return 1;
     return 0;
 }

@@ -57,6 +57,8 @@ int SQL(void);
 
 int json(void);
 
+int free_structs(void);
+
 #ifdef __cplusplus
 }
 #endif

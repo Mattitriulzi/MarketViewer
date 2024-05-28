@@ -2,7 +2,9 @@
 #include "stock.h"
 
 news *sentiments = NULL;
+
 stock *active_stocks = NULL;
+
 char *date = NULL;
 
 
@@ -21,7 +23,6 @@ int json(void)
     } */
 
    
-
 
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
@@ -58,7 +59,6 @@ int json(void)
     We wish to keep only the date. However we have to first copy the string into another 
     variable as this one is a constant*/
     date = strdup(last_updated);
-    printf("%s\n", date);
     for (int i = 0; i < strlen(date); i++)
     {
         if (*(date + i) == ' ')
@@ -67,7 +67,7 @@ int json(void)
             break;
         }
     }
-    free(last_updated_json);
+    if (last_updated_json) json_decref(last_updated_json);
 
 
 
@@ -103,7 +103,6 @@ int json(void)
         if (!json_is_object(most_active))
         {
             perror("Error when reading object array");
-            json_decref(most_active);
             json_decref(most_actively_traded);
             return 305;
         }
@@ -115,65 +114,55 @@ int json(void)
         if (!json_is_string((ticker_json)))
         {
             perror("Error when reading object array");
-            json_decref(most_active);
             json_decref(root_active);
             return 306;
         }
         ticker = json_string_value(json_object_get(most_active, "ticker"));
         (active_stocks + i)->ticker = strdup(ticker);
-        json_decref(ticker_json);
 
 
         json_t *price_json = json_object_get(most_active, "price");
         if (!json_is_string(price_json))
         {
             perror("Error when reading object array");
-            json_decref(most_active);
             json_decref(root_active);
             return 307;
         }
         price = json_string_value(price_json);
         (active_stocks + i)->price = strdup(price);
-        json_decref(price_json);
 
 
         json_t *price_change_json = json_object_get(most_active, "change_amount");
         if (!json_is_string(price_change_json))
         {
             perror("Error when reading object array");
-            json_decref(most_active);
             json_decref(root_active);
             return 308;
         }
         price_change = json_string_value(price_change_json);
         (active_stocks + i)->price_change = strdup(price_change);
-        json_decref(price_change_json);
 
 
         json_t *change_percentage_json = json_object_get(most_active, "change_percentage");
         if (!json_is_string(change_percentage_json))
         {
             perror("Error when reading object array");
-            json_decref(most_active);
             json_decref(root_active);
             return 309;
         }
         change_percentage = json_string_value(change_percentage_json);
         (active_stocks + i)->change_percentage = strdup(change_percentage);
-        json_decref(change_percentage_json);
 
 
         json_t *volume_json = json_object_get(most_active, "volume");
         if (!json_is_string(volume_json))
         {
             perror("Error when reading object array");
-            json_decref(most_active);
             json_decref(root_active);
             return 310;
         }
         volume = json_string_value(volume_json);
         (active_stocks + i)->volume = strdup(volume);
-        json_decref(volume_json);
     /*free(ticker);
     free(price);
     free(price_change);
@@ -183,8 +172,7 @@ int json(void)
     }
     /*freeing all the variables used until now, leaving only the struct with all the values needed*/
     
-    json_decref(most_actively_traded);
-    json_decref(root_active);
+    if (root_active) json_decref(root_active);
 
 
 
@@ -203,7 +191,6 @@ int json(void)
     if (!json_is_array(feed_array))
     {
         perror("Feed is not an object");
-        json_decref(feed_array);
         json_decref(root_news);
         return 311;
     }
@@ -215,8 +202,7 @@ int json(void)
         if (!json_is_object(feed))
         {
             perror("Error when reading object array");
-            json_decref(feed);
-            json_decref(feed_array);
+            json_decref(root_news);
             return 312;
         }
 
@@ -225,59 +211,50 @@ int json(void)
         if (!json_is_string(title_json))
         {
             perror("Error when reading object array");
-            json_decref(feed);
             json_decref(root_news);
             return 313;
         }
         title = json_string_value(title_json);
         (sentiments + i)->title = strdup(title);
-        json_decref(title_json);
 
 
         json_t *url_json = json_object_get(feed, "url");
         if(!json_is_string(url_json))
         {
             perror("Error when reading object array");
-            json_decref(feed);
             json_decref(root_news);
             return 314;
         }
         url = json_string_value(url_json);
         (sentiments + i)->URL = strdup(url);
-        json_decref(url_json);
 
 
         json_t *summary_json = json_object_get(feed, "summary");
         if(!json_is_string(summary_json))
         {
             perror("Error when reading object array");
-            json_decref(feed);
             json_decref(root_news);
             return 315;
         }
         summary = json_string_value(summary_json);
         (sentiments + i)->summary = strdup(summary);
-        json_decref(summary_json);
 
 
         json_t *sentiment_json = json_object_get(feed, "overall_sentiment_label");
         if(!json_is_string(sentiment_json))
         {
             perror("Error when reading object array");
-            json_decref(feed);
             json_decref(root_news);
             return 316;
         }
         sentiment = json_string_value(sentiment_json);
         (sentiments + i)->sentiment = strdup(sentiment);
-        json_decref(sentiment_json);
 
 
         json_t *tickers_array = json_object_get(feed, "ticker_sentiment");
         if (!json_is_array(tickers_array))
         {
             perror("Error when reading object array");
-            json_decref(feed);
             json_decref(root_news);
             return 317;
         }
@@ -293,9 +270,7 @@ int json(void)
             if (!json_is_object(current_ticker))
             {
                 perror("Error when readng object array");
-                json_decref(feed);
                 json_decref(root_news);
-                json_decref(current_ticker);
                 return 318;
             }
             
@@ -307,8 +282,6 @@ int json(void)
             if (!json_is_string(temp_ticker_json))
             {
                 perror("Error when reading object array");
-                json_decref(tickers_array);
-                json_decref(feed);
                 json_decref(root_news);
                 return 319;
             }
@@ -345,10 +318,11 @@ int json(void)
     json_decref(feed); */
     }
     /*freeing all variables*/
-    
-    
-    json_decref(feed_array);
-    json_decref(root_news);
+
+    if (root_news) json_decref(root_news);
+    fclose(stock_data_active);
+    fclose(stock_data_sentiment);
+
     // delete the two files that were created
     /*
     const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
