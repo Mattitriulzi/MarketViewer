@@ -30,6 +30,7 @@ int json(void)
     json_t *root_news = json_loadf(stock_data_sentiment, 0, &error);
     if (!root_active || !root_news)
     {
+        fprintf(stderr, "error: on line %d: %s\n", error.line, error.text);
         perror("Unable to load json string");
         return 301;
     }
