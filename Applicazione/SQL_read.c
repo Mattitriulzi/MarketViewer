@@ -1,29 +1,6 @@
 
 #include "stock.h"
 
-
-// sentiments, active_stocks
-/*typedef struct stock
-{
-    char *ticker;
-    char *price;
-    char *price_change;
-    char *change_percentage;
-    char *volume; 
-} stock;
-
-stock *active_stocks;
-
-typedef struct news
-{
-    char *title;
-    char *URL;
-    char *summary;
-    char *sentiment;
-    char *tickers;
-
-} news;
-*/
 // if true, then the app was already started today and no need to print into the database
 bool already_opened = 0; 
 
