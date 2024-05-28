@@ -38,14 +38,15 @@ int interface(void)
     for (int i = 0; i < LENGTH_STOCKS; i++)
     // iterate through the struct news array to concatenate all information
     {
-        ticker += QString("%1 \n %2 \n %3 \n %4 \n %5 \n\n").arg(active_stocks[i].ticker).arg(active_stocks[i].price)
+        ticker += QString("Ticker: %1 \n Price: %2 \n Price Change%3 \n Change Percentage%4 \n Volume: %5 \n\n")
+        .arg(active_stocks[i].ticker).arg(active_stocks[i].price)
         .arg(active_stocks[i].price_change).arg(active_stocks[i].change_percentage).arg(active_stocks[i].volume);
     }
     QString news;
     for (int i = 0; i < LENGTH_NEWS; i++)
     // iterate through the struct news array to concatenate all information
     {
-        news += QString("%1 \n %2 \n %3 \n %4 \n %5 \n\n").arg(sentiments[i].title).arg(sentiments[i].URL)
+        news += QString("Title: %1 \n URL: %2 \n Summary: %3 \n Sentiment: %4 \n Tickers: %5 \n\n").arg(sentiments[i].title).arg(sentiments[i].URL)
         .arg(sentiments[i].summary).arg(sentiments[i].sentiment).arg(sentiments[i].tickers);
     }
 
