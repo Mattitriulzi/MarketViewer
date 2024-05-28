@@ -33,8 +33,6 @@ int main()
         printf("Error code: %d\n", err);
         return 801;
     }
-    printf("Done with creating database");
-    
 
     err = SQL_read();
     if(err)

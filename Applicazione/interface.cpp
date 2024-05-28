@@ -38,7 +38,7 @@ int interface(void)
     for (int i = 0; i < LENGTH_STOCKS; i++)
     // iterate through the struct news array to concatenate all information
     {
-        ticker += QString("Ticker: %1 \n Price: %2 \n Price Change%3 \n Change Percentage%4 \n Volume: %5 \n\n")
+        ticker += QString("Ticker: %1 \n Price: %2 \n Price Change: %3 \n Change Percentage: %4 \n Volume: %5 \n\n")
         .arg(active_stocks[i].ticker).arg(active_stocks[i].price)
         .arg(active_stocks[i].price_change).arg(active_stocks[i].change_percentage).arg(active_stocks[i].volume);
     }

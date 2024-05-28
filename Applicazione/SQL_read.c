@@ -39,7 +39,7 @@ int SQL_read(void)
     const char *table_active = "Most_active";
     const char *table_news = "News";
 
-    printf("hasdasdads");
+
     if (!is_table_empty(db, table_active))
     {
         int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1 ", callback, 0, &errmsg);
@@ -105,7 +105,6 @@ int callback(void *p, int argc, char** argv, char** azColName)
     {
         if(!strcasecmp(azColName[date_position], "Date")) break;
     }
-    printf("%i", date_position);
     if (!strcasecmp(argv[date_position], date)) already_opened = 1;
     return 0;
 }
