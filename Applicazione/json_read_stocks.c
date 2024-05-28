@@ -13,17 +13,7 @@ char *date = NULL;
 
 int json(void)
 {
-    // old way of first reading the files into a string and then loading them into jansson instead of directly loading them
-    /*char *json_active = read_file(stock_data_active, buffer_len);
-    char *json_news = read_file(stock_data_sentiment, buffer_len);
-    if (json_active == NULL || json_news == NULL)
-    {
-        perror("Unable to read files");
-        return 300;
-    } */
-
    
-
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
     json_t *root_active = json_loadf(stock_data_active, 0, &error);
@@ -164,12 +154,7 @@ int json(void)
         }
         volume = json_string_value(volume_json);
         (active_stocks + i)->volume = strdup(volume);
-    /*free(ticker);
-    free(price);
-    free(price_change);
-    free(change_percentage);
-    free(volume);
-    json_decref(most_active); */
+
     }
     /*freeing all the variables used until now, leaving only the struct with all the values needed*/
     
@@ -311,21 +296,16 @@ int json(void)
             (sentiments + i)->tickers = strdup(tickers);
         }
         //free(title);
-    /*free(url);
-    free(summary);
-    free(sentiment);
-    free(tickers);
-    json_decref(tickers_array);
-    json_decref(feed); */
+
     }
-    /*freeing all variables*/
+    /*freeing*/
 
     if (root_news) json_decref(root_news);
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
 
     // delete the two files that were created
-    /*
+    
     const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
     for (int i = 0; i < 2; i++){
         if (!remove(filename[i]))
@@ -333,7 +313,7 @@ int json(void)
             perror("Unable to remove file");
             return 321;
         }
-    } */
+    } 
     return 0;
 }
 
