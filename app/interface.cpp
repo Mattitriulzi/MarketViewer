@@ -20,7 +20,7 @@ int interface(void)
     char *argv[] = {"", NULL };
     QApplication app(argc,argv);
     QMainWindow mainwindow;
-    mainwindow.resize(1500, 1000);
+    mainwindow.resize(1800, 1000);
 
     //create a central widget to hold the layout
     QWidget *centralwidget = new QWidget(&mainwindow);
