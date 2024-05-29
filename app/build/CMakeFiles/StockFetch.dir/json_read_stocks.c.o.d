@@ -1,6 +1,6 @@
 CMakeFiles/StockFetch.dir/json_read_stocks.c.o: \
-  /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c \
-  /Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/stock.h \
+  /Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c \
+  /Users/matti/Documents/GitHub/Stock_Fetch/app/stock.h \
   /usr/local/include/jansson.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/stdio.h \

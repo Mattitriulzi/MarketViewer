@@ -1,15 +1,15 @@
 StockFetch_autogen/timestamp: \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/CMakeLists.txt \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_create.c \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/SQL_read.c \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/Stock_Data.c \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/free.c \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/interface.cpp \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/json_read_stocks.c \
-	/Users/matti/Documents/GitHub/Stock_Fetch/Applicazione/order.cpp \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/CMakeLists.txt \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_create.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/SQL_read.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/Stock_Data.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/free.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp \
 	/opt/local/lib/cmake/Qt6/Qt6Config.cmake \
 	/opt/local/lib/cmake/Qt6/Qt6ConfigVersion.cmake \
 	/opt/local/libexec/qt6/lib/cmake/Qt6/FindWrapAtomic.cmake \
@@ -180,26 +180,100 @@ StockFetch_autogen/timestamp: \
 	/opt/local/libexec/qt6/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake \
 	/opt/local/libexec/qt6/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/opt/local/libexec/qt6/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in \
+	/opt/local/share/cmake-3.29/Modules/CMakeCCompilerABI.c \
 	/opt/local/share/cmake-3.29/Modules/CMakeCInformation.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in \
+	/opt/local/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp \
 	/opt/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeSystem.cmake.in \
 	/opt/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake \
 	/opt/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake \
+	/opt/local/share/cmake-3.29/Modules/CMakeUnixFindMake.cmake \
 	/opt/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake \
 	/opt/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake \
 	/opt/local/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake \
 	/opt/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake \
 	/opt/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
 	/opt/local/share/cmake-3.29/Modules/Compiler/AppleClang-C.cmake \
 	/opt/local/share/cmake-3.29/Modules/Compiler/AppleClang-CXX.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
 	/opt/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
 	/opt/local/share/cmake-3.29/Modules/Compiler/Clang.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/opt/local/share/cmake-3.29/Modules/Compiler/GNU.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
+	/opt/local/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/opt/local/share/cmake-3.29/Modules/FindCURL.cmake \
 	/opt/local/share/cmake-3.29/Modules/FindOpenGL.cmake \
 	/opt/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake \
@@ -208,15 +282,18 @@ StockFetch_autogen/timestamp: \
 	/opt/local/share/cmake-3.29/Modules/FindSQLite3.cmake \
 	/opt/local/share/cmake-3.29/Modules/FindThreads.cmake \
 	/opt/local/share/cmake-3.29/Modules/GNUInstallDirs.cmake \
+	/opt/local/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake \
 	/opt/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake \
 	/opt/local/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/opt/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake \
+	/opt/local/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake \
 	/opt/local/share/cmake-3.29/Modules/MacroAddFileDependencies.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Apple-AppleClang-C.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Apple-AppleClang-CXX.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Apple-Clang-C.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Apple-Clang-CXX.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Apple-Clang.cmake \
+	/opt/local/share/cmake-3.29/Modules/Platform/Darwin-Determine-CXX.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Darwin-Initialize.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/Darwin.cmake \
 	/opt/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake \
