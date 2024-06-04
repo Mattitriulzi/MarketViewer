@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 #hide makefiles from the language detector
-build/* linguist-vendored
+app/build/* linguist-vendored
