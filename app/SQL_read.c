@@ -39,9 +39,9 @@ int SQL_read(void)
             // create a sqlite3 formatted string for the command
             char *command = sqlite3_mprintf("INSERT INTO %s Values ('%q', '%q', '%q', '%q', '%q', '%q')",
             table_active,
-            (active_stocks + i)->ticker, (active_stocks + i)->price,
-            (active_stocks + i)->price_change, (active_stocks + i)->change_percentage,
-            (active_stocks + i)->volume, date);
+            active_stocks[i].ticker, active_stocks[i].price,
+            active_stocks[i].price_change, active_stocks[i].change_percentage,
+            active_stocks[i].volume, date);
             // execute the command
             int rc = sqlite3_exec(db, command, NULL, 0, &errmsg);
             if (rc)
@@ -57,9 +57,9 @@ int SQL_read(void)
         {
             char *command = sqlite3_mprintf("INSERT INTO %s VALUES ('%q', '%q', '%q', '%q', '%q')", 
             table_news,
-            (sentiments + i)->title, (sentiments + i)->URL,
-            (sentiments + i)->summary, (sentiments + i)->sentiment,
-            (sentiments + i)->tickers);
+            sentiments[i].title, sentiments[i].URL,
+            sentiments[i].summary, sentiments[i].sentiment,
+            sentiments[i].tickers);
             int rc = sqlite3_exec(db, command, NULL, 0,  &errmsg);
             if (rc)
             {

@@ -1,9 +1,9 @@
 
 #include "stock.h"
 
-news *sentiments = NULL;
+news sentiments[LENGTH_NEWS];
 
-stock *active_stocks = NULL;
+stock active_stocks[LENGTH_STOCKS];
 
 char *date = NULL;
 
@@ -74,12 +74,6 @@ int json(void)
         return 304;
     }
     // array of stock structs is declared in the header file "stock.h"
-    active_stocks = (stock *) calloc(LENGTH_STOCKS, sizeof(stock));
-    if (!active_stocks)
-    {
-        perror("Unable to allocate memory");
-        return 320;
-    }
     // iterate over the object array and store the data inside our arrays of stock
     
     for (int i = 0; i < json_array_size(most_actively_traded); i++)
@@ -109,7 +103,7 @@ int json(void)
             return 306;
         }
         ticker = json_string_value(json_object_get(most_active, "ticker"));
-        (active_stocks + i)->ticker = strdup(ticker);
+        active_stocks[i].ticker = strdup(ticker);
 
 
         json_t *price_json = json_object_get(most_active, "price");
@@ -120,7 +114,7 @@ int json(void)
             return 307;
         }
         price = json_string_value(price_json);
-        (active_stocks + i)->price = strdup(price);
+        active_stocks[i].price = strdup(price);
 
 
         json_t *price_change_json = json_object_get(most_active, "change_amount");
@@ -131,7 +125,7 @@ int json(void)
             return 308;
         }
         price_change = json_string_value(price_change_json);
-        (active_stocks + i)->price_change = strdup(price_change);
+        active_stocks[i].price_change = strdup(price_change);
 
 
         json_t *change_percentage_json = json_object_get(most_active, "change_percentage");
@@ -142,7 +136,7 @@ int json(void)
             return 309;
         }
         change_percentage = json_string_value(change_percentage_json);
-        (active_stocks + i)->change_percentage = strdup(change_percentage);
+        active_stocks[i].change_percentage = strdup(change_percentage);
 
 
         json_t *volume_json = json_object_get(most_active, "volume");
@@ -153,7 +147,7 @@ int json(void)
             return 310;
         }
         volume = json_string_value(volume_json);
-        (active_stocks + i)->volume = strdup(volume);
+        active_stocks[i].volume = strdup(volume);
 
     }
     /*freeing all the variables used until now, leaving only the struct with all the values needed*/
@@ -163,12 +157,6 @@ int json(void)
 
 
     // news sentiment struct is declared in the header file.
-    sentiments = (news *) calloc(LENGTH_NEWS, sizeof(news));
-    if (!sentiments)
-    {
-        perror("Unable to allocate memory");
-        return 320;
-    }
 
 
     /*Time to star the deloading for the news json file, first we will extract the array containing the news and then
@@ -201,7 +189,7 @@ int json(void)
             return 313;
         }
         title = json_string_value(title_json);
-        (sentiments + i)->title = strdup(title);
+        sentiments[i].title = strdup(title);
 
 
         json_t *url_json = json_object_get(feed, "url");
@@ -212,7 +200,7 @@ int json(void)
             return 314;
         }
         url = json_string_value(url_json);
-        (sentiments + i)->URL = strdup(url);
+        sentiments[i].URL = strdup(url);
 
 
         json_t *summary_json = json_object_get(feed, "summary");
@@ -223,7 +211,7 @@ int json(void)
             return 315;
         }
         summary = json_string_value(summary_json);
-        (sentiments + i)->summary = strdup(summary);
+        sentiments[i].summary = strdup(summary);
 
 
         json_t *sentiment_json = json_object_get(feed, "overall_sentiment_label");
@@ -234,7 +222,7 @@ int json(void)
             return 316;
         }
         sentiment = json_string_value(sentiment_json);
-        (sentiments + i)->sentiment = strdup(sentiment);
+        sentiments[i].sentiment = strdup(sentiment);
 
 
         json_t *tickers_array = json_object_get(feed, "ticker_sentiment");
@@ -293,7 +281,7 @@ int json(void)
                 
                 strcat(tickers, temp_ticker); 
             } 
-            (sentiments + i)->tickers = strdup(tickers);
+            sentiments[i].tickers = strdup(tickers);
         }
         //free(title);
 

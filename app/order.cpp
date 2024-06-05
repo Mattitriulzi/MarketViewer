@@ -50,13 +50,13 @@ int main()
         printf("Error code: %d\n", err);
         return 804;
     }
-
+    /*
     err = free_structs();
     if (err)
     {
         perror("Error when freeing the structs");
         return 805;
     }
-
+    */
     return 0;
 }
