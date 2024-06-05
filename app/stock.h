@@ -58,7 +58,8 @@ int SQL(void);
 
 int json(void);
 
-int free_structs(void);
+//free_structs function that was needed when the arrays where dynamically allocated
+//int free_structs(void);
 
 #ifdef __cplusplus
 }

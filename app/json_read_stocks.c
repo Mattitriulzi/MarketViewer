@@ -24,6 +24,7 @@ int json(void)
         perror("Unable to load json string");
         return 301;
     }
+    printf("Successfully loaded the json files\n");
 
     // check if data is object
     if (!json_is_object(root_active) || !json_is_object(root_news))
@@ -59,7 +60,7 @@ int json(void)
         }
     }
     if (last_updated_json) json_decref(last_updated_json);
-
+    printf("Correctly opened json objects\n");
 
 
 
@@ -153,6 +154,7 @@ int json(void)
     /*freeing all the variables used until now, leaving only the struct with all the values needed*/
     
     if (root_active) json_decref(root_active);
+    printf("Succesfully loaded the active stocks\n");
 
 
 
@@ -283,11 +285,11 @@ int json(void)
             } 
             sentiments[i].tickers = strdup(tickers);
         }
-        //free(title);
+        
 
     }
     /*freeing*/
-
+    printf("Succesfully loaded the news sentiments\n");
     if (root_news) json_decref(root_news);
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
@@ -302,6 +304,7 @@ int json(void)
             return 321;
         }
     } 
+    printf("Successfully freed objects and deleted the files\n");
     return 0;
 }
 

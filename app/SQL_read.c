@@ -51,7 +51,7 @@ int SQL_read(void)
             }
             if (command) sqlite3_free(command);
         }
-        
+        printf("Successfully added to database\n");
         
         for (int i = 0; i < LENGTH_NEWS; i++)
         {
@@ -69,7 +69,7 @@ int SQL_read(void)
             }
             if (command )sqlite3_free(command);
         }
-
+        printf("Successfully added to database\n");
         if (db) sqlite3_close(db);
         return 0;
 }

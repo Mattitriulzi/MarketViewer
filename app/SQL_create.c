@@ -31,6 +31,7 @@ int SQL(void)
             perror("Unable to initialise tables");
             return 201;
         }
+        printf("Successfully created and initialised tables\n");
     }
     else 
     {
@@ -40,6 +41,7 @@ int SQL(void)
             perror("Unable to create or open database");
             return 203;
         }
+        printf("Successfully opened database\n");
     }
     
     

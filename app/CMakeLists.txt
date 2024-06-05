@@ -33,7 +33,7 @@ endif()
 
 #Tell Cmake to create the executable executable
 add_executable(StockFetch order.cpp json_read_stocks.c
-               SQL_create.c SQL_read.c free.c
+               SQL_create.c SQL_read.c #free.c
                Stock_Data.c interface.cpp)
 
 #Link the Widgets module from Qt6 
