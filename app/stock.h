@@ -31,10 +31,14 @@ typedef struct news
     char *tickers;
 
 } news;
+
 /* Change between pointer and array, same behaviors but it will be created in the stack rather
 than the heap, allowing for faster software and no need to free after*/
+
+// extern stock *active_stocks;
 extern stock active_stocks[LENGTH_STOCKS];
 
+// extern news *sentiments;
 extern news sentiments[LENGTH_NEWS];
 
 extern FILE *stock_data_sentiment;
@@ -48,6 +52,7 @@ extern char *date;
 #ifdef __cplusplus
 extern "C" {
 #endif
+// old read file function
 //char *read_file(FILE *file, int length);
 
 int Stock_Data(void);
