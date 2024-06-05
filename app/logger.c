@@ -1,5 +1,5 @@
 #include "stock.h"
-
+#include <time.h>
 /*This function will log all of the apps operations inside a log.txt to be able 
 to check in the future for any errors
 
@@ -28,5 +28,25 @@ easy debugging
 */
 int log_it(char *msg)
 {
+    // open file
+    FILE *log_file = fopen("logs.txt", "a");
+    if (!log_file)
+    {
+        perror("Unable to create or open log file");
+        return 900;
+    }
+    // get the current time
+    time_t seconds = time(NULL);
+    struct tm *time = localtime(&seconds);
     
+    // read the struct time and format a string with the time template
+    char date[22];
+    strftime(date, sizeof(date), "[%Y-%m-%d %H:%M%S]", time); 
+
+    // print the time and message to the log file
+    fprintf(log_file, "%s %s", date, msg);
+
+    // close the file
+    if(log_file) fclose(log_file);
+
 }
