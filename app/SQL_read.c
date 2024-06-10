@@ -5,8 +5,11 @@ bool already_opened = 0;
 
 // Function prototypes
 int callback_empty(void *count, int argc, char **argv, char** azColName);
+
 int callback(void *p, int argc, char **argv, char **azColName);
+
 int is_table_empty(sqlite3 *db, const char *table_name);
+
 int SQL_read(void);
 
 int SQL_read(void)
@@ -15,14 +18,19 @@ int SQL_read(void)
     const char *table_active = "Most_active";
     const char *table_news = "News";
 
+    log_it("Checking if the table is empty");
+
     // Check if the table 'Most_active' is empty
     if (!is_table_empty(db, table_active))
     {
+        log_it("Table is not empty, checking if the app was already opened today");
+
         // Execute the SQL query to get the date from the first row of the 'Most_active' table
         int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1 ", callback, 0, &errmsg);
         if (rd)
         {
             perror("Unable to access database");
+            log_it("Unable to access database");
             return 400;
         }
     } 
@@ -30,10 +38,16 @@ int SQL_read(void)
     // Check the date of the last entry to avoid duplicate entries
     if (date) free(date);
     if(!already_opened) goto Stock_read;
+
+    log_it("App was already opened today, no need to update database");
+    if (db) sqlite3_close(db);
+    log_it("Database closed succesfully");
+
     return 0;
 
     // Label to jump to if the app was not already opened today
     Stock_read:
+        log_it("App was not opened yet today, reading data from the structure arrays");
         for (int i = 0; i < LENGTH_STOCKS; i++)
         {
             // Create a sqlite3 formatted string for the command to insert data into the 'Most_active' table
@@ -48,11 +62,12 @@ int SQL_read(void)
             if (rc)
             {
                 perror("Unable to access database");
+                log_it("Unable to access database");
                 return 20;
             }
             if (command) sqlite3_free(command);
         }
-        printf("Successfully added to database\n");
+        log_it("Successfully inserted the Active Stock structure array in database");
         
         for (int i = 0; i < LENGTH_NEWS; i++)
         {
@@ -69,12 +84,14 @@ int SQL_read(void)
             {
                 printf("Error: %s\n", errmsg);
                 perror("Unable to access database");
+                log_it("Unable to access database");
                 return 20;
             }
             if (command) sqlite3_free(command);
         }
-        printf("Successfully added to database\n");
+        log_it("Successfully inserted the News structure array in database");
         if (db) sqlite3_close(db);
+        log_it("Successfully closed the dabatase");
         return 0;
 }
 
@@ -107,6 +124,7 @@ int is_table_empty(sqlite3 *db, const char *table_name)
     if (rc != SQLITE_OK)
     {
         perror("cannot execute demand (table_empty_check)");
+        log_it("cannot execute demand (table_empty_check)");
         if (command) sqlite3_free(command);
         return -1;
     }

@@ -11,6 +11,7 @@
 #define LENGTH_NEWS 10
 #define buffer_len 4096
 
+// Structs for the stock and news data
 typedef struct stock
 {
     char *ticker;
@@ -45,6 +46,8 @@ extern FILE *stock_data_sentiment;
 
 extern FILE *stock_data_active;
 
+extern FILE *log_file;
+
 extern sqlite3 *db;
 
 extern char *date;
@@ -63,7 +66,10 @@ int SQL(void);
 
 int json(void);
 
-int log_it
+void log_it(const char *msg);
+// the log_it function already adds a new line so the message should not have the escape seq
+
+int free_structs(void);
 //free_structs function that was needed when the arrays where dynamically allocated
 //int free_structs(void);
 

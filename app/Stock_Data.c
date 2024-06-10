@@ -6,7 +6,6 @@
 // Callback function to write data received from the API to a file
 size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_file)
 {
-    printf("Fetching Data ...\n");
     size_t write = fwrite(buffer, size, nmemb, storing_file);
     return write;
 }
@@ -27,6 +26,7 @@ int Stock_Data(void)
     if (!stock_data_active)
     {
         perror("Unable to create Temporary File, probably missing memory");
+        log_it("Unable to create Temporary File, probably missing memory");
         return 100;
     }
 
@@ -35,8 +35,11 @@ int Stock_Data(void)
     if (!stock_data_sentiment)
     {
         perror("Unable to create Temporary File, probably missing memory");
+        log_it("Unable to create Temporary File, probably missing memory"); 
         return 100;
     }
+
+    log_it("Correctly opened temporary files");
 
     // Generate the curls which will be used to transfer the stock info and initialise them + check for error
     CURL *curl1 = curl_easy_init(); // first transfer
@@ -45,6 +48,7 @@ int Stock_Data(void)
     if (curl1 == NULL || curl2 == NULL || multi_curl == NULL)
     {
         perror("Unable to initiate research, probably missing memory");
+        log_it("Unable to initiate research, probably missing memory");
         return 101;
     }
 
@@ -64,6 +68,8 @@ int Stock_Data(void)
     curl_multi_add_handle(multi_curl, curl1);
     curl_multi_add_handle(multi_curl, curl2);
 
+    log_it("Correctly set up the curl transfers");
+
     // Run all transfers!
     int still_running;
     do 
@@ -78,11 +84,13 @@ int Stock_Data(void)
         /* Error checking */
         {
             perror("curl_multi_poll function was unable to perform transfers");
+            log_it("curl_multi_poll function was unable to perform transfers");
             return 103;
         }
     } while(still_running);
 
     /* Continue until there are no more tranfers to be done */
+    log_it("Correctly fetched data from the API");
 
     /* Cleaning up memory */
     curl_easy_cleanup(curl1);
@@ -99,8 +107,11 @@ int Stock_Data(void)
     if (!stock_data_active || !stock_data_sentiment)
     {
         perror("Unable to reopen files for reading");
+        log_it("Unable to reopen files for reading");
         return 104;
     }
+
+    log_it("Correctly cleaned up memory, closed, and reopened files for reading");
 
     return 0;
 }

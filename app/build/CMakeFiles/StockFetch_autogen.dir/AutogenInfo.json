@@ -293,7 +293,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -336,7 +336,6 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
-		"-std=gnu++17",
 		"-dM",
 		"-E",
 		"-c",
@@ -370,6 +369,7 @@
 			"MU",
 			null
 		],
+		[ "/Users/matti/Documents/GitHub/Stock_Fetch/app/free.c", "MU", null ],
 		[
 			"/Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp",
 			"MU",
@@ -380,6 +380,7 @@
 			"MU",
 			null
 		],
+		[ "/Users/matti/Documents/GitHub/Stock_Fetch/app/logger.c", "MU", null ],
 		[ "/Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

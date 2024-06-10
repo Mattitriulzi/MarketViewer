@@ -72,7 +72,7 @@ StockFetch_autogen/timestamp: /opt/local/libexec/qt6/./libexec/moc
 StockFetch_autogen/timestamp: /opt/local/libexec/qt6/./libexec/uic
 StockFetch_autogen/timestamp: CMakeFiles/StockFetch_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target StockFetch"
-	/opt/local/bin/cmake -E cmake_autogen /Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/StockFetch_autogen.dir/AutogenInfo.json ""
+	/opt/local/bin/cmake -E cmake_autogen /Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/StockFetch_autogen.dir/AutogenInfo.json Debug
 	/opt/local/bin/cmake -E touch /Users/matti/Documents/GitHub/Stock_Fetch/app/build/StockFetch_autogen/timestamp
 
 StockFetch_autogen: CMakeFiles/StockFetch_autogen
