@@ -1,4 +1,3 @@
-
 #include "stock.h"
 
 news sentiments[LENGTH_NEWS];
@@ -22,14 +21,17 @@ int json(void)
     {
         fprintf(stderr, "error: on line %d: %s\n", error.line, error.text);
         perror("Unable to load json string");
+        log_it("Unable to load json string");
         return 301;
     }
-    printf("Successfully loaded the json files\n");
+
+    log_it("Successfully loaded the json files");
 
     // check if data is object
     if (!json_is_object(root_active) || !json_is_object(root_news))
     {
         perror("Root is not an object");
+        log_it("Root is not an object");
         json_decref(root_active);
         json_decref(root_news);
         return 302;
@@ -42,6 +44,7 @@ int json(void)
     if (!(json_is_string(last_updated_json)))
     {
         perror("Error when reading json file");
+        log_it("Error when reading json file");
         return 303;
     }
     const char* last_updated = json_string_value(last_updated_json);
@@ -60,8 +63,10 @@ int json(void)
         }
     }
     if (last_updated_json) json_decref(last_updated_json);
-    printf("Correctly opened json objects\n");
 
+
+    log_it("Successfully read the date");
+    log_it("Successfully opened json objects");
 
 
 
@@ -70,6 +75,7 @@ int json(void)
     if (!json_is_array(most_actively_traded))
     {
         perror("Root object is not an array");
+        log_it("Root object is not an array");
         json_decref(most_actively_traded);
         json_decref(root_active);
         return 304;
@@ -89,6 +95,7 @@ int json(void)
         if (!json_is_object(most_active))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(most_actively_traded);
             return 305;
         }
@@ -100,6 +107,7 @@ int json(void)
         if (!json_is_string((ticker_json)))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_active);
             return 306;
         }
@@ -111,6 +119,7 @@ int json(void)
         if (!json_is_string(price_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_active);
             return 307;
         }
@@ -122,6 +131,7 @@ int json(void)
         if (!json_is_string(price_change_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_active);
             return 308;
         }
@@ -133,6 +143,7 @@ int json(void)
         if (!json_is_string(change_percentage_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_active);
             return 309;
         }
@@ -144,6 +155,7 @@ int json(void)
         if (!json_is_string(volume_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_active);
             return 310;
         }
@@ -153,8 +165,9 @@ int json(void)
     }
     /*freeing all the variables used until now, leaving only the struct with all the values needed*/
     
-    if (root_active) json_decref(root_active);
-    printf("Succesfully loaded the active stocks\n");
+
+
+    log_it("Successfully loaded the Active Stocks structure array");
 
 
 
@@ -167,17 +180,20 @@ int json(void)
     if (!json_is_array(feed_array))
     {
         perror("Feed is not an object");
+        log_it("Feed is not an object");
         json_decref(root_news);
         return 311;
     }
 
-    for (int i = 0; i < LENGTH_NEWS; i++)
+
+    for (int i = 0; i < json_array_size(feed_array); i++)
     {
         const char *title, *url, *summary, *sentiment; // tickers is a special case, hence will initialise later
         json_t *feed = json_array_get(feed_array, i);
         if (!json_is_object(feed))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_news);
             return 312;
         }
@@ -187,6 +203,7 @@ int json(void)
         if (!json_is_string(title_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_news);
             return 313;
         }
@@ -198,6 +215,7 @@ int json(void)
         if(!json_is_string(url_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_news);
             return 314;
         }
@@ -209,6 +227,7 @@ int json(void)
         if(!json_is_string(summary_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_news);
             return 315;
         }
@@ -220,6 +239,7 @@ int json(void)
         if(!json_is_string(sentiment_json))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_news);
             return 316;
         }
@@ -231,13 +251,15 @@ int json(void)
         if (!json_is_array(tickers_array))
         {
             perror("Error when reading object array");
+            log_it("Error when reading object array");
             json_decref(root_news);
             return 317;
         }
 
 
-        char *tickers = (char *) calloc(12, sizeof(char)); /*initially give it a size of 12 as tickers cannot have more than 5
-         + coma + space + null terminator letters P.S. Had to add possibility for CRYPTO:BTC */
+
+        char *tickers = (char *) calloc(15, sizeof(char)); /*initially give it a size of 15 as tickers cannot have more than 5
+        + coma + space + null terminator letters P.S. Had to add possibility for CRYPTO:BTC */
         for (int j = 0; j < json_array_size(tickers_array); j++)
         {
             /* since the tickers can be more than one, we have to iterate over the entire array 
@@ -246,6 +268,7 @@ int json(void)
             if (!json_is_object(current_ticker))
             {
                 perror("Error when readng object array");
+                log_it("Error when readng object array");
                 json_decref(root_news);
                 return 318;
             }
@@ -258,54 +281,65 @@ int json(void)
             if (!json_is_string(temp_ticker_json))
             {
                 perror("Error when reading object array");
+                log_it("Error when reading object array");
                 json_decref(root_news);
                 return 319;
             }
             const char *temp_ticker = json_string_value(temp_ticker_json);
 
 
+            
+            if (!j && json_array_size(feed) == 1){
 
-
-            if (!j)
-            // if it is the first ticker, then we have to copy it into the tickers char
+                // if it is the first ticker and the array is only one length
+                strcpy(tickers, temp_ticker);
+                break;
+            }
+            else if (!j)
+            // if it is the first ticker, then we have to copy it into the tickers char AND that the array is not just one length
             {
                 strcpy(tickers, temp_ticker);
                 strcat(tickers, ", ");
             }
             else
             {
-                tickers = realloc(tickers, (strlen(tickers) + strlen(temp_ticker)) * sizeof(char) + 2 );
+                tickers = realloc(tickers, (strlen(tickers) + strlen(temp_ticker)) * sizeof(char) + 5 );
                 if (!tickers)
                 {
                     perror("Unable to allocate memory");
+                    log_it("Unable to allocate memory");
                     return 320;
                 }
-                
+                strcat(tickers, ", ");
                 strcat(tickers, temp_ticker); 
             } 
-            sentiments[i].tickers = strdup(tickers);
+            
         }
-        
+        if(tickers) free(tickers);
+        sentiments[i].tickers = strdup(tickers);
 
     }
     /*freeing*/
-    printf("Succesfully loaded the news sentiments\n");
+
+    log_it("Successfully loaded the News sentiments structure array");
+
+    if (root_active) json_decref(root_active);
     if (root_news) json_decref(root_news);
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
 
+    log_it("Successfully freed the json objects and closed files");
     // delete the two files that were created
     
     const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
     for (int i = 0; i < 2; i++){
         if (remove(filename[i]))
         {
-            perror("Unable to remove file");
+            perror("Unable to delete file");
+            log_it("Unable to delete file");
             return 321;
         }
     } 
-    printf("Successfully freed objects and deleted the files\n");
+    log_it("Successfully deleted the temporary files");
     return 0;
 }
-
-

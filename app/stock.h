@@ -11,6 +11,7 @@
 #define LENGTH_NEWS 10
 #define buffer_len 4096
 
+// Structs for the stock and news data
 typedef struct stock
 {
     char *ticker;
@@ -31,15 +32,21 @@ typedef struct news
     char *tickers;
 
 } news;
+
 /* Change between pointer and array, same behaviors but it will be created in the stack rather
 than the heap, allowing for faster software and no need to free after*/
+
+// extern stock *active_stocks;
 extern stock active_stocks[LENGTH_STOCKS];
 
+// extern news *sentiments;
 extern news sentiments[LENGTH_NEWS];
 
 extern FILE *stock_data_sentiment;
 
 extern FILE *stock_data_active;
+
+extern FILE *log_file;
 
 extern sqlite3 *db;
 
@@ -48,6 +55,7 @@ extern char *date;
 #ifdef __cplusplus
 extern "C" {
 #endif
+// old read file function
 //char *read_file(FILE *file, int length);
 
 int Stock_Data(void);
@@ -58,6 +66,10 @@ int SQL(void);
 
 int json(void);
 
+void log_it(const char *msg);
+// the log_it function already adds a new line so the message should not have the escape seq
+
+int free_structs(void);
 //free_structs function that was needed when the arrays where dynamically allocated
 //int free_structs(void);
 

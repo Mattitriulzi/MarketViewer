@@ -1,0 +1,22 @@
+[2024-06-10 18:4258] ---------------------------------------------------
+[2024-06-10 18:4258] (MAIN) Starting Application
+[2024-06-10 18:4258] Correctly opened temporary files
+[2024-06-10 18:4258] Correctly set up the curl transfers
+[2024-06-10 18:4259] Correctly fetched data from the API
+[2024-06-10 18:4259] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-10 18:4259] (MAIN) Successfully fetched Stock Data
+[2024-06-10 18:4259] Successfully loaded the json files
+[2024-06-10 18:4259] Successfully read the date
+[2024-06-10 18:4259] Succesfully opened json objects
+[2024-06-10 18:4259] Succesfully loaded the Active Stocks structure array
+[2024-06-10 18:4259] Succesfully loaded the News sentiments structure array
+[2024-06-10 18:4404] ---------------------------------------------------
+[2024-06-10 18:4404] (MAIN) Starting Application
+[2024-06-10 18:4404] Correctly opened temporary files
+[2024-06-10 18:4404] Correctly set up the curl transfers
+[2024-06-10 18:4405] Correctly fetched data from the API
+[2024-06-10 18:4405] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-10 18:4405] (MAIN) Successfully fetched Stock Data
+[2024-06-10 18:4405] Successfully loaded the json files
+[2024-06-10 18:4405] Error when reading json file
+[2024-06-10 18:4405] (MAIN) Error when parsing json file
