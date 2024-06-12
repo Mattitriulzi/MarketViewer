@@ -53,8 +53,8 @@ void log_it(const char *msg) {
     }
     
     // read the struct time and format a string with the time template
-    char date[22];
-    strftime(date, sizeof(date), "[%Y-%m-%d %H:%M%S]", time); 
+    char date[23];
+    strftime(date, sizeof(date), "[%Y-%m-%d %H:%M:%S]", time); 
 
     // print the time and message to the log file
     fprintf(log_file, "%s %s\n", date, msg);

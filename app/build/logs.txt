@@ -20,3 +20,39 @@
 [2024-06-10 18:4405] Successfully loaded the json files
 [2024-06-10 18:4405] Error when reading json file
 [2024-06-10 18:4405] (MAIN) Error when parsing json file
+[2024-06-12 20:1302] ---------------------------------------------------
+[2024-06-12 20:1302] (MAIN) Starting Application
+[2024-06-12 20:1302] Correctly opened temporary files
+[2024-06-12 20:1302] Correctly set up the curl transfers
+[2024-06-12 20:1303] Correctly fetched data from the API
+[2024-06-12 20:1303] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:1303] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:1303] Successfully loaded the json files
+[2024-06-12 20:1303] Successfully read the date
+[2024-06-12 20:1303] Successfully opened json objects
+[2024-06-12 20:1303] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:1303] Successfully loaded the News sentiments structure array
+[2024-06-12 20:1319] ---------------------------------------------------
+[2024-06-12 20:1319] (MAIN) Starting Application
+[2024-06-12 20:1319] Correctly opened temporary files
+[2024-06-12 20:1319] Correctly set up the curl transfers
+[2024-06-12 20:1320] Correctly fetched data from the API
+[2024-06-12 20:1320] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:1320] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:1320] Successfully loaded the json files
+[2024-06-12 20:1320] Successfully read the date
+[2024-06-12 20:1320] Successfully opened json objects
+[2024-06-12 20:1320] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:1320] Successfully loaded the News sentiments structure array
+[2024-06-12 20:14:07] ---------------------------------------------------
+[2024-06-12 20:14:07] (MAIN) Starting Application
+[2024-06-12 20:14:07] Correctly opened temporary files
+[2024-06-12 20:14:07] Correctly set up the curl transfers
+[2024-06-12 20:14:08] Correctly fetched data from the API
+[2024-06-12 20:14:08] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:14:08] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:14:08] Successfully loaded the json files
+[2024-06-12 20:14:08] Successfully read the date
+[2024-06-12 20:14:08] Successfully opened json objects
+[2024-06-12 20:14:08] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:14:08] Successfully loaded the News sentiments structure array
