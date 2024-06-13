@@ -34,14 +34,20 @@ int SQL_read(void)
             return 400;
         }
     } 
-
+    log_it("Table is empty, checking if app was already opened today");
     // Check the date of the last entry to avoid duplicate entries
-    if (date) free(date);
     if(!already_opened) goto Stock_read;
 
     log_it("App was already opened today, no need to update database");
-    if (db) sqlite3_close(db);
-    log_it("Database closed succesfully");
+    if (db) {
+        sqlite3_close(db);
+        db = NULL;
+    }
+    log_it("Database closed successfully");
+    if (date){
+        free(date);
+        date = NULL;
+    }
 
     return 0;
 
@@ -65,18 +71,21 @@ int SQL_read(void)
                 log_it("Unable to access database");
                 return 20;
             }
-            if (command) sqlite3_free(command);
+            if (command) {
+                sqlite3_free(command);
+                command = NULL;
+            }
         }
         log_it("Successfully inserted the Active Stock structure array in database");
         
         for (int i = 0; i < LENGTH_NEWS; i++)
         {
             // Create a sqlite3 formatted string for the command to insert data into the 'News' table
-            char *command = sqlite3_mprintf("INSERT INTO %s VALUES ('%q', '%q', '%q', '%q', '%q')", 
+            char *command = sqlite3_mprintf("INSERT INTO %s VALUES ('%q', '%q', '%q', '%q', '%q', '%q')", 
             table_news,
             sentiments[i].title, sentiments[i].URL,
             sentiments[i].summary, sentiments[i].sentiment,
-            sentiments[i].tickers);
+            sentiments[i].tickers, date);
             
             // Execute the command to insert data into the 'News' table
             int rc = sqlite3_exec(db, command, NULL, 0,  &errmsg);
@@ -87,11 +96,19 @@ int SQL_read(void)
                 log_it("Unable to access database");
                 return 20;
             }
-            if (command) sqlite3_free(command);
+            if (command) {
+                sqlite3_free(command);
+                command = NULL;
+            }
         }
         log_it("Successfully inserted the News structure array in database");
-        if (db) sqlite3_close(db);
-        log_it("Successfully closed the dabatase");
+
+        if (db) {
+            sqlite3_close(db);
+            db = NULL;
+        }
+
+        log_it("Database closed successfully");
         return 0;
 }
 
@@ -104,7 +121,6 @@ int callback(void *p, int argc, char** argv, char** azColName)
     {
         if(!strcasecmp(azColName[date_position], "Date")) break;
     }
-    
     // Check if the date of the last entry is the same as the current date
     if (!strcasecmp(argv[date_position], date)) already_opened = 1;
     return 0;
@@ -128,7 +144,10 @@ int is_table_empty(sqlite3 *db, const char *table_name)
         if (command) sqlite3_free(command);
         return -1;
     }
-    if (command) sqlite3_free(command);
+    if (command) {
+        sqlite3_free(command);
+        command = NULL;
+    }
     
     // Return 1 if the table is empty, 0 otherwise
     if (!count) return 1;

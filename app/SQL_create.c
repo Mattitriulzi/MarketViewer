@@ -11,12 +11,12 @@ int SQL(void)
     int rc;
 
     /* Check if database already exists, if not then initialize the tables */
-    if (access("Stock_Data.db", R_OK | W_OK) == -1)
+    if (access("stockdata.db", R_OK | W_OK) == -1)
     {
-        log_it("Database does not exist, creating database and initializing tables");
+        log_it("Database does not exist, creating database and initialising tables");
 
         /* Initialize database */
-        rc = sqlite3_open("Stock_Data.db", &db);
+        rc = sqlite3_open("stockdata.db", &db);
         if (rc)
         {
             perror("Unable to create or open database");
@@ -30,13 +30,13 @@ int SQL(void)
             perror("Unable to initialize tables");
             return 201;
         }
-        log_it("Successfully created and initialized tables");
+        log_it("Successfully created and initialised tables");
     }
     else
     {
         log_it("Database found, opening database");
 
-        rc = sqlite3_open("Stock_Data.db", &db);
+        rc = sqlite3_open("stockdata.db", &db);
         if (rc)
         {
             perror("Unable to create or open database");
@@ -66,7 +66,8 @@ int create_database(sqlite3 *db)
                        "URL TEXT NOT NULL,"
                        "Summary TEXT NOT NULL, "
                        "Sentiment TEXT NOT NULL, "
-                       "Tickers TEXT NOT NULL)";
+                       "Tickers TEXT NOT NULL, "
+                       "Date TEXT NOT NULL)";
 
     /* Execute the creation of the tables in the database */
     int rc = sqlite3_exec(db, table_active, NULL, 0, &zErrMsg);

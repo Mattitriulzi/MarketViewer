@@ -29,12 +29,7 @@ easy debugging
 */
 
 void log_it(const char *msg) {
-
-    // check if the message actually has something
-    if (!msg){
-        perror("Message is empty");
-        return;
-    }
+    // int i is there as a flag if it is the beginning or end of program to prind newlines
 
 
 
@@ -44,22 +39,35 @@ void log_it(const char *msg) {
         perror("Unable to create or open log file");
         return;
     }
+
+    // case where it is the beginning of the file
+    if (!msg) {
+        fprintf(log_file, "\n\n");
+        fclose(log_file);
+        return;
+    }
+
+
     // get the current time
     time_t seconds = time(NULL);
     struct tm *time = localtime(&seconds);
     if (!time) {
         perror("Unable to get time");
+        fclose(log_file);
         return;
     }
     
     // read the struct time and format a string with the time template
-    char date[22];
-    strftime(date, sizeof(date), "[%Y-%m-%d %H:%M%S]", time); 
+    char date[23];
+    strftime(date, sizeof(date), "[%Y-%m-%d %H:%M:%S]", time); 
 
     // print the time and message to the log file
     fprintf(log_file, "%s %s\n", date, msg);
 
     // close the file
-    if(log_file) fclose(log_file);
+    
+    fclose(log_file);
+        
+    return;
 
 }

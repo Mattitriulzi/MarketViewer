@@ -1,22 +1,289 @@
-[2024-06-10 18:4258] ---------------------------------------------------
-[2024-06-10 18:4258] (MAIN) Starting Application
-[2024-06-10 18:4258] Correctly opened temporary files
-[2024-06-10 18:4258] Correctly set up the curl transfers
-[2024-06-10 18:4259] Correctly fetched data from the API
-[2024-06-10 18:4259] Correctly cleaned up memory, closed, and reopened files for reading
-[2024-06-10 18:4259] (MAIN) Successfully fetched Stock Data
-[2024-06-10 18:4259] Successfully loaded the json files
-[2024-06-10 18:4259] Successfully read the date
-[2024-06-10 18:4259] Succesfully opened json objects
-[2024-06-10 18:4259] Succesfully loaded the Active Stocks structure array
-[2024-06-10 18:4259] Succesfully loaded the News sentiments structure array
-[2024-06-10 18:4404] ---------------------------------------------------
-[2024-06-10 18:4404] (MAIN) Starting Application
-[2024-06-10 18:4404] Correctly opened temporary files
-[2024-06-10 18:4404] Correctly set up the curl transfers
-[2024-06-10 18:4405] Correctly fetched data from the API
-[2024-06-10 18:4405] Correctly cleaned up memory, closed, and reopened files for reading
-[2024-06-10 18:4405] (MAIN) Successfully fetched Stock Data
-[2024-06-10 18:4405] Successfully loaded the json files
-[2024-06-10 18:4405] Error when reading json file
-[2024-06-10 18:4405] (MAIN) Error when parsing json file
+
+
+[2024-06-13 16:16:38] ---------------------------------------------------
+[2024-06-13 16:16:38] (MAIN) Starting Application
+[2024-06-13 16:16:38] Successfully prepared files for reading
+[2024-06-13 16:16:38] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:16:38] Successfully loaded the json files, closing files
+[2024-06-13 16:16:38] Successfully closed temporary files
+[2024-06-13 16:16:38] Successfully opened json objects
+[2024-06-13 16:16:38] Successfully read the date
+[2024-06-13 16:16:38] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:16:38] Successfully loaded the News sentiments structure array
+[2024-06-13 16:16:38] Successfully freed the json objects
+[2024-06-13 16:16:38] (MAIN) Successfully parsed json file
+[2024-06-13 16:16:38] (MAIN) Checking the database's existence
+[2024-06-13 16:16:38] Database found, opening database
+[2024-06-13 16:16:38] Successfully opened database
+[2024-06-13 16:16:38] (MAIN) Successfully created SQL database
+[2024-06-13 16:16:38] Checking if the table is empty
+[2024-06-13 16:16:38] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:16:38] Table is empty, checking if app was already opened today
+[2024-06-13 16:16:38] App was already opened today, no need to update database
+[2024-06-13 16:16:38] Database closed successfully
+[2024-06-13 16:16:38] (MAIN) Successfully read SQL database
+[2024-06-13 16:16:38] (MAIN) Starting Application GUI
+
+
+[2024-06-13 16:16:41] ---------------------------------------------------
+[2024-06-13 16:16:41] (MAIN) Starting Application
+[2024-06-13 16:16:41] Successfully prepared files for reading
+[2024-06-13 16:16:41] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:16:41] Successfully loaded the json files, closing files
+[2024-06-13 16:16:41] Successfully closed temporary files
+[2024-06-13 16:16:41] Successfully opened json objects
+[2024-06-13 16:16:41] Successfully read the date
+[2024-06-13 16:16:41] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:16:41] Successfully loaded the News sentiments structure array
+[2024-06-13 16:16:41] Successfully freed the json objects
+[2024-06-13 16:16:41] (MAIN) Successfully parsed json file
+[2024-06-13 16:16:41] (MAIN) Checking the database's existence
+[2024-06-13 16:16:41] Database found, opening database
+[2024-06-13 16:16:41] Successfully opened database
+[2024-06-13 16:16:41] (MAIN) Successfully created SQL database
+[2024-06-13 16:16:41] Checking if the table is empty
+[2024-06-13 16:16:41] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:16:41] Table is empty, checking if app was already opened today
+[2024-06-13 16:16:41] App was already opened today, no need to update database
+[2024-06-13 16:16:41] Database closed successfully
+[2024-06-13 16:16:41] (MAIN) Successfully read SQL database
+[2024-06-13 16:16:41] (MAIN) Starting Application GUI
+[2024-06-13 16:16:41] Successfully created Main App Window
+[2024-06-13 16:16:41] Successfully concatenated all information into a QString
+[2024-06-13 16:16:41] Successfully created the labels and scroll areas
+[2024-06-13 16:16:41] Successfully added the scroll areas to the layout
+[2024-06-13 16:16:41] Successfully started Application GUI
+[2024-06-13 16:16:43] (MAIN) Stopping Application GUI
+[2024-06-13 16:16:43] (MAIN) Successfully closed application GUI
+[2024-06-13 16:16:43] Successfully freed News structure array
+[2024-06-13 16:16:43] Successfully freed Active Stock structure array
+[2024-06-13 16:16:43] (MAIN) Successfully freed all structure arrays
+[2024-06-13 16:16:43] (MAIN) Successfully stopped the Application
+[2024-06-13 16:16:43] ---------------------------------------------------
+
+
+
+
+[2024-06-13 16:17:50] ---------------------------------------------------
+[2024-06-13 16:17:50] (MAIN) Starting Application
+[2024-06-13 16:17:50] Successfully prepared files for reading
+[2024-06-13 16:17:50] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:17:50] Successfully loaded the json files, closing files
+[2024-06-13 16:17:50] Successfully closed temporary files
+[2024-06-13 16:17:50] Successfully opened json objects
+[2024-06-13 16:17:50] Successfully read the date
+[2024-06-13 16:17:50] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:17:50] Successfully loaded the News sentiments structure array
+[2024-06-13 16:17:50] Successfully freed the json objects
+[2024-06-13 16:17:50] (MAIN) Successfully parsed json file
+[2024-06-13 16:17:50] (MAIN) Checking the database's existence
+[2024-06-13 16:17:50] Database found, opening database
+[2024-06-13 16:17:50] Successfully opened database
+[2024-06-13 16:17:50] (MAIN) Successfully created SQL database
+[2024-06-13 16:17:50] Checking if the table is empty
+[2024-06-13 16:17:50] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:17:50] Table is empty, checking if app was already opened today
+[2024-06-13 16:17:50] App was already opened today, no need to update database
+[2024-06-13 16:17:50] Database closed successfully
+[2024-06-13 16:17:50] (MAIN) Successfully read SQL database
+[2024-06-13 16:17:50] (MAIN) Starting Application GUI
+[2024-06-13 16:17:50] Successfully created Main App Window
+[2024-06-13 16:17:50] Successfully concatenated all information into a QString
+[2024-06-13 16:17:50] Successfully created the labels and scroll areas
+[2024-06-13 16:17:51] Successfully added the scroll areas to the layout
+[2024-06-13 16:17:51] Successfully started Application GUI
+[2024-06-13 16:18:11] (MAIN) Stopping Application GUI
+[2024-06-13 16:18:11] (MAIN) Successfully closed application GUI
+[2024-06-13 16:18:11] Successfully freed News structure array
+[2024-06-13 16:18:11] Successfully freed Active Stock structure array
+[2024-06-13 16:18:11] (MAIN) Successfully freed all structure arrays
+[2024-06-13 16:18:11] (MAIN) Successfully stopped the Application
+[2024-06-13 16:18:11] ---------------------------------------------------
+
+
+
+
+[2024-06-13 16:18:25] ---------------------------------------------------
+[2024-06-13 16:18:25] (MAIN) Starting Application
+[2024-06-13 16:18:25] Successfully prepared files for reading
+[2024-06-13 16:18:25] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:18:25] Successfully loaded the json files, closing files
+[2024-06-13 16:18:25] Successfully closed temporary files
+[2024-06-13 16:18:25] Successfully opened json objects
+[2024-06-13 16:18:25] Successfully read the date
+[2024-06-13 16:18:25] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:18:25] Successfully loaded the News sentiments structure array
+[2024-06-13 16:18:25] Successfully freed the json objects
+[2024-06-13 16:18:25] (MAIN) Successfully parsed json file
+[2024-06-13 16:18:25] (MAIN) Checking the database's existence
+[2024-06-13 16:18:25] Database found, opening database
+[2024-06-13 16:18:25] Successfully opened database
+[2024-06-13 16:18:25] (MAIN) Successfully created SQL database
+[2024-06-13 16:18:25] Checking if the table is empty
+[2024-06-13 16:18:25] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:18:25] Table is empty, checking if app was already opened today
+[2024-06-13 16:18:25] App was already opened today, no need to update database
+[2024-06-13 16:18:25] Database closed successfully
+[2024-06-13 16:18:25] (MAIN) Successfully read SQL database
+[2024-06-13 16:18:25] (MAIN) Starting Application GUI
+[2024-06-13 16:18:25] Successfully created Main App Window
+[2024-06-13 16:18:25] Successfully concatenated all information into a QString
+[2024-06-13 16:18:25] Successfully created the labels and scroll areas
+[2024-06-13 16:18:25] Successfully added the scroll areas to the layout
+[2024-06-13 16:18:25] Successfully started Application GUI
+[2024-06-13 16:19:09] (MAIN) Stopping Application GUI
+[2024-06-13 16:19:09] (MAIN) Successfully closed application GUI
+[2024-06-13 16:19:09] Successfully freed News structure array
+[2024-06-13 16:19:09] Successfully freed Active Stock structure array
+[2024-06-13 16:19:09] (MAIN) Successfully freed all structure arrays
+[2024-06-13 16:19:09] (MAIN) Successfully stopped the Application
+[2024-06-13 16:19:09] ---------------------------------------------------
+
+
+
+
+[2024-06-13 16:19:12] ---------------------------------------------------
+[2024-06-13 16:19:12] (MAIN) Starting Application
+[2024-06-13 16:19:12] Successfully prepared files for reading
+[2024-06-13 16:19:12] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:19:12] Successfully loaded the json files, closing files
+[2024-06-13 16:19:12] Successfully closed temporary files
+[2024-06-13 16:19:12] Successfully opened json objects
+[2024-06-13 16:19:12] Successfully read the date
+[2024-06-13 16:19:12] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:19:12] Successfully loaded the News sentiments structure array
+[2024-06-13 16:19:12] Successfully freed the json objects
+[2024-06-13 16:19:12] (MAIN) Successfully parsed json file
+[2024-06-13 16:19:12] (MAIN) Checking the database's existence
+[2024-06-13 16:19:12] Database found, opening database
+[2024-06-13 16:19:12] Successfully opened database
+[2024-06-13 16:19:12] (MAIN) Successfully created SQL database
+[2024-06-13 16:19:12] Checking if the table is empty
+[2024-06-13 16:19:12] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:19:12] Table is empty, checking if app was already opened today
+[2024-06-13 16:19:12] App was already opened today, no need to update database
+[2024-06-13 16:19:12] Database closed successfully
+[2024-06-13 16:19:12] (MAIN) Successfully read SQL database
+[2024-06-13 16:19:12] (MAIN) Starting Application GUI
+[2024-06-13 16:19:12] Successfully created Main App Window
+[2024-06-13 16:19:12] Successfully concatenated all information into a QString
+[2024-06-13 16:19:12] Successfully created the labels and scroll areas
+[2024-06-13 16:19:12] Successfully added the scroll areas to the layout
+[2024-06-13 16:19:12] Successfully started Application GUI
+[2024-06-13 16:19:30] (MAIN) Stopping Application GUI
+[2024-06-13 16:19:30] (MAIN) Successfully closed application GUI
+[2024-06-13 16:19:30] Successfully freed News structure array
+[2024-06-13 16:19:30] Successfully freed Active Stock structure array
+[2024-06-13 16:19:30] (MAIN) Successfully freed all structure arrays
+[2024-06-13 16:19:30] (MAIN) Successfully stopped the Application
+[2024-06-13 16:19:30] ---------------------------------------------------
+
+
+
+
+[2024-06-13 16:22:50] ---------------------------------------------------
+[2024-06-13 16:22:50] (MAIN) Starting Application
+[2024-06-13 16:22:50] Successfully prepared files for reading
+[2024-06-13 16:22:50] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:22:50] Successfully loaded the json files, closing files
+[2024-06-13 16:22:50] Successfully closed temporary files
+[2024-06-13 16:22:50] Successfully opened json objects
+[2024-06-13 16:22:50] Successfully read the date
+[2024-06-13 16:22:50] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:22:50] Successfully loaded the News sentiments structure array
+[2024-06-13 16:22:50] Successfully freed the json objects
+[2024-06-13 16:22:50] (MAIN) Successfully parsed json file
+[2024-06-13 16:22:50] (MAIN) Checking the database's existence
+[2024-06-13 16:22:50] Database found, opening database
+[2024-06-13 16:22:50] Successfully opened database
+[2024-06-13 16:22:50] (MAIN) Successfully created SQL database
+[2024-06-13 16:22:50] Checking if the table is empty
+[2024-06-13 16:22:50] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:22:50] Table is empty, checking if app was already opened today
+[2024-06-13 16:22:50] App was already opened today, no need to update database
+[2024-06-13 16:22:50] Database closed successfully
+[2024-06-13 16:22:50] (MAIN) Successfully read SQL database
+[2024-06-13 16:22:50] (MAIN) Starting Application GUI
+[2024-06-13 16:22:56] Successfully created Main App Window
+[2024-06-13 16:23:02] Successfully concatenated all information into a QString
+[2024-06-13 16:23:02] Successfully created the labels and scroll areas
+[2024-06-13 16:23:02] Successfully added the scroll areas to the layout
+[2024-06-13 16:23:02] Successfully started Application GUI
+[2024-06-13 16:23:05] (MAIN) Stopping Application GUI
+[2024-06-13 16:23:05] (MAIN) Successfully closed application GUI
+[2024-06-13 16:23:05] Successfully freed News structure array
+[2024-06-13 16:23:05] Successfully freed Active Stock structure array
+[2024-06-13 16:23:05] (MAIN) Successfully freed all structure arrays
+[2024-06-13 16:23:05] (MAIN) Successfully stopped the Application
+[2024-06-13 16:23:05] ---------------------------------------------------
+
+
+
+
+[2024-06-13 16:23:07] ---------------------------------------------------
+[2024-06-13 16:23:07] (MAIN) Starting Application
+[2024-06-13 16:23:07] Successfully prepared files for reading
+[2024-06-13 16:23:07] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:23:07] Successfully loaded the json files, closing files
+[2024-06-13 16:23:07] Successfully closed temporary files
+[2024-06-13 16:23:07] Successfully opened json objects
+[2024-06-13 16:23:07] Successfully read the date
+[2024-06-13 16:23:07] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:23:07] Successfully loaded the News sentiments structure array
+[2024-06-13 16:23:07] Successfully freed the json objects
+[2024-06-13 16:23:07] (MAIN) Successfully parsed json file
+[2024-06-13 16:23:07] (MAIN) Checking the database's existence
+[2024-06-13 16:23:07] Database found, opening database
+[2024-06-13 16:23:07] Successfully opened database
+[2024-06-13 16:23:07] (MAIN) Successfully created SQL database
+[2024-06-13 16:23:07] Checking if the table is empty
+[2024-06-13 16:23:07] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:23:07] Table is empty, checking if app was already opened today
+[2024-06-13 16:23:07] App was already opened today, no need to update database
+[2024-06-13 16:23:07] Database closed successfully
+[2024-06-13 16:23:07] (MAIN) Successfully read SQL database
+[2024-06-13 16:23:07] (MAIN) Starting Application GUI
+[2024-06-13 16:23:11] Successfully created Main App Window
+[2024-06-13 16:23:11] Successfully concatenated all information into a QString
+[2024-06-13 16:23:11] Successfully created the labels and scroll areas
+[2024-06-13 16:23:11] Successfully added the scroll areas to the layout
+[2024-06-13 16:23:11] Successfully started Application GUI
+[2024-06-13 16:23:13] (MAIN) Stopping Application GUI
+[2024-06-13 16:23:13] (MAIN) Successfully closed application GUI
+[2024-06-13 16:23:13] Successfully freed News structure array
+[2024-06-13 16:23:13] Successfully freed Active Stock structure array
+[2024-06-13 16:23:13] (MAIN) Successfully freed all structure arrays
+[2024-06-13 16:23:13] (MAIN) Successfully stopped the Application
+[2024-06-13 16:23:13] ---------------------------------------------------
+
+
+
+
+[2024-06-13 16:23:15] ---------------------------------------------------
+[2024-06-13 16:23:15] (MAIN) Starting Application
+[2024-06-13 16:23:15] Successfully prepared files for reading
+[2024-06-13 16:23:15] (MAIN) Successfully fetched Stock Data
+[2024-06-13 16:23:15] Successfully loaded the json files, closing files
+[2024-06-13 16:23:15] Successfully closed temporary files
+[2024-06-13 16:23:15] Successfully opened json objects
+[2024-06-13 16:23:15] Successfully read the date
+[2024-06-13 16:23:15] Successfully loaded the Active Stocks structure array
+[2024-06-13 16:23:15] Successfully loaded the News sentiments structure array
+[2024-06-13 16:23:15] Successfully freed the json objects
+[2024-06-13 16:23:15] (MAIN) Successfully parsed json file
+[2024-06-13 16:23:15] (MAIN) Checking the database's existence
+[2024-06-13 16:23:15] Database found, opening database
+[2024-06-13 16:23:15] Successfully opened database
+[2024-06-13 16:23:15] (MAIN) Successfully created SQL database
+[2024-06-13 16:23:15] Checking if the table is empty
+[2024-06-13 16:23:15] Table is not empty, checking if the app was already opened today
+[2024-06-13 16:23:15] Table is empty, checking if app was already opened today
+[2024-06-13 16:23:15] App was already opened today, no need to update database
+[2024-06-13 16:23:15] Database closed successfully
+[2024-06-13 16:23:15] (MAIN) Successfully read SQL database
+[2024-06-13 16:23:15] (MAIN) Starting Application GUI
+[2024-06-13 16:23:20] Successfully created Main App Window
+[2024-06-13 16:23:20] Successfully concatenated all information into a QString
+[2024-06-13 16:23:20] Successfully created the labels and scroll areas
+[2024-06-13 16:23:20] Successfully added the scroll areas to the layout
+[2024-06-13 16:23:20] Successfully started Application GUI

@@ -299,29 +299,101 @@ interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/interface.cpp.s
 .PHONY : interface.cpp.s
 
-json_read_stocks.o: json_read_stocks.c.o
-.PHONY : json_read_stocks.o
+json.o: json.c.o
+.PHONY : json.o
 
 # target to build an object file
-json_read_stocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_read_stocks.c.o
-.PHONY : json_read_stocks.c.o
+json.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json.c.o
+.PHONY : json.c.o
 
-json_read_stocks.i: json_read_stocks.c.i
-.PHONY : json_read_stocks.i
+json.i: json.c.i
+.PHONY : json.i
 
 # target to preprocess a source file
-json_read_stocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_read_stocks.c.i
-.PHONY : json_read_stocks.c.i
+json.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json.c.i
+.PHONY : json.c.i
 
-json_read_stocks.s: json_read_stocks.c.s
-.PHONY : json_read_stocks.s
+json.s: json.c.s
+.PHONY : json.s
 
 # target to generate assembly for a file
-json_read_stocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_read_stocks.c.s
-.PHONY : json_read_stocks.c.s
+json.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json.c.s
+.PHONY : json.c.s
+
+json_parse_active.o: json_parse_active.c.o
+.PHONY : json_parse_active.o
+
+# target to build an object file
+json_parse_active.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_parse_active.c.o
+.PHONY : json_parse_active.c.o
+
+json_parse_active.i: json_parse_active.c.i
+.PHONY : json_parse_active.i
+
+# target to preprocess a source file
+json_parse_active.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_parse_active.c.i
+.PHONY : json_parse_active.c.i
+
+json_parse_active.s: json_parse_active.c.s
+.PHONY : json_parse_active.s
+
+# target to generate assembly for a file
+json_parse_active.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_parse_active.c.s
+.PHONY : json_parse_active.c.s
+
+json_parse_sentiment.o: json_parse_sentiment.c.o
+.PHONY : json_parse_sentiment.o
+
+# target to build an object file
+json_parse_sentiment.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_parse_sentiment.c.o
+.PHONY : json_parse_sentiment.c.o
+
+json_parse_sentiment.i: json_parse_sentiment.c.i
+.PHONY : json_parse_sentiment.i
+
+# target to preprocess a source file
+json_parse_sentiment.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_parse_sentiment.c.i
+.PHONY : json_parse_sentiment.c.i
+
+json_parse_sentiment.s: json_parse_sentiment.c.s
+.PHONY : json_parse_sentiment.s
+
+# target to generate assembly for a file
+json_parse_sentiment.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/json_parse_sentiment.c.s
+.PHONY : json_parse_sentiment.c.s
+
+logger.o: logger.c.o
+.PHONY : logger.o
+
+# target to build an object file
+logger.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.o
+.PHONY : logger.c.o
+
+logger.i: logger.c.i
+.PHONY : logger.i
+
+# target to preprocess a source file
+logger.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.i
+.PHONY : logger.c.i
+
+logger.s: logger.c.s
+.PHONY : logger.s
+
+# target to generate assembly for a file
+logger.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.s
+.PHONY : logger.c.s
 
 logger.o: logger.c.o
 .PHONY : logger.o
@@ -400,9 +472,15 @@ help:
 	@echo "... interface.o"
 	@echo "... interface.i"
 	@echo "... interface.s"
-	@echo "... json_read_stocks.o"
-	@echo "... json_read_stocks.i"
-	@echo "... json_read_stocks.s"
+	@echo "... json.o"
+	@echo "... json.i"
+	@echo "... json.s"
+	@echo "... json_parse_active.o"
+	@echo "... json_parse_active.i"
+	@echo "... json_parse_active.s"
+	@echo "... json_parse_sentiment.o"
+	@echo "... json_parse_sentiment.i"
+	@echo "... json_parse_sentiment.s"
 	@echo "... logger.o"
 	@echo "... logger.i"
 	@echo "... logger.s"

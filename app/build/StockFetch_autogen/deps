@@ -8,7 +8,9 @@ StockFetch_autogen/timestamp: \
 	/Users/matti/Documents/GitHub/Stock_Fetch/app/build/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	/Users/matti/Documents/GitHub/Stock_Fetch/app/free.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/app/interface.cpp \
-	/Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/json.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/json_parse_active.c \
+	/Users/matti/Documents/GitHub/Stock_Fetch/app/json_parse_sentiment.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/app/logger.c \
 	/Users/matti/Documents/GitHub/Stock_Fetch/app/order.cpp \
 	/opt/local/lib/cmake/Qt6/Qt6Config.cmake \

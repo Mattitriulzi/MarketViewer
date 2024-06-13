@@ -1,3 +1,2629 @@
 {
-    "Information": "Thank you for using Alpha Vantage! Our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+    "items": "50",
+    "sentiment_score_definition": "x <= -0.35: Bearish; -0.35 < x <= -0.15: Somewhat-Bearish; -0.15 < x < 0.15: Neutral; 0.15 <= x < 0.35: Somewhat_Bullish; x >= 0.35: Bullish",
+    "relevance_score_definition": "0 < x <= 1, with a higher score indicating higher relevance.",
+    "feed": [
+        {
+            "title": "2 Bank Stocks To Watch Before June 2024",
+            "url": "https://stockmarket.com/featured/2-bank-stocks-to-watch-before-june-2024-2024-05-28",
+            "time_published": "20240528T133032",
+            "authors": [
+                "Jonathan Phillip"
+            ],
+            "summary": "The financial sector is a fundamental component of the stock market, with bank stocks playing a significant role. These stocks represent shares in financial institutions like banks that provide various services, including loans, deposits, asset management, and investment services.",
+            "banner_image": "https://u3j7m9h7.rocketcdn.me/wp-content/uploads/2021/04/gs-stock.jpg",
+            "source": "StockMarket.com",
+            "category_within_source": "n/a",
+            "source_domain": "stockmarket.com",
+            "topics": [
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.796627"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.218167,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "GS",
+                    "relevance_score": "0.364987",
+                    "ticker_sentiment_score": "0.307629",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Kiplinger Readers' Choice Awards 2024: Wealth Managers",
+            "url": "https://www.kiplinger.com/personal-finance/kiplinger-readers-choice-awards-2024-wealth-managers",
+            "time_published": "20240528T130639",
+            "authors": [
+                "Emma Patch",
+                "Ellen Kennedy",
+                "Lisa Gerstner"
+            ],
+            "summary": "The Kiplinger Readers' Choice Awards aim to recognize and celebrate the best products and services in the personal finance arena. We asked you, our Kiplinger community, to help us name the products and services you think have delivered excellent value in the past year.",
+            "banner_image": "https://cdn.mos.cms.futurecdn.net/NEbDT4Nz9MqAHb34Bu7VJ8-415-80.jpg",
+            "source": "Kiplinger",
+            "category_within_source": "n/a",
+            "source_domain": "www.kiplinger.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.94762"
+                }
+            ],
+            "overall_sentiment_score": 0.506611,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BAC",
+                    "relevance_score": "0.104002",
+                    "ticker_sentiment_score": "0.259597",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.052112",
+                    "ticker_sentiment_score": "0.147544",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Patria Investments Has Fulfilled the Requirements Necessary to Complete the Transfer of Credit Suisse's Brazilian Real Estate Business Following Approval by REIT Shareholders, Positioning Patria as One of the Leading Real Estate Managers in Brazil and Latin America - Patria Investments  ( NASDAQ:PAX ) ",
+            "url": "https://www.benzinga.com/pressreleases/24/05/g39037944/patria-investments-has-fulfilled-the-requirements-necessary-to-complete-the-transfer-of-credit-sui",
+            "time_published": "20240528T130000",
+            "authors": [
+                "Globe Newswire"
+            ],
+            "summary": "GRAND CAYMAN, Cayman Islands, May 28, 2024 ( GLOBE NEWSWIRE ) -- Patria Investments Limited ( \"Patria\" ) PAX, a global alternative asset manager and leader in Latin America, announced that it has received all necessary REIT shareholders approvals for the transfer of management of Credit Suisse's ...",
+            "banner_image": "https://www.benzinga.com/next-assets/images/schema-image-default.png",
+            "source": "Benzinga",
+            "category_within_source": "News",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "IPO",
+                    "relevance_score": "0.310843"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.503496"
+                }
+            ],
+            "overall_sentiment_score": 0.315344,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CIB",
+                    "relevance_score": "0.065685",
+                    "ticker_sentiment_score": "0.056059",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "PAX",
+                    "relevance_score": "0.195287",
+                    "ticker_sentiment_score": "0.234437",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Scotiabank Beats The Odds: Solid Revenue Growth & Capital Strength Highlight Q2 Earnings - Bank of Nova Scotia  ( NYSE:BNS ) ",
+            "url": "https://www.benzinga.com/news/earnings/24/05/39037878/scotiabank-beats-the-odds-solid-revenue-growth-capital-strength-highlight-q2-earnings",
+            "time_published": "20240528T125603",
+            "authors": [
+                "Akanksha Bakshi"
+            ],
+            "summary": "Bank of Nova Scotia BNS reported second-quarter fiscal 2024 revenue growth of 5.5% year-over-year to C$8.347 billion, beating the consensus of C$8.256 billion. For the quarter, net interest income was C$4.694 billion, and non-interest income was $3.653 billion.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/credit-union-advantages-over-banks-1.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "News",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.993856"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.905476"
+                }
+            ],
+            "overall_sentiment_score": 0.319428,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BNS",
+                    "relevance_score": "0.457977",
+                    "ticker_sentiment_score": "0.430686",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "U.S. crude oil gains more than 1% as market looks to OPEC+ meeting on production levels",
+            "url": "https://www.cnbc.com/2024/05/28/crude-oil-prices-today.html",
+            "time_published": "20240528T124153",
+            "authors": [
+                "Spencer Kimball"
+            ],
+            "summary": "Oil market analysts are broadly expecting OPEC+ to maintain its current production levels.",
+            "banner_image": "https://image.cnbcfm.com/api/v1/image/107415375-1715789968083-gettyimages-2111032784-01-l1002150-_a3qq5fqs.jpeg?v=1716899094&w=1920&h=1080",
+            "source": "CNBC",
+            "category_within_source": "Top News",
+            "source_domain": "www.cnbc.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.108179"
+                }
+            ],
+            "overall_sentiment_score": 0.050044,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.09989",
+                    "ticker_sentiment_score": "0.064871",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Is the Options Market Predicting a Spike in Arch Capital  ( ACGL )  Stock?",
+            "url": "https://www.zacks.com/stock/news/2279860/is-the-options-market-predicting-a-spike-in-arch-capital-acgl-stock",
+            "time_published": "20240528T123400",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Investors need to pay close attention to Arch Capital (ACGL) stock based on the movements in the options market lately.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/65/56840.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.310843"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.214378"
+                }
+            ],
+            "overall_sentiment_score": 0.05733,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "ACGL",
+                    "relevance_score": "0.567746",
+                    "ticker_sentiment_score": "0.082473",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Barclays Stock Is Up 38% YTD, What's Next?",
+            "url": "https://www.forbes.com/sites/greatspeculations/2024/05/28/barclays-stock-is-up-38-ytd-whats-next/",
+            "time_published": "20240528T123032",
+            "authors": [
+                "Trefis Team"
+            ],
+            "summary": "Barclays' stock ( NYSE: BCS ) has gained 38% YTD, as compared to the 11% rise in the S&P500 over the same period. In comparison, Barclays' peer Deutsche Bank ( NYSE: DB ) has seen its stock rise 24% over the same period.",
+            "banner_image": "https://imageio.forbes.com/specials-images/imageserve/6655a6bb338778a851685784/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+            "source": "Forbes",
+            "category_within_source": "n/a",
+            "source_domain": "www.forbes.com",
+            "topics": [
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.108179"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.503496"
+                }
+            ],
+            "overall_sentiment_score": 0.149143,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BCS",
+                    "relevance_score": "0.812352",
+                    "ticker_sentiment_score": "0.250274",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Eastern Bankshares, Inc. And Cambridge Bancorp Announce Regulatory Approvals Received To Merge",
+            "url": "https://www.prnewswire.com/news-releases/eastern-bankshares-inc-and-cambridge-bancorp-announce-regulatory-approvals-received-to-merge-302156417.html",
+            "time_published": "20240528T123000",
+            "authors": [
+                "Cambridge Bancorp"
+            ],
+            "summary": "BOSTON, May 28, 2024 /PRNewswire/ -- Eastern Bankshares, Inc. ( \"Eastern\" ) ( NASDAQ Global Select Market: EBC ) , the stock holding company for Eastern Bank, and Cambridge Bancorp ( NASDAQ: CATC ) ( \"Cambridge\" ) , the parent company of Cambridge Trust Company, today jointly announced they have ...",
+            "banner_image": "https://mma.prnewswire.com/media/2422993/cambridgebancorp_easternbankshares_logos_Logo.jpg?p=facebook",
+            "source": "PR Newswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.prnewswire.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.839681"
+                }
+            ],
+            "overall_sentiment_score": 0.249958,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CATC",
+                    "relevance_score": "0.124593",
+                    "ticker_sentiment_score": "0.155707",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "EBC",
+                    "relevance_score": "0.165598",
+                    "ticker_sentiment_score": "0.173024",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Dynata Secures DIP Financing After Successful Prepackaged Chapter 11 First Day Hearing",
+            "url": "https://www.prnewswire.com/news-releases/dynata-secures-dip-financing-after-successful-prepackaged-chapter-11-first-day-hearing-302156146.html",
+            "time_published": "20240528T123000",
+            "authors": [
+                "Dynata"
+            ],
+            "summary": "• in New Money Financing Committed by New Equity Owners, of which recently was funded",
+            "banner_image": "https://mma.prnewswire.com/media/808175/Dynata_Logo.jpg?p=facebook",
+            "source": "PR Newswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.prnewswire.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.316726"
+                }
+            ],
+            "overall_sentiment_score": 0.36227,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "HLI",
+                    "relevance_score": "0.080188",
+                    "ticker_sentiment_score": "0.153846",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "PJT",
+                    "relevance_score": "0.080188",
+                    "ticker_sentiment_score": "0.116008",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Implied Volatility Surging for Carter Bankshares  ( CARE )  Stock Options",
+            "url": "https://www.zacks.com/stock/news/2279850/implied-volatility-surging-for-carter-bankshares-care-stock-options",
+            "time_published": "20240528T123000",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Investors need to pay close attention to Carter Bankshares (CARE) stock based on the movements in the options market lately.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/00/448.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.214378"
+                }
+            ],
+            "overall_sentiment_score": 0.057153,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CARE",
+                    "relevance_score": "0.60326",
+                    "ticker_sentiment_score": "0.085002",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Medallion Financial Corp. Set to Join Russell 3000® Index - Medallion Finl  ( NASDAQ:MFIN ) ",
+            "url": "https://www.benzinga.com/pressreleases/24/05/g39037120/medallion-financial-corp-set-to-join-russell-3000-index",
+            "time_published": "20240528T123000",
+            "authors": [
+                "Globe Newswire"
+            ],
+            "summary": "NEW YORK, May 28, 2024 ( GLOBE NEWSWIRE ) -- Medallion Financial Corp.",
+            "banner_image": "https://www.benzinga.com/next-assets/images/schema-image-default.png",
+            "source": "Benzinga",
+            "category_within_source": "Markets",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.999612"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.451494"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.224837,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MBNKP",
+                    "relevance_score": "0.043499",
+                    "ticker_sentiment_score": "0.095991",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MFIN",
+                    "relevance_score": "0.297404",
+                    "ticker_sentiment_score": "0.152636",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "LDNXF",
+                    "relevance_score": "0.043499",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "5 Reasons to Buy Provident Financial  ( PFS )  Stock Right Now",
+            "url": "https://www.zacks.com/stock/news/2279927/5-reasons-to-buy-provident-financial-pfs-stock-right-now",
+            "time_published": "20240528T120800",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Strategic acquisition of Lakeland Bancorp, high rates, modest loan demand and robust balance sheet will keep supporting Provident Financial (PFS). This makes PFS stock an attractive pick.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/34/40658.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.99915"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.990999"
+                }
+            ],
+            "overall_sentiment_score": 0.332471,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "FFBC",
+                    "relevance_score": "0.17715",
+                    "ticker_sentiment_score": "0.229276",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "PFS",
+                    "relevance_score": "0.290952",
+                    "ticker_sentiment_score": "0.378934",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "PROV",
+                    "relevance_score": "0.17715",
+                    "ticker_sentiment_score": "0.221876",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "LBAI",
+                    "relevance_score": "0.17715",
+                    "ticker_sentiment_score": "0.312697",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "FNLC",
+                    "relevance_score": "0.059488",
+                    "ticker_sentiment_score": "0.195232",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "StepStone Group to Present at the Morgan Stanley US Financials, Payments & CRE Conference - StepStone Group  ( NASDAQ:STEP ) ",
+            "url": "https://www.benzinga.com/pressreleases/24/05/g39036496/stepstone-group-to-present-at-the-morgan-stanley-us-financials-payments-cre-conference",
+            "time_published": "20240528T120500",
+            "authors": [
+                "Globe Newswire"
+            ],
+            "summary": "NEW YORK, May 28, 2024 ( GLOBE NEWSWIRE ) -- StepStone Group Inc.",
+            "banner_image": "https://www.benzinga.com/next-assets/images/schema-image-default.png",
+            "source": "Benzinga",
+            "category_within_source": "News",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.214378"
+                }
+            ],
+            "overall_sentiment_score": 0.316827,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.15347",
+                    "ticker_sentiment_score": "0.042267",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "STEP",
+                    "relevance_score": "0.824531",
+                    "ticker_sentiment_score": "0.518672",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "StepStone Group to Present at the Morgan Stanley US Financials, Payments & CRE Conference",
+            "url": "https://www.globenewswire.com/news-release/2024/05/28/2889002/0/en/StepStone-Group-to-Present-at-the-Morgan-Stanley-US-Financials-Payments-CRE-Conference.html",
+            "time_published": "20240528T120500",
+            "authors": [
+                "StepStone Group Inc"
+            ],
+            "summary": "NEW YORK, May 28, 2024 ( GLOBE NEWSWIRE ) -- StepStone Group Inc. ( Nasdaq: STEP ) today announced that Scott Hart, CEO, and Mike McCabe, Head of Strategy, are scheduled to present at the Morgan Stanley US Financials, Payments and CRE Conference on Tuesday, June 11, 2024, at 9:30 am ET. A live ...",
+            "banner_image": "https://ml.globenewswire.com/Resource/Download/eaaa85d7-3cef-4079-8b40-91ec6878e34e",
+            "source": "GlobeNewswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.globenewswire.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.161647"
+                }
+            ],
+            "overall_sentiment_score": 0.32672,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.192694",
+                    "ticker_sentiment_score": "0.050964",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "STEP",
+                    "relevance_score": "0.912237",
+                    "ticker_sentiment_score": "0.539489",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "3 Magnificent Mutual Funds to Maximize Your Retirement Portfolio",
+            "url": "https://www.zacks.com/stock/news/2279838/3-magnificent-mutual-funds-to-maximize-your-retirement-portfolio",
+            "time_published": "20240528T120005",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Take advantage of these top-ranked, best-performing and well-managed mutual funds to maximize your retirement portfolio returns.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/default_article_images/default289.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.495866"
+                }
+            ],
+            "overall_sentiment_score": 0.48963,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.115787",
+                    "ticker_sentiment_score": "0.33916",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "3 Great Mutual Fund Picks for Your Retirement",
+            "url": "https://www.zacks.com/stock/news/2279840/3-great-mutual-fund-picks-for-your-retirement",
+            "time_published": "20240528T120004",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Adding these three top-ranked, best-performing, and well-managed mutual funds to your retirement portfolio could maximize your returns.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/default_article_images/default112.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.839681"
+                }
+            ],
+            "overall_sentiment_score": 0.433782,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "IVZ",
+                    "relevance_score": "0.12165",
+                    "ticker_sentiment_score": "0.24723",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Make the Most of Your Retirement with These Top-Ranked Mutual Funds",
+            "url": "https://www.zacks.com/stock/news/2279839/make-the-most-of-your-retirement-with-these-top-ranked-mutual-funds",
+            "time_published": "20240528T120004",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "These three top-ranked, best-performing and well-managed funds can help you maximize your retirement portfolio returns.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/default_article_images/default44.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.433366,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "IVZ",
+                    "relevance_score": "0.109956",
+                    "ticker_sentiment_score": "0.236653",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "BayCom  ( BCML )  Rewards Investors With New Share Buyback Plan",
+            "url": "https://www.zacks.com/stock/news/2279916/baycom-bcml-rewards-investors-with-new-share-buyback-plan",
+            "time_published": "20240528T120000",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Under BayCom's (BCML) ninth stock repurchase program, the company is authorized to buy back of 0.56 million shares.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/9e/31205.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.955357"
+                }
+            ],
+            "overall_sentiment_score": 0.309417,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TRST",
+                    "relevance_score": "0.244518",
+                    "ticker_sentiment_score": "0.363529",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "BCML",
+                    "relevance_score": "0.593715",
+                    "ticker_sentiment_score": "0.290213",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Ascenda and Ramp partner to make spend management more rewarding for U.S. businesses - PR Newswire",
+            "url": "https://www.prnewswire.com/news-releases/ascenda-and-ramp-partner-to-make-spend-management-more-rewarding-for-us-businesses-302155128.html",
+            "time_published": "20240528T120000",
+            "authors": [],
+            "summary": "Ascenda and Ramp partner to make spend management more rewarding for U.S. businesses PR ...",
+            "banner_image": null,
+            "source": "PR Newswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.prnewswire.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.453332,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.082677",
+                    "ticker_sentiment_score": "0.370592",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "AFRAF",
+                    "relevance_score": "0.082677",
+                    "ticker_sentiment_score": "0.295977",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "F.N.B. Corporation Continues To Expand in Headquarters Building",
+            "url": "https://www.prnewswire.com/news-releases/fnb-corporation-continues-to-expand-in-headquarters-building-302155344.html",
+            "time_published": "20240528T120000",
+            "authors": [
+                "F.N.B. Corporation"
+            ],
+            "summary": "FNB's investment in its new headquarters is an extension of its significant commitment to western Pennsylvania, where the Company was founded more than 160 years ago. Today, FNB has nearly 2,000 employees spanning the region.",
+            "banner_image": "https://mma.prnewswire.com/media/2421741/FNB_Financial_Center_Lobby.jpg",
+            "source": "PR Newswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.prnewswire.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.94762"
+                }
+            ],
+            "overall_sentiment_score": 0.326552,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "FXNC",
+                    "relevance_score": "0.091335",
+                    "ticker_sentiment_score": "0.197251",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Hindalco Industries owned Novelis targets $12.6 bn valuation in US IPO",
+            "url": "https://www.business-standard.com/markets/ipo/hindalco-industries-owned-novelis-targets-12-6-bn-valuation-in-us-ipo-124052801511_1.html",
+            "time_published": "20240528T115012",
+            "authors": [
+                "Reuters"
+            ],
+            "summary": "Novelis, owned by Indian billionaire Kumar Mangalam Birla's Hindalco Industries, is targeting a valuation of up to $12.6 billion in its initial public offering in the United States, the aluminum products maker said on Tuesday. The U.S.",
+            "banner_image": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-05/02/full/1714669756-0508.jpg?im=FitAndFill=(826,465)",
+            "source": "Business Standard",
+            "category_within_source": "GoogleRSS",
+            "source_domain": "www.business-standard.com",
+            "topics": [
+                {
+                    "topic": "IPO",
+                    "relevance_score": "0.310843"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.495866"
+                }
+            ],
+            "overall_sentiment_score": 0.212883,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.306963",
+                    "ticker_sentiment_score": "0.524031",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.306963",
+                    "ticker_sentiment_score": "0.524031",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Tempted to try a no-buy year? Here are tips from people doing it",
+            "url": "https://apnews.com/article/nobuy-year-challenge-tips-482780187cad117632cedc7ad92e43bf",
+            "time_published": "20240528T113800",
+            "authors": [
+                "ADRIANA MORGA"
+            ],
+            "summary": "NEW YORK ( AP ) - The rules of a are self-imposed and simple: Make a list of the non-essential items you won't spend money on for a set period of time and stick to it. Easier said than done. Many people start such challenges at the beginning of the year and commit to keep going until the end of ...",
+            "banner_image": "https://dims.apnews.com/dims4/default/03b50b1/2147483647/strip/true/crop/5760x3837+0+2/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa0%2F92%2Fb7ca1346b4b4ec3d46e0a3989d8b%2F8261e6c4be1c42ef88329c0983ff571c",
+            "source": "Associated Press",
+            "category_within_source": "Markets",
+            "source_domain": "apnews.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.122404,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "SCHW",
+                    "relevance_score": "0.107978",
+                    "ticker_sentiment_score": "0.216463",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Numab Therapeutics Announces Johnson & Johnson to Acquire its Wholly-Owned Subsidiary Yellow Jersey Therapeutics Including Rights to NM26, a Bi-Specific Antibody for the Treatment of Atopic Dermatitis - Johnson & Johnson  ( NYSE:JNJ ) ",
+            "url": "https://www.benzinga.com/pressreleases/24/05/g39035788/numab-therapeutics-announces-johnson-johnson-to-acquire-its-wholly-owned-subsidiary-yellow-jersey-",
+            "time_published": "20240528T113500",
+            "authors": [
+                "Globe Newswire"
+            ],
+            "summary": "J&J will gain full rights to develop, manufacture and commercialize NM26 globally for the treatment of atopic dermatitis and follow-on indications Under the agreement terms, J&J will pay $1.25 billion to acquire Yellow Jersey Therapeutics, which holds NM26 rights",
+            "banner_image": "https://www.benzinga.com/next-assets/images/schema-image-default.png",
+            "source": "Benzinga",
+            "category_within_source": "Mergers",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Mergers & Acquisitions",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.199107,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TRMNF",
+                    "relevance_score": "0.069294",
+                    "ticker_sentiment_score": "-0.040115",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ESALF",
+                    "relevance_score": "0.069294",
+                    "ticker_sentiment_score": "0.206176",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.069294",
+                    "ticker_sentiment_score": "0.061195",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Inter&Co doubles down on SMEs through acquisition of Granito - Inter & Co  ( NASDAQ:INTR ) ",
+            "url": "https://www.benzinga.com/pressreleases/24/05/g39035755/inter-co-doubles-down-on-smes-through-acquisition-of-granito",
+            "time_published": "20240528T113317",
+            "authors": [
+                "Globe Newswire"
+            ],
+            "summary": "BELO HORIZONTE, Brazil, May 28, 2024 ( GLOBE NEWSWIRE ) -- Inter&Co Inc. INTR B3: INBR32 ) ) ) , announces that Banco Inter S.A. entered into a share purchase agreement to acquire the remaining 50 percent of Granito, a merchant acquirer that provides financial services to more than 100,000 SMEs ...",
+            "banner_image": "https://www.benzinga.com/next-assets/images/schema-image-default.png",
+            "source": "Benzinga",
+            "category_within_source": "Mergers",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.161647"
+                },
+                {
+                    "topic": "Mergers & Acquisitions",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.451367,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "INTR",
+                    "relevance_score": "0.663374",
+                    "ticker_sentiment_score": "0.636316",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Inter&Co doubles down on SMEs through acquisition of Granito",
+            "url": "https://www.globenewswire.com/news-release/2024/05/28/2888932/0/en/Inter-Co-doubles-down-on-SMEs-through-acquisition-of-Granito.html",
+            "time_published": "20240528T113300",
+            "authors": [
+                "Inc",
+                "Inter&Co"
+            ],
+            "summary": "BELO HORIZONTE, Brazil, May 28, 2024 ( GLOBE NEWSWIRE ) -- Inter&Co Inc. ( NASDAQ: INTR | B3: INBR32 ) , announces that Banco Inter S.A. entered into a share purchase agreement to acquire the remaining 50 percent of Granito, a merchant acquirer that provides financial services to more than ...",
+            "banner_image": "https://ml.globenewswire.com/Resource/Download/10a8aebd-1f0e-4156-8511-5ba1c8b00846",
+            "source": "GlobeNewswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.globenewswire.com",
+            "topics": [
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.108179"
+                },
+                {
+                    "topic": "Mergers & Acquisitions",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.461955,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "INTR",
+                    "relevance_score": "0.700945",
+                    "ticker_sentiment_score": "0.660965",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Leading Proxy Advisor ISS Recommends Medallion Shareholders Vote \"FOR\" Both of the Board's Director Nominees on the BLUE Proxy Card",
+            "url": "https://www.globenewswire.com/news-release/2024/05/28/2888928/0/en/Leading-Proxy-Advisor-ISS-Recommends-Medallion-Shareholders-Vote-FOR-Both-of-the-Board-s-Director-Nominees-on-the-BLUE-Proxy-Card.html",
+            "time_published": "20240528T113000",
+            "authors": [
+                "Medallion Financial Corp."
+            ],
+            "summary": "Also Recommends in Favor of Say-on-Pay Also Recommends in Favor of ...",
+            "banner_image": "https://ml.globenewswire.com/Resource/Download/ccb1d8b9-da4d-4901-b441-645ff1c7ad3f",
+            "source": "GlobeNewswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.globenewswire.com",
+            "topics": [
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.214378"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.451494"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "1.0"
+                }
+            ],
+            "overall_sentiment_score": 0.18615,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MBNKP",
+                    "relevance_score": "0.03916",
+                    "ticker_sentiment_score": "0.104572",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MFIN",
+                    "relevance_score": "0.155702",
+                    "ticker_sentiment_score": "0.116791",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Kiplinger Readers' Choice Awards 2024: Cash Back Credit Cards",
+            "url": "https://www.kiplinger.com/personal-finance/kiplinger-readers-choice-awards-2024-cash-back-credit-cards",
+            "time_published": "20240528T135214",
+            "authors": [
+                "Emma Patch",
+                "Ellen Kennedy",
+                "Lisa Gerstner"
+            ],
+            "summary": "The Kiplinger Readers' Choice Awards aim to recognize and celebrate the best products and services in the personal finance arena. We asked you, our Kiplinger community, to help us name the products and services you think have delivered excellent value in the past year.",
+            "banner_image": "https://cdn.mos.cms.futurecdn.net/FjwGDmVLPkuxaaoPbFXMs9-415-80.jpg",
+            "source": "Kiplinger",
+            "category_within_source": "n/a",
+            "source_domain": "www.kiplinger.com",
+            "topics": [
+                {
+                    "topic": "Retail & Wholesale",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.437735,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.054983",
+                    "ticker_sentiment_score": "0.057847",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "COST",
+                    "relevance_score": "0.163909",
+                    "ticker_sentiment_score": "0.104545",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Decoding Dell Technologies's Options Activity: What's the Big Picture? - Dell Technologies  ( NYSE:DELL ) ",
+            "url": "https://www.benzinga.com/insights/options/24/05/39039398/decoding-dell-technologiess-options-activity-whats-the-big-picture",
+            "time_published": "20240528T134637",
+            "authors": [
+                "Benzinga Insights"
+            ],
+            "summary": "Financial giants have made a conspicuous bearish move on Dell Technologies. Our analysis of options history for Dell Technologies DELL revealed 28 unusual trades. Delving into the details, we found 17% of traders were bullish, while 60% showed bearish tendencies.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2023/movers_image_0.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Markets",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.316726"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.231951,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BCS",
+                    "relevance_score": "0.081276",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.081276",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "DELL",
+                    "relevance_score": "0.779232",
+                    "ticker_sentiment_score": "0.283757",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.081276",
+                    "ticker_sentiment_score": "-0.137725",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "First Solar Options Trading: A Deep Dive into Market Sentiment - First Solar  ( NASDAQ:FSLR ) ",
+            "url": "https://www.benzinga.com/insights/options/24/05/39039396/first-solar-options-trading-a-deep-dive-into-market-sentiment",
+            "time_published": "20240528T134632",
+            "authors": [
+                "Benzinga Insights"
+            ],
+            "summary": "High-rolling investors have positioned themselves bearish on First Solar FSLR, and it's important for retail traders to take note. \\This activity came to our attention today through Benzinga's tracking of publicly available options data.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2023/movers_image_0.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Markets",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.413559"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.310843"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.113661,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "FSLR",
+                    "relevance_score": "0.828619",
+                    "ticker_sentiment_score": "0.097426",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "BCS",
+                    "relevance_score": "0.072655",
+                    "ticker_sentiment_score": "-0.116849",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GS",
+                    "relevance_score": "0.072655",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.072655",
+                    "ticker_sentiment_score": "-0.106752",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Kiplinger Readers' Choice Awards 2024: Airline Credit Card Rewards Programs",
+            "url": "https://www.kiplinger.com/personal-finance/kiplinger-readers-choice-awards-2024-airline-credit-card-rewards-programs",
+            "time_published": "20240528T134531",
+            "authors": [
+                "Emma Patch",
+                "Ellen Kennedy",
+                "Lisa Gerstner"
+            ],
+            "summary": "The Kiplinger Readers' Choice Awards aim to recognize and celebrate the best products and services in the personal finance arena. We asked you, our Kiplinger community, to help us name the products and services you think have delivered excellent value in the past year.",
+            "banner_image": "https://cdn.mos.cms.futurecdn.net/83nczdSNc9fnZrZAS7GXNf-415-80.jpg",
+            "source": "Kiplinger",
+            "category_within_source": "n/a",
+            "source_domain": "www.kiplinger.com",
+            "topics": [
+                {
+                    "topic": "Energy & Transportation",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.40077,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.061315",
+                    "ticker_sentiment_score": "0.102011",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "BCS",
+                    "relevance_score": "0.061315",
+                    "ticker_sentiment_score": "0.050081",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "LUV",
+                    "relevance_score": "0.061315",
+                    "ticker_sentiment_score": "0.221459",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MA",
+                    "relevance_score": "0.122269",
+                    "ticker_sentiment_score": "0.058269",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "These 2 Stocks Are Outperforming the S&P 500, and Wall Street Thinks They Can Climb Even Higher",
+            "url": "https://www.fool.com/investing/2024/05/28/these-2-stocks-are-outperforming-the-sp-500-and-wa/",
+            "time_published": "20240528T133800",
+            "authors": [
+                "Scott Levine and Lee Samaha"
+            ],
+            "summary": "Can this airline and silver stock continue to beat the market as analysts expect them to?",
+            "banner_image": "https://g.foolcdn.com/editorial/images/778544/gettyimages-134059508.jpg",
+            "source": "Motley Fool",
+            "category_within_source": "n/a",
+            "source_domain": "www.fool.com",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.266143"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.891286"
+                },
+                {
+                    "topic": "Energy & Transportation",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.240113,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.050148",
+                    "ticker_sentiment_score": "0.297543",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "CM",
+                    "relevance_score": "0.050148",
+                    "ticker_sentiment_score": "0.102286",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "HL",
+                    "relevance_score": "0.294093",
+                    "ticker_sentiment_score": "0.210756",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "DAL",
+                    "relevance_score": "0.198628",
+                    "ticker_sentiment_score": "0.159475",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Kiplinger Readers' Choice Awards 2024: Travel Rewards Credit Cards",
+            "url": "https://www.kiplinger.com/personal-finance/kiplinger-readers-choice-awards-2024-travel-rewards-credit-cards",
+            "time_published": "20240528T133718",
+            "authors": [
+                "Lisa Gerstner",
+                "Ellen Kennedy",
+                "Emma Patch"
+            ],
+            "summary": "The Kiplinger Readers' Choice Awards aim to recognize and celebrate the best products and services in the personal finance arena. We asked you, our Kiplinger community, to help us name the products and services you think have delivered excellent value in the past year.",
+            "banner_image": "https://cdn.mos.cms.futurecdn.net/pUzNkTEQJzXg6LfKE4G5RU-415-80.jpg",
+            "source": "Kiplinger",
+            "category_within_source": "n/a",
+            "source_domain": "www.kiplinger.com",
+            "topics": [
+                {
+                    "topic": "Energy & Transportation",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.39853,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "LUV",
+                    "relevance_score": "0.036812",
+                    "ticker_sentiment_score": "0.14784",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.036812",
+                    "ticker_sentiment_score": "0.216206",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Netflix, IBM And A Big Bank On CNBC's 'Final Trades' - Netflix  ( NASDAQ:NFLX ) ",
+            "url": "https://www.benzinga.com/news/24/05/39038937/netflix-ibm-and-a-big-bank-on-cnbcs-final-trades",
+            "time_published": "20240528T132417",
+            "authors": [
+                "Avi Kapoor"
+            ],
+            "summary": "On CNBC's \"Halftime Report Final Trades,\" Stephen Weiss of Short Hills Capital Partners said Netflix, Inc. NFLX is killing it. Netflix, last week, released its biannual engagement report on Thursday, covering 99% of viewing on the platform from July to December 2023.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/Netflix-App.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Trading",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.214378"
+                }
+            ],
+            "overall_sentiment_score": 0.167192,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "NFLX",
+                    "relevance_score": "0.577527",
+                    "ticker_sentiment_score": "0.228566",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "IBM",
+                    "relevance_score": "0.478939",
+                    "ticker_sentiment_score": "0.328619",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.577527",
+                    "ticker_sentiment_score": "-0.058846",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Why Tuya Shares Are Moving During Tuesday's Session - Tuya  ( NYSE:TUYA ) ",
+            "url": "https://www.benzinga.com/news/24/05/39038653/why-tuya-shares-are-moving-during-tuesdays-session",
+            "time_published": "20240528T131143",
+            "authors": [
+                "Henry Khederian"
+            ],
+            "summary": "Tuya Inc TUYA shares are trading higher by 7% to $2.13 during Tuesday's session. The company announced that it joined the United Nations Global Compact ( UNGC ) . The company says this move highlights Tuya's commitment to its \"Ten Principles\" on human rights, labor, environment and ...",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/1.png?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "News",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.999186"
+                }
+            ],
+            "overall_sentiment_score": 0.301676,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TUYA",
+                    "relevance_score": "0.514619",
+                    "ticker_sentiment_score": "0.390386",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "BRK-A",
+                    "relevance_score": "0.110973",
+                    "ticker_sentiment_score": "0.185933",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "If You Invested $1000 In Apple When It Acquired Siri 14 Years Ago, Here's How Much You'd Have - Apple  ( NASDAQ:AAPL ) ",
+            "url": "https://www.benzinga.com/markets/equities/24/05/39036260/if-you-invested-1000-in-apple-when-it-acquired-siri-14-years-ago-heres-how-much-youd-have",
+            "time_published": "20240528T120025",
+            "authors": [
+                "Rounak Jain"
+            ],
+            "summary": "Apple Inc. AAPL truly kickstarted the personal voice assistant frenzy when it launched Siri with the iPhone 4s, forcing rivals like Alphabet Inc.'s Google and Samsung Electronics Co Ltd. to launch their own solutions. However, Apple acquired Siri more than a year before it integrated the voice ...",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/Apple-Siri.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Markets",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.977154"
+                },
+                {
+                    "topic": "Mergers & Acquisitions",
+                    "relevance_score": "0.161647"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.200012,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.078354",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "SSNLF",
+                    "relevance_score": "0.155954",
+                    "ticker_sentiment_score": "0.149089",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GOOG",
+                    "relevance_score": "0.232069",
+                    "ticker_sentiment_score": "0.132069",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AAPL",
+                    "relevance_score": "0.674691",
+                    "ticker_sentiment_score": "0.29917",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "IVZ",
+                    "relevance_score": "0.078354",
+                    "ticker_sentiment_score": "0.135034",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Belden  ( NYSE:BDC )  Downgraded by StockNews.com to Hold",
+            "url": "https://www.defenseworld.net/2024/05/28/belden-nysebdc-downgraded-by-stocknews-com-to-hold.html",
+            "time_published": "20240528T114757",
+            "authors": [
+                "Defense World Staff"
+            ],
+            "summary": "Belden ( NYSE:BDC - Get Free Report ) was downgraded by investment analysts at StockNews.com from a \"buy\" rating to a \"hold\" rating in a report released on Tuesday. BDC has been the topic of several other reports.",
+            "banner_image": "https://www.marketbeat.com/logos/belden-inc-logo-1200x675.jpg?v=20221117162800",
+            "source": "Stocknews.com",
+            "category_within_source": "n/a",
+            "source_domain": "www.defenseworld.net",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.999997"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.983783"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.269625,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BDC",
+                    "relevance_score": "0.838176",
+                    "ticker_sentiment_score": "0.445391",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "JHG",
+                    "relevance_score": "0.123526",
+                    "ticker_sentiment_score": "0.165937",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "TFC",
+                    "relevance_score": "0.061949",
+                    "ticker_sentiment_score": "0.053003",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "CAPFF",
+                    "relevance_score": "0.061949",
+                    "ticker_sentiment_score": "0.143176",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Is the Vanguard S&P 500 ETF Still a Buy? Here's What History Says and Why You Should Ignore It.",
+            "url": "https://www.fool.com/investing/2024/05/28/is-the-vanguard-sp-500-etf-still-a-buy-heres-what/",
+            "time_published": "20240528T114500",
+            "authors": [
+                "George Budwell"
+            ],
+            "summary": "U.S. large-cap stocks have continued to print fresh 52-week highs in 2024. Despite stretched fundamentals, investors may want to stay the course.",
+            "banner_image": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F778722%2Finnovation.jpg&op=resize&w=700",
+            "source": "Motley Fool",
+            "category_within_source": "n/a",
+            "source_domain": "www.fool.com",
+            "topics": [
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.5"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.5"
+                }
+            ],
+            "overall_sentiment_score": 0.167932,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "GS",
+                    "relevance_score": "0.056407",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.112532",
+                    "ticker_sentiment_score": "0.034006",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "New Study Reveals 90% of Organizations Experienced an Identity-Related Incident in the Last Year, 84% Reported a Direct Business Impact",
+            "url": "https://www.prnewswire.com/news-releases/new-study-reveals-90-of-organizations-experienced-an-identity-related-incident-in-the-last-year-84-reported-a-direct-business-impact-302156769.html",
+            "time_published": "20240528T132300",
+            "authors": [
+                "IDSA"
+            ],
+            "summary": "New Study Reveals 90% of Organizations Experienced an Identity-Related Incident in the Last Year, 84% Reported a ... PR ...",
+            "banner_image": "https://mma.prnewswire.com/media/2423357/IDSA_LOGO_2x_Logo.jpg?p=facebook",
+            "source": "PR Newswire",
+            "category_within_source": "n/a",
+            "source_domain": "www.prnewswire.com",
+            "topics": [
+                {
+                    "topic": "Real Estate & Construction",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.141218,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CLX",
+                    "relevance_score": "0.059636",
+                    "ticker_sentiment_score": "-0.16614",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "CZR",
+                    "relevance_score": "0.059636",
+                    "ticker_sentiment_score": "-0.16614",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "UNH",
+                    "relevance_score": "0.11894",
+                    "ticker_sentiment_score": "-0.02647",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "We're initiating a position in a turnaround stock and buying more of another name",
+            "url": "https://www.cnbc.com/2024/05/28/we-are-initiating-a-position-in-a-turnaround-stock-and-buying-more-of-another.html",
+            "time_published": "20240528T131241",
+            "authors": [
+                "Jeff Marks"
+            ],
+            "summary": "After a long stretch of disappointing quarters, this industrial manufacturer has turned the corner.",
+            "banner_image": "https://image.cnbcfm.com/api/v1/image/107180311-1674054896730-gettyimages-1246311433-MORGAN_STANLEY_EARNS.jpeg?v=1715787485&w=600&h=300&vtcrop=y",
+            "source": "CNBC",
+            "category_within_source": "Top News",
+            "source_domain": "www.cnbc.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.972756"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.999975"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.25373,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "DD",
+                    "relevance_score": "0.190167",
+                    "ticker_sentiment_score": "0.166502",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "DOV",
+                    "relevance_score": "0.425541",
+                    "ticker_sentiment_score": "0.302917",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.031992",
+                    "ticker_sentiment_score": "0.104636",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Wall Street's Most Accurate Analysts Say Hold These 3 Health Care Stocks With Over 4% Dividend Yields - Pfizer  ( NYSE:PFE ) ",
+            "url": "https://www.benzinga.com/news/24/05/39037894/wall-streets-most-accurate-analysts-say-hold-these-3-health-care-stocks-with-over-4-dividend-yields",
+            "time_published": "20240528T125632",
+            "authors": [
+                "Avi Kapoor"
+            ],
+            "summary": "During times of turbulence and uncertainty in the markets, even when markets are at all-time highs, many investors turn to dividend-yielding stocks. These are often companies that have high free cash flows and reward shareholders with a high dividend payout.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/Medical-Examination-And-Healthcare-Busin.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Trading",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Retail & Wholesale",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.266143"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.061584,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CVS",
+                    "relevance_score": "0.103778",
+                    "ticker_sentiment_score": "0.113922",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.205807",
+                    "ticker_sentiment_score": "-0.058345",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.103778",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "PFE",
+                    "relevance_score": "0.103778",
+                    "ticker_sentiment_score": "0.160491",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "BMY",
+                    "relevance_score": "0.103778",
+                    "ticker_sentiment_score": "-0.165189",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "SNY",
+                    "relevance_score": "0.205807",
+                    "ticker_sentiment_score": "-0.244169",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "AMD Grabs 33% of Server CPU Market and Prepares for Major Processor Launch: Report - Advanced Micro Devices  ( NASDAQ:AMD ) ",
+            "url": "https://www.benzinga.com/news/24/05/39037776/amd-grabs-33-of-server-cpu-market-and-prepares-for-major-processor-launch-report",
+            "time_published": "20240528T124828",
+            "authors": [
+                "Anusuya Lahiri"
+            ],
+            "summary": "Advanced Micro Devices, Inc AMD claims it holds a 33% share in the server CPU market as it prepares to launch its next-gen \"Turin\" processors and unveils a GPU roadmap following the MI300 product line, the Register reports.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/1119936-Raphael-02-0037-4K.png?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "News",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.918141"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.243328,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.191929",
+                    "ticker_sentiment_score": "0.282043",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.191929",
+                    "ticker_sentiment_score": "-0.029856",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AMD",
+                    "relevance_score": "0.725658",
+                    "ticker_sentiment_score": "0.312754",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.191929",
+                    "ticker_sentiment_score": "0.158857",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "ARM",
+                    "relevance_score": "0.191929",
+                    "ticker_sentiment_score": "0.003061",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "STM",
+                    "relevance_score": "0.191929",
+                    "ticker_sentiment_score": "0.158857",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "RYDAF",
+                    "relevance_score": "0.096671",
+                    "ticker_sentiment_score": "0.111697",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "3 Solid Mutual Funds to Ride on the Ongoing Tech Rally",
+            "url": "https://www.zacks.com/stock/news/2279872/3-solid-mutual-funds-to-ride-on-the-ongoing-tech-rally",
+            "time_published": "20240528T124800",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Funds like FELIX, JNGTX and FSPTX are likely to benefit from the ongoing tech rally.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/ad/591.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.538269"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.304543,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "JHG",
+                    "relevance_score": "0.105141",
+                    "ticker_sentiment_score": "0.230975",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.052685",
+                    "ticker_sentiment_score": "0.185666",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.208464",
+                    "ticker_sentiment_score": "0.235462",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "3 Brandes Mutual Funds for Attractive Returns",
+            "url": "https://www.zacks.com/stock/news/2279851/3-brandes-mutual-funds-for-attractive-returns",
+            "time_published": "20240528T123100",
+            "authors": [
+                "Zacks Equity Research"
+            ],
+            "summary": "Consider investing in Brandes mutual funds like BGEAX, BIEAX and BINCX for reliable returns.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/6a/353.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.999956"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.24387,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "RYCEF",
+                    "relevance_score": "0.13459",
+                    "ticker_sentiment_score": "0.060733",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.067536",
+                    "ticker_sentiment_score": "0.053103",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "UBS",
+                    "relevance_score": "0.067536",
+                    "ticker_sentiment_score": "0.053103",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "CGPZF",
+                    "relevance_score": "0.067536",
+                    "ticker_sentiment_score": "0.049093",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ERJ",
+                    "relevance_score": "0.067536",
+                    "ticker_sentiment_score": "0.049093",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "PXGYF",
+                    "relevance_score": "0.067536",
+                    "ticker_sentiment_score": "0.049093",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "TAK",
+                    "relevance_score": "0.067536",
+                    "ticker_sentiment_score": "0.050095",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "What I Learned From My Latest Investment Mistake",
+            "url": "https://www.fool.com/investing/2024/05/28/what-i-learned-from-my-latest-investment-mistake/",
+            "time_published": "20240528T122000",
+            "authors": [
+                "Reuben Gregg Brewer"
+            ],
+            "summary": "I sold a stock at a significant loss. Here are my big takeaways from yet another humbling investment experience.",
+            "banner_image": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F778526%2F22_01_26-a-person-looking-at-a-computer-screen-with-a-look-of-unpleasant-surprise-_gettyimages-1216968860.jpg&op=resize&w=700",
+            "source": "Motley Fool",
+            "category_within_source": "n/a",
+            "source_domain": "www.fool.com",
+            "topics": [
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.316726"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                }
+            ],
+            "overall_sentiment_score": 0.019653,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "PARA",
+                    "relevance_score": "0.082963",
+                    "ticker_sentiment_score": "-0.04966",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "BRK-A",
+                    "relevance_score": "0.082963",
+                    "ticker_sentiment_score": "-0.001034",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "LEG",
+                    "relevance_score": "0.5341",
+                    "ticker_sentiment_score": "-0.020381",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "3 Top ETF Areas of Last Week",
+            "url": "https://www.zacks.com/stock/news/2279836/3-top-etf-areas-of-last-week",
+            "time_published": "20240528T120000",
+            "authors": [
+                "Sanghamitra Saha"
+            ],
+            "summary": "U.S. stocks managed to reclaim ground by the end of a turbulent week, signaling a potential recovery.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/default_article_images/default6.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Blockchain",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.310843"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.998311"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.333333"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.158519"
+                }
+            ],
+            "overall_sentiment_score": 0.134507,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.070935",
+                    "ticker_sentiment_score": "0.102871",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.210579",
+                    "ticker_sentiment_score": "0.110304",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "FSLR",
+                    "relevance_score": "0.14131",
+                    "ticker_sentiment_score": "0.126909",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "IVZ",
+                    "relevance_score": "0.070935",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "CRYPTO:BTC",
+                    "relevance_score": "0.14131",
+                    "ticker_sentiment_score": "0.220115",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "CRYPTO:ETH",
+                    "relevance_score": "0.343755",
+                    "ticker_sentiment_score": "0.330123",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "This Airbnb Analyst Turns Bullish; Here Are Top 5 Upgrades For Tuesday - Airbnb  ( NASDAQ:ABNB ) ",
+            "url": "https://www.benzinga.com/news/24/05/39037555/this-airbnb-analyst-turns-bullish-here-are-top-5-upgrades-for-tuesday",
+            "time_published": "20240528T124021",
+            "authors": [
+                "Avi Kapoor"
+            ],
+            "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades and downgrades, please see our analyst ratings page. Wedbush analyst Scott Devitt upgraded the rating for Airbnb, Inc.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/AirBNB-Shutterstock.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Trading",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Retail & Wholesale",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.365926"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.25"
+                }
+            ],
+            "overall_sentiment_score": 0.432225,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "DD",
+                    "relevance_score": "0.412298",
+                    "ticker_sentiment_score": "0.394774",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "SYY",
+                    "relevance_score": "0.412298",
+                    "ticker_sentiment_score": "0.465832",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "ABNB",
+                    "relevance_score": "0.412298",
+                    "ticker_sentiment_score": "0.567583",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "ALV",
+                    "relevance_score": "0.412298",
+                    "ticker_sentiment_score": "0.580999",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.143415",
+                    "ticker_sentiment_score": "0.187096",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "More S&P 500 Rally in the Cards? ETFs to Gain",
+            "url": "https://www.zacks.com/stock/news/2279852/more-sp-500-rally-in-the-cards-etfs-to-gain",
+            "time_published": "20240528T123100",
+            "authors": [
+                "Sanghamitra Saha"
+            ],
+            "summary": "Most Wall Street analysts are getting bullish on the S&P 500 due to the earnings strength, the AI boom, the broadening of market strength, inflation that is sticky but not accelerating and decent US economic growth.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/default_article_images/default339.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Energy & Transportation",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.310843"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.999955"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.25"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.890401"
+                }
+            ],
+            "overall_sentiment_score": 0.159751,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.048133",
+                    "ticker_sentiment_score": "0.014892",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.190793",
+                    "ticker_sentiment_score": "0.11501",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AMD",
+                    "relevance_score": "0.048133",
+                    "ticker_sentiment_score": "0.00794",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "DUK",
+                    "relevance_score": "0.048133",
+                    "ticker_sentiment_score": "0.054674",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "IVZ",
+                    "relevance_score": "0.048133",
+                    "ticker_sentiment_score": "0.0",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "SO",
+                    "relevance_score": "0.048133",
+                    "ticker_sentiment_score": "0.054674",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NEE",
+                    "relevance_score": "0.048133",
+                    "ticker_sentiment_score": "0.054674",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Futures Mixed As Nvidia Hits Record Highs",
+            "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-nvidia-stock-nvda-gamestop-gme/",
+            "time_published": "20240528T121300",
+            "authors": [
+                "Investor's Business Daily",
+                "SCOTT LEHTONEN"
+            ],
+            "summary": "Stock Market Today: Dow Jones Futures Fall As Nvidia Hits Record High. GameStop Soars 23% Investor's Business Daily ...",
+            "banner_image": "https://www.investors.com/wp-content/uploads/2021/09/Stock-wallstreetflag-01-adobe.jpg",
+            "source": "Investors Business Daily",
+            "category_within_source": "n/a",
+            "source_domain": "www.investors.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.451494"
+                },
+                {
+                    "topic": "Economy - Fiscal",
+                    "relevance_score": "0.158519"
+                },
+                {
+                    "topic": "Retail & Wholesale",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.158519"
+                }
+            ],
+            "overall_sentiment_score": 0.139141,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.209064",
+                    "ticker_sentiment_score": "0.130868",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NFLX",
+                    "relevance_score": "0.070414",
+                    "ticker_sentiment_score": "0.149853",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.17484",
+                    "ticker_sentiment_score": "0.099139",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AAPL",
+                    "relevance_score": "0.105449",
+                    "ticker_sentiment_score": "0.023748",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "TSLA",
+                    "relevance_score": "0.105449",
+                    "ticker_sentiment_score": "0.077216",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "CROX",
+                    "relevance_score": "0.14028",
+                    "ticker_sentiment_score": "0.080707",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "IVZ",
+                    "relevance_score": "0.035241",
+                    "ticker_sentiment_score": "0.211291",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "ISRG",
+                    "relevance_score": "0.070414",
+                    "ticker_sentiment_score": "-0.024376",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GME",
+                    "relevance_score": "0.105449",
+                    "ticker_sentiment_score": "0.080086",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Beat the Market the Zacks Way: EverQuote, Micron, Amgen in Focus",
+            "url": "https://www.zacks.com/stock/news/2279920/beat-the-market-the-zacks-way-everquote-micron-amgen-in-focus",
+            "time_published": "20240528T120700",
+            "authors": [
+                "Abhinab Dasgupta"
+            ],
+            "summary": "Our time-tested methodologies were at work to help investors navigate the market well last week. Here are some of our key performance data from the past three months.",
+            "banner_image": "https://staticx-tuner.zacks.com/images/articles/main/13/816.jpg",
+            "source": "Zacks Commentary",
+            "category_within_source": "n/a",
+            "source_domain": "www.zacks.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Economy - Monetary",
+                    "relevance_score": "0.682689"
+                },
+                {
+                    "topic": "Retail & Wholesale",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "0.977154"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Earnings",
+                    "relevance_score": "0.972193"
+                }
+            ],
+            "overall_sentiment_score": 0.172726,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "SE",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.061196",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "PLMR",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.245905",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "NVO",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.101176",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MU",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.061196",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "KALU",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.245905",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MTD",
+                    "relevance_score": "0.099066",
+                    "ticker_sentiment_score": "0.107081",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "TSCO",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.061217",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AMGN",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.061217",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "EVER",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.252957",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "BMI",
+                    "relevance_score": "0.066139",
+                    "ticker_sentiment_score": "0.12425",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Netflix To Rally Over 8%? Here Are 10 Top Analyst Forecasts For Tuesday - Netflix  ( NASDAQ:NFLX ) ",
+            "url": "https://www.benzinga.com/news/24/05/39035953/netflix-to-rally-over-8-here-are-10-top-analyst-forecasts-for-tuesday",
+            "time_published": "20240528T114615",
+            "authors": [
+                "Avi Kapoor"
+            ],
+            "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades and downgrades, please see our analyst ratings page. Mizuho boosted the price target for Norwegian Cruise Line Holdings Ltd. NCLH from $21 to $24.",
+            "banner_image": "https://cdn.benzinga.com/files/images/story/2024/05/28/Netflix-House.jpeg?width=1200&height=800&fit=crop",
+            "source": "Benzinga",
+            "category_within_source": "Trading",
+            "source_domain": "www.benzinga.com",
+            "topics": [
+                {
+                    "topic": "Life Sciences",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Financial Markets",
+                    "relevance_score": "1.0"
+                },
+                {
+                    "topic": "Manufacturing",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Energy & Transportation",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Technology",
+                    "relevance_score": "0.2"
+                },
+                {
+                    "topic": "Finance",
+                    "relevance_score": "0.2"
+                }
+            ],
+            "overall_sentiment_score": 0.197525,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "DD",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "0.208358",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "NFLX",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "0.306398",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.156461",
+                    "ticker_sentiment_score": "0.156391",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "CRWD",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "-0.014455",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.156461",
+                    "ticker_sentiment_score": "-0.010761",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NCLH",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "0.296419",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "NIO",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "-0.036105",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "WFC",
+                    "relevance_score": "0.156461",
+                    "ticker_sentiment_score": "-0.161705",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "ZUO",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "-0.084444",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "DECK",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "0.473884",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "TDG",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "0.099781",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GLOB",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "0.003747",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ZS",
+                    "relevance_score": "0.23281",
+                    "ticker_sentiment_score": "-0.215416",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        }
+    ]
 }

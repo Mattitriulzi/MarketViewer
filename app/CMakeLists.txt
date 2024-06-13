@@ -32,9 +32,10 @@ if(NOT JANSSON_LIBRARY)
 endif()
 
 #Tell Cmake to create the executable executable
-add_executable(StockFetch order.cpp json_read_stocks.c
+add_executable(StockFetch order.cpp json.c
                SQL_create.c SQL_read.c free.c
-               Stock_Data.c interface.cpp logger.c)
+               Stock_Data.c interface.cpp logger.c
+               json_parse_active.c json_parse_sentiment.c)
 
 #Link the Widgets module from Qt6 
 link_directories(/usr/local/lib)

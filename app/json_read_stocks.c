@@ -343,3 +343,4 @@ int json(void)
     log_it("Successfully deleted the temporary files");
     return 0;
 }
+

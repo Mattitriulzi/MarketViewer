@@ -70,8 +70,10 @@ void log_it(const char *msg);
 // the log_it function already adds a new line so the message should not have the escape seq
 
 int free_structs(void);
-//free_structs function that was needed when the arrays where dynamically allocated
-//int free_structs(void);
+
+int json_parse_active(json_t *root_active);
+
+int json_parse_sentiment(json_t*root_news);
 
 #ifdef __cplusplus
 }

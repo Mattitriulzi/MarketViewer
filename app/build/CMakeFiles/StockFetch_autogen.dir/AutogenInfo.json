@@ -375,8 +375,14 @@
 			"MU",
 			null
 		],
+		[ "/Users/matti/Documents/GitHub/Stock_Fetch/app/json.c", "MU", null ],
 		[
-			"/Users/matti/Documents/GitHub/Stock_Fetch/app/json_read_stocks.c",
+			"/Users/matti/Documents/GitHub/Stock_Fetch/app/json_parse_active.c",
+			"MU",
+			null
+		],
+		[
+			"/Users/matti/Documents/GitHub/Stock_Fetch/app/json_parse_sentiment.c",
 			"MU",
 			null
 		],
