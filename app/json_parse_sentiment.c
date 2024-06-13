@@ -125,7 +125,6 @@ int json_parse_sentiment(json_t *root_news){
             // if it is the first ticker, then we have to copy it into the tickers char AND that the array is not just one length
             {
                 strcpy(tickers, temp_ticker);
-                strcat(tickers, ", ");
             }
             else
             {
