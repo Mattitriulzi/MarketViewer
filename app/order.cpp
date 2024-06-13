@@ -1,66 +1,67 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-    #include "stock.h" // Include the "stock.h" header file
+    #include "stock.h" 
 #ifdef __cplusplus
 }
 #endif
 
 
-int main()
+int main(void)
 {
     // order of which functions to perform
+    log_it(NULL);
     log_it("---------------------------------------------------");
     log_it("(MAIN) Starting Application");
 
     int err;
-    err = Stock_Data(); // Call the Stock_Data function
+    err = Stock_Data(); 
     if(err)
     {
-        perror("Error when fetching Stock Data"); // Print an error message if there's an error
-        printf("Error code: %d\n", err); // Print the error code
+        perror("Error when fetching Stock Data"); 
+        printf("Error code: %d\n", err); 
         log_it("(MAIN) Error when fetching Stock Data");
-        return 800; // Return an error code
+        return 800; 
     }
     log_it("(MAIN) Successfully fetched Stock Data");
 
-    err = json(); // Call the json function
+    err = json(); 
     if (err)
     {
-        perror("Error when parsing json file"); // Print an error message if there's an error
-        printf("Error code: %d\n", err); // Print the error code
+        perror("Error when parsing json file"); 
+        printf("Error code: %d\n", err); 
         log_it("(MAIN) Error when parsing json file");
-        return 802; // Return an error code
+        return 802; 
     }
     log_it("(MAIN) Successfully parsed json file");
 
-    err = SQL(); // Call the SQL function
+    err = SQL(); 
     if(err)
     {
-        perror("Error when creating SQL database"); // Print an error message if there's an error
-        printf("Error code: %d\n", err); // Print the error code
+        perror("Error when creating SQL database"); 
+        printf("Error code: %d\n", err); 
         log_it("(MAIN) Error when creating SQL database");
-        return 801; // Return an error code
+        return 801; 
     }
     log_it("(MAIN) Successfully created SQL database");
 
-    err = SQL_read(); // Call the SQL_read function
+    err = SQL_read(); 
     if(err)
     {
-        perror("Error when reading SQL database"); // Print an error message if there's an error
-        printf("Error code: %d\n", err); // Print the error code
+        perror("Error when reading SQL database"); 
+        printf("Error code: %d\n", err); 
         log_it("(MAIN) Error when reading SQL database");
-        return 803; // Return an error code
+        return 803; 
     }
     log_it("(MAIN) Successfully read SQL database");
 
-    err = interface(); // Call the interface function
+    err = interface(); 
     if(err)
     {
-        perror("Error when starting interface"); // Print an error message if there's an error
-        printf("Error code: %d\n", err); // Print the error code
+        perror("Error when starting interface"); 
+        printf("Error code: %d\n", err); 
         log_it("(MAIN) Error when starting interface");
-        return 804; // Return an error code
+        return 804; 
     }
     log_it("(MAIN) Stopping Application GUI");
     log_it("(MAIN) Successfully closed application GUI");
@@ -76,7 +77,8 @@ int main()
     log_it("(MAIN) Successfully freed all structure arrays");
     log_it("(MAIN) Successfully stopped the Application");
     log_it("---------------------------------------------------");
+    log_it(NULL);
     
 
-    return 0; // Return 0 to indicate successful execution
+    return 0; 
 }

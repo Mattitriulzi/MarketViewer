@@ -36,11 +36,17 @@ int SQL_read(void)
     } 
 
     // Check the date of the last entry to avoid duplicate entries
-    if (date) free(date);
+    if (date) {
+        free(date);
+        date = NULL;
+    }
     if(!already_opened) goto Stock_read;
 
     log_it("App was already opened today, no need to update database");
-    if (db) sqlite3_close(db);
+    if (db) {
+        sqlite3_close(db);
+        db = NULL;
+    }
     log_it("Database closed succesfully");
 
     return 0;
@@ -65,7 +71,10 @@ int SQL_read(void)
                 log_it("Unable to access database");
                 return 20;
             }
-            if (command) sqlite3_free(command);
+            if (command) {
+                sqlite3_free(command);
+                command = NULL;
+            }
         }
         log_it("Successfully inserted the Active Stock structure array in database");
         
@@ -87,11 +96,19 @@ int SQL_read(void)
                 log_it("Unable to access database");
                 return 20;
             }
-            if (command) sqlite3_free(command);
+            if (command) {
+                sqlite3_free(command);
+                command = NULL;
+            }
         }
         log_it("Successfully inserted the News structure array in database");
-        if (db) sqlite3_close(db);
-        log_it("Successfully closed the dabatase");
+
+        if (db) {
+            sqlite3_close(db);
+            db = NULL;
+        }
+
+        log_it("Database closed successfully");
         return 0;
 }
 
@@ -128,7 +145,10 @@ int is_table_empty(sqlite3 *db, const char *table_name)
         if (command) sqlite3_free(command);
         return -1;
     }
-    if (command) sqlite3_free(command);
+    if (command) {
+        sqlite3_free(command);
+        command = NULL;
+    }
     
     // Return 1 if the table is empty, 0 otherwise
     if (!count) return 1;

@@ -46,8 +46,6 @@ extern FILE *stock_data_sentiment;
 
 extern FILE *stock_data_active;
 
-extern FILE *log_file;
-
 extern sqlite3 *db;
 
 extern char *date;
@@ -71,7 +69,10 @@ void log_it(const char *msg);
 
 int free_structs(void);
 //free_structs function that was needed when the arrays where dynamically allocated
-//int free_structs(void);
+
+int json_parse_active(json_t *root_active);
+
+int json_parse_sentiment(json_t*root_news);
 
 #ifdef __cplusplus
 }

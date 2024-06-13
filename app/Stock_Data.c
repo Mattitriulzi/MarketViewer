@@ -19,9 +19,9 @@ int Stock_Data(void)
 {
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
 
-    /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
+    
 
-    // Open temporary file for active stock data
+    
     stock_data_active = fopen("stock_data_active.json", "w+");
     if (!stock_data_active)
     {
@@ -30,7 +30,7 @@ int Stock_Data(void)
         return 100;
     }
 
-    // Open temporary file for stock sentiment data
+    
     stock_data_sentiment = fopen("stock_data_sentiment.json", "w+");
     if (!stock_data_sentiment)
     {
@@ -42,8 +42,8 @@ int Stock_Data(void)
     log_it("Correctly opened temporary files");
 
     // Generate the curls which will be used to transfer the stock info and initialise them + check for error
-    CURL *curl1 = curl_easy_init(); // first transfer
-    CURL *curl2 = curl_easy_init(); // second trasfer
+    CURL *curl1 = curl_easy_init(); 
+    CURL *curl2 = curl_easy_init(); 
     CURLM *multi_curl = curl_multi_init(); // libcurl multi to allow for both transfers to occur simultaneaously
     if (curl1 == NULL || curl2 == NULL || multi_curl == NULL)
     {
@@ -64,7 +64,7 @@ int Stock_Data(void)
     curl_easy_setopt(curl2,CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl2, CURLOPT_WRITEDATA, stock_data_sentiment);
 
-    // Add the singular easy curl transfers to the multi_curl for simultaneaous transfer
+    
     curl_multi_add_handle(multi_curl, curl1);
     curl_multi_add_handle(multi_curl, curl2);
 
@@ -93,25 +93,34 @@ int Stock_Data(void)
     log_it("Correctly fetched data from the API");
 
     /* Cleaning up memory */
-    curl_easy_cleanup(curl1);
-    curl_easy_cleanup(curl2);
-    curl_multi_cleanup(multi_curl);
+    if (curl1) {
+        curl_easy_cleanup(curl1);
+        curl1 = NULL;
+    }
+    if (curl2) {
+        curl_easy_cleanup(curl2);
+        curl2 = NULL;
+    }
+    if (multi_curl) {
+        curl_multi_cleanup(multi_curl);
+        multi_curl = NULL;
+    }
     curl_global_cleanup();
 
-    fclose(stock_data_active);
-    fclose(stock_data_sentiment);
+    // Flush the buffers
+    fflush(stock_data_active);
+    fflush(stock_data_sentiment);
+    log_it("Correctly cleaned up memory");
+    //log_it("Correctly cleaned up memory, closed, and reopened files for reading");
 
-    // Reopen files for reading
-    stock_data_active = fopen("stock_data_active.json", "r");
-    stock_data_sentiment = fopen("stock_data_sentiment.json", "r");
-    if (!stock_data_active || !stock_data_sentiment)
-    {
-        perror("Unable to reopen files for reading");
-        log_it("Unable to reopen files for reading");
-        return 104;
+    //move the file pointer to the beginning 
+    if (fseek(stock_data_active, 0, SEEK_SET) 
+        || fseek(stock_data_sentiment, 0, SEEK_SET)) {
+            perror("Unable to move file pointer to the beginning of file");
+            log_it("Unable to move file pointer to beginning of file");
+            return 105;
     }
 
-    log_it("Correctly cleaned up memory, closed, and reopened files for reading");
-
+    log_it("Successfully prepared files for reading");
     return 0;
 }

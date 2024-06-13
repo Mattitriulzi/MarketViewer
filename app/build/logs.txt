@@ -56,3 +56,286 @@
 [2024-06-12 20:14:08] Successfully opened json objects
 [2024-06-12 20:14:08] Successfully loaded the Active Stocks structure array
 [2024-06-12 20:14:08] Successfully loaded the News sentiments structure array
+[2024-06-12 20:18:37] ---------------------------------------------------
+[2024-06-12 20:18:37] (MAIN) Starting Application
+[2024-06-12 20:18:37] Correctly opened temporary files
+[2024-06-12 20:18:37] Correctly set up the curl transfers
+[2024-06-12 20:18:38] Correctly fetched data from the API
+[2024-06-12 20:18:38] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:18:38] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:18:38] Successfully loaded the json files
+[2024-06-12 20:18:38] Successfully read the date
+[2024-06-12 20:18:38] Successfully opened json objects
+[2024-06-12 20:18:38] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:18:38] Successfully loaded the News sentiments structure array
+[2024-06-12 20:19:43] ---------------------------------------------------
+[2024-06-12 20:19:43] (MAIN) Starting Application
+[2024-06-12 20:19:43] Correctly opened temporary files
+[2024-06-12 20:19:43] Correctly set up the curl transfers
+[2024-06-12 20:19:44] Correctly fetched data from the API
+[2024-06-12 20:19:44] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:19:44] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:19:44] Successfully loaded the json files
+[2024-06-12 20:19:44] Successfully read the date
+[2024-06-12 20:19:44] Successfully opened json objects
+[2024-06-12 20:19:44] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:19:44] Successfully loaded the News sentiments structure array
+[2024-06-12 20:20:29] ---------------------------------------------------
+[2024-06-12 20:20:29] (MAIN) Starting Application
+[2024-06-12 20:20:29] Correctly opened temporary files
+[2024-06-12 20:20:29] Correctly set up the curl transfers
+[2024-06-12 20:20:30] Correctly fetched data from the API
+[2024-06-12 20:20:30] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:20:30] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:20:30] Successfully loaded the json files
+[2024-06-12 20:20:30] Successfully read the date
+[2024-06-12 20:20:30] Successfully opened json objects
+[2024-06-12 20:20:30] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:20:30] Successfully loaded the News sentiments structure array
+[2024-06-12 20:21:33] ---------------------------------------------------
+[2024-06-12 20:21:33] (MAIN) Starting Application
+[2024-06-12 20:21:33] Correctly opened temporary files
+[2024-06-12 20:21:33] Correctly set up the curl transfers
+[2024-06-12 20:21:34] Correctly fetched data from the API
+[2024-06-12 20:21:34] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:21:34] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:21:34] Successfully loaded the json files
+[2024-06-12 20:21:34] Successfully read the date
+[2024-06-12 20:21:34] Successfully opened json objects
+[2024-06-12 20:21:34] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:21:34] Successfully loaded the News sentiments structure array
+[2024-06-12 20:22:05] ---------------------------------------------------
+[2024-06-12 20:22:05] (MAIN) Starting Application
+[2024-06-12 20:22:05] Correctly opened temporary files
+[2024-06-12 20:22:05] Correctly set up the curl transfers
+[2024-06-12 20:22:05] Correctly fetched data from the API
+[2024-06-12 20:22:05] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:22:05] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:22:05] Successfully loaded the json files
+[2024-06-12 20:22:05] Successfully read the date
+[2024-06-12 20:22:05] Successfully opened json objects
+[2024-06-12 20:22:05] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:22:05] Successfully loaded the News sentiments structure array
+[2024-06-12 20:22:17] ---------------------------------------------------
+[2024-06-12 20:22:17] (MAIN) Starting Application
+[2024-06-12 20:22:17] Correctly opened temporary files
+[2024-06-12 20:22:17] Correctly set up the curl transfers
+[2024-06-12 20:22:17] Correctly fetched data from the API
+[2024-06-12 20:22:17] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:22:17] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:22:17] Successfully loaded the json files
+[2024-06-12 20:22:17] Successfully read the date
+[2024-06-12 20:22:17] Successfully opened json objects
+[2024-06-12 20:22:17] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:22:17] Successfully loaded the News sentiments structure array
+[2024-06-12 20:36:13] ---------------------------------------------------
+[2024-06-12 20:36:13] (MAIN) Starting Application
+[2024-06-12 20:36:13] Correctly opened temporary files
+[2024-06-12 20:36:13] Correctly set up the curl transfers
+[2024-06-12 20:36:14] Correctly fetched data from the API
+[2024-06-12 20:36:14] Correctly cleaned up memory, closed, and reopened files for reading
+[2024-06-12 20:36:14] (MAIN) Successfully fetched Stock Data
+[2024-06-12 20:36:14] Successfully loaded the json files
+[2024-06-12 20:36:14] Successfully read the date
+[2024-06-12 20:36:14] Successfully opened json objects
+[2024-06-12 20:36:14] Successfully loaded the Active Stocks structure array
+[2024-06-12 20:36:14] Successfully loaded the News sentiments structure array
+
+ 
+[2024-06-13 09:23:24]  
+[2024-06-13 09:23:24] ---------------------------------------------------
+[2024-06-13 09:23:24] (MAIN) Starting Application
+[2024-06-13 09:23:24] Correctly opened temporary files
+[2024-06-13 09:23:24] Correctly set up the curl transfers
+[2024-06-13 09:23:25] Correctly fetched data from the API
+[2024-06-13 09:23:25] Correctly cleaned up memory and flushed the buffers
+[2024-06-13 09:23:25] (MAIN) Successfully fetched Stock Data
+[2024-06-13 09:23:25] Unable to load json string
+[2024-06-13 09:23:25] (MAIN) Error when parsing json file
+
+ 
+[2024-06-13 09:32:16]  
+[2024-06-13 09:32:16] ---------------------------------------------------
+[2024-06-13 09:32:16] (MAIN) Starting Application
+[2024-06-13 09:32:16] Correctly opened temporary files
+[2024-06-13 09:32:16] Correctly set up the curl transfers
+[2024-06-13 09:32:17] Correctly fetched data from the API
+[2024-06-13 09:32:17] Correctly cleaned up memory
+[2024-06-13 09:32:17] Successfully moved file pointer to the beginning of the file
+[2024-06-13 09:32:17] (MAIN) Successfully fetched Stock Data
+[2024-06-13 09:32:17] Successfully loaded the json files
+[2024-06-13 09:32:17] Successfully read the date
+[2024-06-13 09:32:17] Successfully opened json objects
+[2024-06-13 09:32:17] Successfully loaded the Active Stocks structure array
+[2024-06-13 09:32:17] Successfully loaded the News sentiments structure array
+
+ 
+[2024-06-13 14:12:38]  
+[2024-06-13 14:12:38] ---------------------------------------------------
+[2024-06-13 14:12:38] (MAIN) Starting Application
+[2024-06-13 14:12:38] Correctly opened temporary files
+[2024-06-13 14:12:38] Correctly set up the curl transfers
+[2024-06-13 14:12:39] Correctly fetched data from the API
+[2024-06-13 14:12:39] Correctly cleaned up memory
+[2024-06-13 14:12:39] Successfully prepared files for reading
+[2024-06-13 14:12:39] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:12:39] Successfully loaded the json files
+[2024-06-13 14:12:39] Successfully opened json objects
+[2024-06-13 14:12:39] Successfully read the date
+[2024-06-13 14:12:39] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:13:50] ---------------------------------------------------
+[2024-06-13 14:13:50] (MAIN) Starting Application
+[2024-06-13 14:13:50] Correctly opened temporary files
+[2024-06-13 14:13:50] Correctly set up the curl transfers
+[2024-06-13 14:13:51] Correctly fetched data from the API
+[2024-06-13 14:13:51] Correctly cleaned up memory
+[2024-06-13 14:13:51] Successfully prepared files for reading
+[2024-06-13 14:13:51] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:13:51] Successfully loaded the json files
+[2024-06-13 14:13:51] Successfully opened json objects
+[2024-06-13 14:13:51] Successfully read the date
+[2024-06-13 14:13:51] Successfully loaded the Active Stocks structure array
+
+
+[2024-06-13 14:17:12] ---------------------------------------------------
+[2024-06-13 14:17:12] (MAIN) Starting Application
+[2024-06-13 14:17:12] Correctly opened temporary files
+[2024-06-13 14:17:12] Correctly set up the curl transfers
+[2024-06-13 14:17:13] Correctly fetched data from the API
+[2024-06-13 14:17:13] Correctly cleaned up memory
+[2024-06-13 14:17:13] Successfully prepared files for reading
+[2024-06-13 14:17:13] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:17:13] Successfully loaded the json files
+[2024-06-13 14:17:13] Successfully opened json objects
+[2024-06-13 14:17:13] Successfully read the date
+[2024-06-13 14:17:13] Successfully loaded the Active Stocks structure array
+
+
+[2024-06-13 14:19:06] ---------------------------------------------------
+[2024-06-13 14:19:06] (MAIN) Starting Application
+[2024-06-13 14:19:06] Correctly opened temporary files
+[2024-06-13 14:19:06] Correctly set up the curl transfers
+[2024-06-13 14:19:06] Correctly fetched data from the API
+[2024-06-13 14:19:06] Correctly cleaned up memory
+[2024-06-13 14:19:06] Successfully prepared files for reading
+[2024-06-13 14:19:06] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:19:07] Successfully loaded the json files
+[2024-06-13 14:19:07] Successfully opened json objects
+[2024-06-13 14:19:07] Successfully read the date
+[2024-06-13 14:19:07] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:19:07] Successfully loaded the News sentiments structure array
+
+
+[2024-06-13 14:31:07] ---------------------------------------------------
+[2024-06-13 14:31:07] (MAIN) Starting Application
+[2024-06-13 14:31:07] Correctly opened temporary files
+[2024-06-13 14:31:07] Correctly set up the curl transfers
+[2024-06-13 14:31:08] Correctly fetched data from the API
+[2024-06-13 14:31:08] Correctly cleaned up memory
+[2024-06-13 14:31:08] Successfully prepared files for reading
+[2024-06-13 14:31:08] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:31:08] Successfully loaded the json files
+[2024-06-13 14:31:08] Successfully opened json objects
+[2024-06-13 14:31:08] Successfully read the date
+[2024-06-13 14:31:08] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:31:08] Successfully loaded the News sentiments structure array
+
+
+[2024-06-13 14:32:04] ---------------------------------------------------
+[2024-06-13 14:32:04] (MAIN) Starting Application
+[2024-06-13 14:32:04] Correctly opened temporary files
+[2024-06-13 14:32:04] Correctly set up the curl transfers
+[2024-06-13 14:32:07] Correctly fetched data from the API
+[2024-06-13 14:32:07] Correctly cleaned up memory
+[2024-06-13 14:32:07] Successfully prepared files for reading
+[2024-06-13 14:32:07] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:32:07] Successfully loaded the json files
+[2024-06-13 14:32:07] Successfully opened json objects
+[2024-06-13 14:32:07] Successfully read the date
+[2024-06-13 14:32:07] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:32:07] Successfully loaded the News sentiments structure array
+
+
+[2024-06-13 14:32:27] ---------------------------------------------------
+[2024-06-13 14:32:27] (MAIN) Starting Application
+[2024-06-13 14:32:27] Correctly opened temporary files
+[2024-06-13 14:32:27] Correctly set up the curl transfers
+[2024-06-13 14:32:28] Correctly fetched data from the API
+[2024-06-13 14:32:28] Correctly cleaned up memory
+[2024-06-13 14:32:28] Successfully prepared files for reading
+[2024-06-13 14:32:28] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:32:28] Successfully loaded the json files
+[2024-06-13 14:32:28] Successfully opened json objects
+[2024-06-13 14:32:28] Successfully read the date
+[2024-06-13 14:32:28] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:32:28] Successfully loaded the News sentiments structure array
+
+
+[2024-06-13 14:49:21] ---------------------------------------------------
+[2024-06-13 14:49:21] (MAIN) Starting Application
+[2024-06-13 14:49:21] Correctly opened temporary files
+[2024-06-13 14:49:21] Correctly set up the curl transfers
+[2024-06-13 14:49:22] Correctly fetched data from the API
+[2024-06-13 14:49:22] Correctly cleaned up memory
+[2024-06-13 14:49:22] Successfully prepared files for reading
+[2024-06-13 14:49:22] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:49:22] Successfully loaded the json files
+[2024-06-13 14:49:22] Successfully opened json objects
+[2024-06-13 14:49:22] Successfully read the date
+[2024-06-13 14:49:22] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:49:22] Successfully loaded the News sentiments structure array
+
+
+[2024-06-13 14:50:42] ---------------------------------------------------
+[2024-06-13 14:50:42] (MAIN) Starting Application
+[2024-06-13 14:50:42] Correctly opened temporary files
+[2024-06-13 14:50:42] Correctly set up the curl transfers
+[2024-06-13 14:50:46] Correctly fetched data from the API
+[2024-06-13 14:50:46] Correctly cleaned up memory
+[2024-06-13 14:50:46] Successfully prepared files for reading
+[2024-06-13 14:50:46] (MAIN) Successfully fetched Stock Data
+[2024-06-13 14:50:46] Successfully loaded the json files
+[2024-06-13 14:50:46] Successfully opened json objects
+[2024-06-13 14:50:46] Successfully read the date
+[2024-06-13 14:50:46] Successfully loaded the Active Stocks structure array
+[2024-06-13 14:50:46] Successfully loaded the News sentiments structure array
+[2024-06-13 14:50:46] (MAIN) Successfully parsed json file
+[2024-06-13 14:50:46] Database found, opening database
+[2024-06-13 14:50:46] Successfully opened database
+[2024-06-13 14:50:46] (MAIN) Successfully created SQL database
+[2024-06-13 14:50:46] Checking if the table is empty
+[2024-06-13 14:50:46] Table is not empty, checking if the app was already opened today
+[2024-06-13 14:50:46] App was not opened yet today, reading data from the structure arrays
+[2024-06-13 14:50:46] Successfully inserted the Active Stock structure array in database
+[2024-06-13 14:50:46] Successfully inserted the News structure array in database
+[2024-06-13 14:50:46] Successfully closed the dabatase
+[2024-06-13 14:50:46] (MAIN) Successfully read SQL database
+[2024-06-13 14:50:46] Successfully created Main App Window
+[2024-06-13 14:50:46] Successfully concatenated all information into a QString
+[2024-06-13 14:50:46] Successfully created the labels and scroll areas
+[2024-06-13 14:50:46] Successfully added the scroll areas to the layout
+[2024-06-13 14:50:46] Successfully started Application GUI
+[2024-06-13 14:51:15] (MAIN) Stopping Application GUI
+[2024-06-13 14:51:15] (MAIN) Successfully closed application GUI
+[2024-06-13 14:51:15] Successfully freed News structure array
+[2024-06-13 14:51:15] Successfully freed Active Stock structure array
+[2024-06-13 14:51:15] (MAIN) Successfully freed all structure arrays
+[2024-06-13 14:51:15] (MAIN) Successfully stopped the Application
+[2024-06-13 14:51:15] ---------------------------------------------------
+
+
+
+
+[2024-06-13 15:08:04] ---------------------------------------------------
+[2024-06-13 15:08:04] (MAIN) Starting Application
+[2024-06-13 15:08:04] Correctly opened temporary files
+[2024-06-13 15:08:04] Correctly set up the curl transfers
+[2024-06-13 15:08:07] Correctly fetched data from the API
+[2024-06-13 15:08:07] Correctly cleaned up memory
+[2024-06-13 15:08:07] Successfully prepared files for reading
+[2024-06-13 15:08:07] (MAIN) Successfully fetched Stock Data
+[2024-06-13 15:08:07] Successfully loaded the json files
+[2024-06-13 15:08:07] Successfully opened json objects
+[2024-06-13 15:08:07] Successfully read the date
+[2024-06-13 15:08:07] Successfully loaded the Active Stocks structure array
+[2024-06-13 15:08:07] Successfully loaded the News sentiments structure array
