@@ -2,3 +2,4 @@
 *.dir
 *.cmake
 /app/build/Makefile
+/app/build/*
