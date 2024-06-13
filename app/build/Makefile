@@ -395,30 +395,6 @@ logger.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.s
 .PHONY : logger.c.s
 
-logger.o: logger.c.o
-.PHONY : logger.o
-
-# target to build an object file
-logger.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.o
-.PHONY : logger.c.o
-
-logger.i: logger.c.i
-.PHONY : logger.i
-
-# target to preprocess a source file
-logger.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.i
-.PHONY : logger.c.i
-
-logger.s: logger.c.s
-.PHONY : logger.s
-
-# target to generate assembly for a file
-logger.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StockFetch.dir/build.make CMakeFiles/StockFetch.dir/logger.c.s
-.PHONY : logger.c.s
-
 order.o: order.cpp.o
 .PHONY : order.o
 
