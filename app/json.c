@@ -33,7 +33,7 @@ int json(void)
     log_it("Successfully loaded the json files, closing files");
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
-    int error_return = fdelete(filename, arraylen);
+    error_return = fdelete(filename, arraylen);
     if (error_return){
         perror("Unable to delete file");
         log_it("Unable to delete file");

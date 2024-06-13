@@ -572,3 +572,43 @@
 [2024-06-13 19:08:14] ---------------------------------------------------
 
 
+
+
+[2024-06-13 19:13:43] ---------------------------------------------------
+[2024-06-13 19:13:43] (MAIN) Starting Application
+[2024-06-13 19:13:43] Successfully prepared files for reading
+[2024-06-13 19:13:43] (MAIN) Successfully fetched Stock Data
+[2024-06-13 19:13:43] Successfully loaded the json files, closing files
+[2024-06-13 19:13:43] Successfully deleted the temporary files
+[2024-06-13 19:13:43] Successfully closed temporary files
+[2024-06-13 19:13:43] Successfully opened json objects
+[2024-06-13 19:13:43] Successfully read the date
+[2024-06-13 19:13:43] Successfully loaded the Active Stocks structure array
+[2024-06-13 19:13:43] Successfully loaded the News sentiments structure array
+[2024-06-13 19:13:43] Successfully freed the json objects
+[2024-06-13 19:13:43] (MAIN) Successfully parsed json file
+[2024-06-13 19:13:43] (MAIN) Checking the database's existence
+[2024-06-13 19:13:43] Database found, opening database
+[2024-06-13 19:13:43] Successfully opened database
+[2024-06-13 19:13:43] (MAIN) Successfully created SQL database
+[2024-06-13 19:13:43] Checking if the table is empty
+[2024-06-13 19:13:43] Table is not empty, checking if the app was already opened today
+[2024-06-13 19:13:43] Table is empty, checking if app was already opened today
+[2024-06-13 19:13:43] App was already opened today, no need to update database
+[2024-06-13 19:13:43] Database closed successfully
+[2024-06-13 19:13:43] (MAIN) Successfully read SQL database
+[2024-06-13 19:13:43] (MAIN) Starting Application GUI
+[2024-06-13 19:13:43] Successfully created Main App Window
+[2024-06-13 19:13:43] Successfully concatenated all information into a QString
+[2024-06-13 19:13:43] Successfully created the labels and scroll areas
+[2024-06-13 19:13:43] Successfully added the scroll areas to the layout
+[2024-06-13 19:13:43] Successfully started Application GUI
+[2024-06-13 19:14:33] (MAIN) Stopping Application GUI
+[2024-06-13 19:14:33] (MAIN) Successfully closed application GUI
+[2024-06-13 19:14:33] Successfully freed News structure array
+[2024-06-13 19:14:33] Successfully freed Active Stock structure array
+[2024-06-13 19:14:33] (MAIN) Successfully freed all structure arrays
+[2024-06-13 19:14:33] (MAIN) Successfully stopped the Application
+[2024-06-13 19:14:33] ---------------------------------------------------
+
+
