@@ -35,6 +35,7 @@ int main(void)
     }
     log_it("(MAIN) Successfully parsed json file");
 
+    log_it("(MAIN) Checking the database's existence");
     err = SQL(); 
     if(err)
     {
@@ -55,6 +56,7 @@ int main(void)
     }
     log_it("(MAIN) Successfully read SQL database");
 
+    log_it("(MAIN) Starting Application GUI");
     err = interface(); 
     if(err)
     {

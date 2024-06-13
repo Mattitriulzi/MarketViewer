@@ -6,13 +6,17 @@ stock active_stocks[LENGTH_STOCKS];
 
 char *date = NULL;
 
+int fdelete(const char* filename[], unsigned int arraylen);
+
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
 /*structs were created in the header, respectively (stock) active_stocks and (news) sentiments*/
 
 int json(void)
 {
-   
+    int error_return;
+    const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
+    unsigned int arraylen = 2;
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
     json_t *root_active = json_loadf(stock_data_active, 0, &error);
@@ -25,7 +29,20 @@ int json(void)
         return 301;
     }
 
-    log_it("Successfully loaded the json files");
+    // time to delete the temporary files!
+    log_it("Successfully loaded the json files, closing files");
+    fclose(stock_data_active);
+    fclose(stock_data_sentiment);
+    /*int error_return = fdelete(filename, arraylen);
+    if (error_return){
+        perror("Unable to delete file");
+        log_it("Unable to delete file");
+        return 301;
+    }
+    log_it("Successfully deleted the temporary files"); */
+    
+
+    log_it("Successfully closed temporary files");
 
     // check if data is object
     if (!json_is_object(root_active) || !json_is_object(root_news))
@@ -75,7 +92,7 @@ int json(void)
 
 
 
-    int error_return = json_parse_active(root_active);
+    error_return = json_parse_active(root_active);
     if (error_return){
         perror("Error when parsing active stocks json");
         log_it("Error when parsing active stocks json");
@@ -107,27 +124,22 @@ int json(void)
         root_news = NULL;
     }
 
-    if (stock_data_active){
-        fclose(stock_data_active);
-        stock_data_active = NULL;
-    } 
+    //fclose(stock_data_active);
+    //fclose(stock_data_sentiment);
 
-    if (stock_data_sentiment) {
-        fclose(stock_data_sentiment);
-        stock_data_sentiment = NULL;
-    } 
+    log_it("Successfully freed the json objects");
+    return 0;
+}
 
-    log_it("Successfully freed the json objects and closed files");
-    // delete the two files that were created
-    
-    const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
-    for (int i = 0; i < 2; i++){
+
+int fdelete(const char* filename[], unsigned int arraylen){
+
+    for(int i = 0; i < arraylen; i++){
         if (remove(filename[i])){
             perror("Unable to delete file");
             log_it("Unable to delete file");
-            return 332;
+            return 1;
         }
-    } 
-    log_it("Successfully deleted the temporary files"); 
+    }
     return 0;
 }

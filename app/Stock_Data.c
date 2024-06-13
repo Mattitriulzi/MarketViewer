@@ -19,9 +19,6 @@ int Stock_Data(void)
 {
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
 
-    
-
-    
     stock_data_active = fopen("stock_data_active.json", "w+");
     if (!stock_data_active)
     {
