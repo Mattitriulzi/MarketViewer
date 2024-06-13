@@ -6,7 +6,7 @@ stock active_stocks[LENGTH_STOCKS];
 
 char *date = NULL;
 
-int fdelete(const char* filename[], unsigned int arraylen);
+int fdelete(const char* filename[], unsigned arraylen);
 
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
@@ -16,7 +16,7 @@ int json(void)
 {
     int error_return;
     const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
-    unsigned int arraylen = 2;
+    unsigned arraylen = 2;
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
     json_t *root_active = json_loadf(stock_data_active, 0, &error);
@@ -132,7 +132,7 @@ int json(void)
 }
 
 
-int fdelete(const char* filename[], unsigned int arraylen){
+int fdelete(const char* filename[], unsigned arraylen){
 
     for(int i = 0; i < arraylen; i++){
         if (remove(filename[i])){
