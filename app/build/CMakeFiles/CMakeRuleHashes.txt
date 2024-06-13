@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-aad4e69a9bb9db80421779036b094e2d CMakeFiles/StockFetch_autogen
-62361ff8e2313fd29f73ded1709366ee StockFetch_autogen/timestamp
