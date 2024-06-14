@@ -35,7 +35,7 @@ int json(void)
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
     error_return = fdelete(filename, arraylen);
-    if (error_return){
+    if (error_return) {
         perror("Unable to delete file");
         log_it("Unable to delete file");
         return 301;

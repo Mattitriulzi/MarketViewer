@@ -20,26 +20,27 @@ int SQL_read(void)
 
     log_it("Checking if the table is empty");
     
-    // Check if the table 'Most_active' is empty
-    if (!is_table_empty(db, table_active))
-    {
-        log_it("Table is not empty, checking if the app was already opened today");
-
-        // Execute the SQL query to get the date from the first row of the 'Most_active' table
-        int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1 ", callback, 0, &errmsg);
-        if (rd)
-        {
-            perror("Unable to access database");
-            log_it("Unable to access database");
-            return 400;
-        }
-    } 
-    log_it("Table is empty, checking if app was already opened today");
+    if (table_is_empty(db, table_active)) {
+        log_it("Table is empty");
+        goto Stock_Read;
+    }
+    
+    log_it("Table is not empty, checking if app was already opened today");
+    
+    int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1", callback, 0, &errmsg);
+    if (rd){
+        perror("Unable to access database");
+        log_it("Unable to access database");
+        return 400;
+    }
 
 
 
-    if(!already_opened) goto Stock_read;
-
+    if(!already_opened) {
+        log_it("App was not opened today");
+        goto Stock_Read;
+    }
+    
     log_it("App was already opened today, no need to update database");
     if (db) {
         sqlite3_close(db);
@@ -54,8 +55,8 @@ int SQL_read(void)
     return 0;
 
     // Label to jump to if the app was not already opened today
-    Stock_read:
-        log_it("App was not opened yet today, reading data from the structure arrays");
+    Stock_Read:
+        log_it("Reading data from the structure arrays");
         for (int i = 0; i < LENGTH_STOCKS; i++)
         {
             // Create a sqlite3 formatted string for the command to insert data into the 'Most_active' table
@@ -108,6 +109,11 @@ int SQL_read(void)
         if (db) {
             sqlite3_close(db);
             db = NULL;
+        }
+
+        if (date) {
+            free(date);
+            date = NULL;
         }
 
         log_it("Database closed successfully");
