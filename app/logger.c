@@ -47,6 +47,11 @@ void log_it(const char *msg)
         fclose(log_file);
         return;
     }
+    if (strcmp(msg, " ") == 0) {
+        fprintf(log_file, "\n");
+        fclose(log_file);
+        return;
+    }
 
 
     // get the current time

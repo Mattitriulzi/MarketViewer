@@ -12,6 +12,7 @@ int main(void)
     // order of which functions to perform
     log_it(NULL);
     log_it("---------------------------------------------------");
+    log_it(" ");
     log_it("(MAIN) Starting Application");
 
     int err;
@@ -24,7 +25,7 @@ int main(void)
         return 800; 
     }
     log_it("(MAIN) Successfully fetched Stock Data");
-
+    log_it(" ");
     log_it("(MAIN) Starting json file parsing");
     err = json(); 
     if (err)
@@ -35,7 +36,7 @@ int main(void)
         return 802; 
     }
     log_it("(MAIN) Successfully parsed json file");
-
+    log_it(" ");
     log_it("(MAIN) Checking the database's existence");
     err = SQL(); 
     if(err)
@@ -46,7 +47,7 @@ int main(void)
         return 801; 
     }
     log_it("(MAIN) Successfully created SQL database");
-
+    log_it(" ");
     log_it("(MAIN) Starting database update process");
     err = SQL_read(); 
     if(err)
@@ -58,7 +59,7 @@ int main(void)
     }
 
     log_it("(MAIN) Successfully updated database if necessary");
-
+    log_it(" ");
     log_it("(MAIN) Starting Application GUI");
     err = interface(); 
     if(err)
@@ -68,10 +69,10 @@ int main(void)
         log_it("(MAIN) Error when starting interface");
         return 804; 
     }
-    log_it("(MAIN) Stopping Application GUI");
     log_it("(MAIN) Successfully closed application GUI");
-
+    log_it(" ");
     
+    log_it("(MAIN) Starting the freeing process");
     err = free_structs();
     if (err)
     {
@@ -81,6 +82,7 @@ int main(void)
     }
     log_it("(MAIN) Successfully freed all structure arrays");
     log_it("(MAIN) Successfully stopped the Application");
+    log_it(" ");
     log_it("---------------------------------------------------");
     log_it(NULL);
     
