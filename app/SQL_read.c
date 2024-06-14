@@ -18,14 +18,14 @@ int SQL_read(void)
     const char *table_active = "Most_active";
     const char *table_news = "News";
 
-    log_it("Checking if the table is empty");
+    log_it("Checking if the database is empty");
     
     if (table_is_empty(db, table_active)) {
-        log_it("Table is empty");
+        log_it("Database is empty");
         goto Stock_Read;
     }
     
-    log_it("Table is not empty, checking if app was already opened today");
+    log_it("Database is not empty, checking if app was already opened today");
     
     int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1", callback, 0, &errmsg);
     if (rd){
