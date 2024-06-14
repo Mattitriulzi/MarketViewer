@@ -14,8 +14,16 @@ The following libraries were used:
 
 libcurl\
 jansson \
-QT(C++)  
-sqlite3 
+QT(C++) \ 
+sqlite3 \
+
+For now to compile and run the app do the following: \
+(From the root of the repo)\ <code>
+$ cd app  
+$ mkdir build \
+$ cd build \
+$ make \
+$ ./StockFetch </code>
 
 # History-Keeping
 
