@@ -83,9 +83,5 @@ int interface(void)
     // starting the app loop
     int execution = app.exec();
 
-    if (argv[0]){
-        free(argv[0]);
-        argv[0] = NULL;
-    }
     return execution;
 }

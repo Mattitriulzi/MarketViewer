@@ -9,9 +9,9 @@ int create_database(sqlite3 *db);
 int SQL(void)
 {
     int rc;
-    unsigned dbex = 1; //database existence
+    unsigned dbex = 1; //database initialised
 
-    if (access("../stockdata.db", R_OK | W_OK) == 1)
+    if (access("../stockdata.db", R_OK | W_OK) == -1)
         dbex = 0;
 
     rc = sqlite3_open("../stockdata.db", &db);

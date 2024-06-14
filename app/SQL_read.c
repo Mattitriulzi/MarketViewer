@@ -34,7 +34,7 @@ int SQL_read(void)
             return 400;
         }
     } 
-    log_it("Table is empty, checking if app was already opened today");
+    log_it("Table is empty");
 
 
 
