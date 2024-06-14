@@ -40,6 +40,7 @@ int Stock_Data(void)
         return 101;
     }
 
+    log_it("Setting up for libcurl transfers");
     // Set the settings for the transfers
     // First curl gets the TOP_GAINERS_LOSERS and most active stocks, both write into temporary files
     curl_easy_setopt(curl1, CURLOPT_URL, "https://www.alphavantage.co/query?function=TOP_GAINERS_LOSERS&apikey=VVHPQ5BU5N72PSWX");

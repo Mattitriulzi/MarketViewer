@@ -51,11 +51,13 @@ int SQL_read(void)
         free(date);
         date = NULL;
     }
+    log_it("No update was necessary");
 
     return 0;
 
     // Label to jump to if the app was not already opened today
     Stock_Read:
+        log_it("Starting the database update process");
         log_it("Reading data from the structure arrays");
         for (int i = 0; i < LENGTH_STOCKS; i++)
         {
@@ -131,6 +133,7 @@ int callback(void *p, int argc, char** argv, char** azColName)
     }
     // Check if the date of the last entry is the same as the current date
     if (!strcasecmp(argv[date_position], date)) already_opened = 1;
+    log_it("Compared current date with last date in database");
     return 0;
 }
 

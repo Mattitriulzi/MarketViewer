@@ -17,6 +17,7 @@ extern "C" {
 
 int interface(void)
 {
+    log_it("Starting the GUI creation process");
     //creating the application and its main window
     int argc = 1;
     char *argv[] = {(char *) "StockFetch"};
@@ -37,6 +38,7 @@ int interface(void)
  
     log_it("Successfully created Main App Window");
 
+    log_it("Fetching the data to add to QLabel");
     QString ticker;
     for (int i = 0; i < LENGTH_STOCKS; i++)
     // iterate through the struct news array to concatenate all information

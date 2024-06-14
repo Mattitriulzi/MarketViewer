@@ -11,8 +11,12 @@ int SQL(void)
     int rc;
     unsigned dbex = 1; //database existence
 
-    if (access("../stockdata.db", R_OK | W_OK) == -1)
+    log_it("Checking if database already exists");
+    if (access("../stockdata.db", R_OK | W_OK) == -1) {
+        log_it("Database does not exist, will be created");
         dbex = 0;
+    }
+        
 
     rc = sqlite3_open("../stockdata.db", &db);
     if (rc){

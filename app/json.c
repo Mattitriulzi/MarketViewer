@@ -40,11 +40,11 @@ int json(void)
         log_it("Unable to delete file");
         return 301;
     }
-    log_it("Successfully deleted the temporary files");  
-    
-
+  
     log_it("Successfully closed temporary files");
+    log_it("Successfully deleted the temporary files");
 
+    log_it("Verifying loaded json data");
     // check if data is object
     if (!json_is_object(root_active) || !json_is_object(root_news))
     {
@@ -54,9 +54,10 @@ int json(void)
         json_decref(root_news);
         return 302;
     }
+    log_it("Data seems valid");
 
 
-
+    log_it("Getting the objects");
     json_t *last_updated_json = json_object_get(root_active, "last_updated");
     // Get the date so that we are able to avoid duplications
     if (!(json_is_string(last_updated_json)))
@@ -65,7 +66,7 @@ int json(void)
         log_it("Error when reading json file");
         return 303;
     }
-    log_it("Successfully opened json objects");
+    log_it("Successfully got json objects");
 
 
     const char* last_updated = json_string_value(last_updated_json);
@@ -88,12 +89,12 @@ int json(void)
         last_updated_json = NULL;
     }
 
-    log_it("Successfully read the date");
+    log_it("Successfully saved the date");
 
 
 
-
-
+    
+    log_it("Starting the Active Stocks loading process");
     error_return = json_parse_active(root_active);
     if (error_return){
         perror("Error when parsing active stocks json");
@@ -104,7 +105,7 @@ int json(void)
     log_it("Successfully loaded the Active Stocks structure array");
 
 
-
+    log_it("Starting the News sentiment loading process");
     error_return = json_parse_sentiment(root_news);
     if (error_return){
         perror("Error when parsing news sentiment json");

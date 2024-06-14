@@ -25,6 +25,7 @@ int main(void)
     }
     log_it("(MAIN) Successfully fetched Stock Data");
 
+    log_it("(MAIN) Starting json file parsing");
     err = json(); 
     if (err)
     {
@@ -46,6 +47,7 @@ int main(void)
     }
     log_it("(MAIN) Successfully created SQL database");
 
+    log_it("(MAIN) Starting database update process");
     err = SQL_read(); 
     if(err)
     {
@@ -54,7 +56,8 @@ int main(void)
         log_it("(MAIN) Error when reading SQL database, exiting");
         return 803; 
     }
-    log_it("(MAIN) Successfully read SQL database");
+
+    log_it("(MAIN) Successfully updated database if necessary");
 
     log_it("(MAIN) Starting Application GUI");
     err = interface(); 
