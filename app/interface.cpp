@@ -19,7 +19,7 @@ int interface(void)
 {
     //creating the application and its main window
     int argc = 1;
-    char *argv[] = {strdup("StockFetch"), NULL};
+    char *argv[] = {(char *) "StockFetch"};
     QApplication app(argc,argv);
     QMainWindow mainwindow;
 

@@ -1,7 +1,8 @@
 #include "stock.h"
 
 
-int json_parse_sentiment(json_t *root_news){
+int json_parse_sentiment(json_t *root_news)
+{
         /*Time to star the deloading for the news json file, first we will extract the array containing the news and then
     take what interests us */
     json_t *feed_array = json_object_get(root_news, "feed"); // extract the feed from the json giant object
@@ -35,8 +36,6 @@ int json_parse_sentiment(json_t *root_news){
             json_decref(root_news);
             return 313;
         }
-        title = json_string_value(title_json);
-        sentiments[i].title = strdup(title);
 
 
         json_t *url_json = json_object_get(feed, "url");
@@ -47,8 +46,6 @@ int json_parse_sentiment(json_t *root_news){
             json_decref(root_news);
             return 314;
         }
-        url = json_string_value(url_json);
-        sentiments[i].URL = strdup(url);
 
 
         json_t *summary_json = json_object_get(feed, "summary");
@@ -59,8 +56,6 @@ int json_parse_sentiment(json_t *root_news){
             json_decref(root_news);
             return 315;
         }
-        summary = json_string_value(summary_json);
-        sentiments[i].summary = strdup(summary);
 
 
         json_t *sentiment_json = json_object_get(feed, "overall_sentiment_label");
@@ -71,8 +66,6 @@ int json_parse_sentiment(json_t *root_news){
             json_decref(root_news);
             return 316;
         }
-        sentiment = json_string_value(sentiment_json);
-        sentiments[i].sentiment = strdup(sentiment);
 
 
         json_t *tickers_array = json_object_get(feed, "ticker_sentiment");
@@ -128,7 +121,7 @@ int json_parse_sentiment(json_t *root_news){
             }
             else
             {
-                tickers = realloc(tickers, sizeof(tickers) + 12);
+                tickers = realloc(tickers, sizeof(tickers) + 13);
                 if (!tickers)
                 {
                     perror("Unable to allocate memory");
@@ -140,9 +133,20 @@ int json_parse_sentiment(json_t *root_news){
             } 
             
         }
-        sentiments[i].tickers = strdup(tickers);
-        if(tickers) free(tickers);
 
+
+        sentiments[i].title = strdup(json_string_value(title_json));
+        check(sentiments[i].title, 313);
+        sentiments[i].URL = strdup(json_string_value(url_json));
+        check(sentiments[i].URL, 313);
+        sentiments[i].summary = strdup(json_string_value(summary_json));
+        check(sentiments[i].summary, 313);
+        sentiments[i].sentiment = strdup(json_string_value(sentiment_json));
+        check(sentiments[i].sentiment, 313);
+        sentiments[i].tickers = strdup(tickers);
+        check(sentiments[i].tickers, 313);
+        
+        if(tickers) free(tickers);
     }
     return 0;
 }

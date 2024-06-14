@@ -13,9 +13,9 @@ int fdelete(const char* filename[], unsigned arraylen);
 /*structs were created in the header, respectively (stock) active_stocks and (news) sentiments*/
 
 int json(void)
-{
+{  
     int error_return;
-    const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
+    const char *filename[] = {"../stock_data_active.json", "../stock_data_sentiment.json"};
     unsigned arraylen = 2;
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
@@ -29,6 +29,7 @@ int json(void)
         return 301;
     }
 
+
     // time to delete the temporary files!
     log_it("Successfully loaded the json files, closing files");
     fclose(stock_data_active);
@@ -39,7 +40,7 @@ int json(void)
         log_it("Unable to delete file");
         return 301;
     }
-    log_it("Successfully deleted the temporary files"); 
+    log_it("Successfully deleted the temporary files");  
     
 
     log_it("Successfully closed temporary files");
@@ -65,6 +66,7 @@ int json(void)
         return 303;
     }
     log_it("Successfully opened json objects");
+
 
     const char* last_updated = json_string_value(last_updated_json);
     /*Read the last_updated string to be able to check for the first space and keep
@@ -124,8 +126,7 @@ int json(void)
         root_news = NULL;
     }
 
-    //fclose(stock_data_active);
-    //fclose(stock_data_sentiment);
+
 
     log_it("Successfully freed the json objects");
     return 0;

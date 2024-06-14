@@ -1,6 +1,7 @@
 #include "stock.h"
 
-int free_structs(void) {
+int free_structs(void) 
+{
     for (int i = 0; i < LENGTH_NEWS; i++) {
         if (sentiments[i].title) {
             free(sentiments[i].title);

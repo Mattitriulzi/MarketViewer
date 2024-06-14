@@ -1,7 +1,8 @@
 #include "stock.h"
 
 
-int json_parse_active(json_t* root_active){
+int json_parse_active(json_t* root_active)
+{
     // get the most_actively_traded object and check if what the object contains is an array
     json_t *most_actively_traded = json_object_get(root_active, "most_actively_traded");
     if (!json_is_array(most_actively_traded))
@@ -32,8 +33,6 @@ int json_parse_active(json_t* root_active){
         }
 
 
-
-
         json_t *ticker_json = json_object_get(most_active, "ticker");
         if (!json_is_string((ticker_json)))
         {
@@ -42,10 +41,7 @@ int json_parse_active(json_t* root_active){
             json_decref(root_active);
             return 306;
         }
-        ticker = json_string_value(json_object_get(most_active, "ticker"));
-        active_stocks[i].ticker = strdup(ticker);
-
-
+        
         json_t *price_json = json_object_get(most_active, "price");
         if (!json_is_string(price_json))
         {
@@ -54,9 +50,6 @@ int json_parse_active(json_t* root_active){
             json_decref(root_active);
             return 307;
         }
-        price = json_string_value(price_json);
-        active_stocks[i].price = strdup(price);
-
 
         json_t *price_change_json = json_object_get(most_active, "change_amount");
         if (!json_is_string(price_change_json))
@@ -66,9 +59,6 @@ int json_parse_active(json_t* root_active){
             json_decref(root_active);
             return 308;
         }
-        price_change = json_string_value(price_change_json);
-        active_stocks[i].price_change = strdup(price_change);
-
 
         json_t *change_percentage_json = json_object_get(most_active, "change_percentage");
         if (!json_is_string(change_percentage_json))
@@ -78,10 +68,7 @@ int json_parse_active(json_t* root_active){
             json_decref(root_active);
             return 309;
         }
-        change_percentage = json_string_value(change_percentage_json);
-        active_stocks[i].change_percentage = strdup(change_percentage);
-
-
+        
         json_t *volume_json = json_object_get(most_active, "volume");
         if (!json_is_string(volume_json))
         {
@@ -90,9 +77,21 @@ int json_parse_active(json_t* root_active){
             json_decref(root_active);
             return 310;
         }
-        volume = json_string_value(volume_json);
-        active_stocks[i].volume = strdup(volume);
+
+
+        active_stocks[i].ticker = strdup(json_string_value(ticker_json));
+        check(active_stocks[i].ticker, 313);
+        active_stocks[i].price = strdup(json_string_value(price_json));
+        check(active_stocks[i].price, 313);
+        active_stocks[i].price_change = strdup(json_string_value(price_change_json));
+        check(active_stocks[i].price_change, 313);
+        active_stocks[i].change_percentage = strdup(json_string_value(change_percentage_json));
+        check(active_stocks[i].change_percentage, 313);
+        active_stocks[i].volume = strdup(json_string_value(volume_json));
+        check(active_stocks[i].volume, 313);
+
 
     }
     return 0;
 }
+        
