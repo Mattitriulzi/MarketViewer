@@ -79,3 +79,5 @@ int json_parse_sentiment(json_t*root_news);
 }
 #endif
 int interface(void);
+
+#define check(a, b) do{ if(!a) return b} while(0)

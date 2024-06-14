@@ -20,7 +20,7 @@ int main(void)
     {
         perror("Error when fetching Stock Data"); 
         printf("Error code: %d\n", err); 
-        log_it("(MAIN) Error when fetching Stock Data");
+        log_it("(MAIN) Error when fetching Stock Data, exiting");
         return 800; 
     }
     log_it("(MAIN) Successfully fetched Stock Data");
@@ -30,7 +30,7 @@ int main(void)
     {
         perror("Error when parsing json file"); 
         printf("Error code: %d\n", err); 
-        log_it("(MAIN) Error when parsing json file");
+        log_it("(MAIN) Error when parsing json file, exiting");
         return 802; 
     }
     log_it("(MAIN) Successfully parsed json file");
@@ -41,7 +41,7 @@ int main(void)
     {
         perror("Error when creating SQL database"); 
         printf("Error code: %d\n", err); 
-        log_it("(MAIN) Error when creating SQL database");
+        log_it("(MAIN) Error when creating SQL database, exiting");
         return 801; 
     }
     log_it("(MAIN) Successfully created SQL database");
@@ -51,7 +51,7 @@ int main(void)
     {
         perror("Error when reading SQL database"); 
         printf("Error code: %d\n", err); 
-        log_it("(MAIN) Error when reading SQL database");
+        log_it("(MAIN) Error when reading SQL database, exiting");
         return 803; 
     }
     log_it("(MAIN) Successfully read SQL database");

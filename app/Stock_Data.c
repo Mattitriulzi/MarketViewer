@@ -20,19 +20,10 @@ int Stock_Data(void)
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
 
     stock_data_active = fopen("stock_data_active.json", "w+");
-    if (!stock_data_active)
-    {
-        perror("Unable to create Temporary File, probably missing memory");
-        log_it("Unable to create Temporary File, probably missing memory");
-        return 100;
-    }
-
-    
     stock_data_sentiment = fopen("stock_data_sentiment.json", "w+");
-    if (!stock_data_sentiment)
-    {
-        perror("Unable to create Temporary File, probably missing memory");
-        log_it("Unable to create Temporary File, probably missing memory"); 
+    if (!stock_data_sentiment || !stock_data_active) {
+        perror("Unable to create temporary file, probably missing memory");
+        log_it("Unable to create temporary file, stopping");
         return 100;
     }
 
