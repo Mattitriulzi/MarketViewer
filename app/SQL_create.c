@@ -9,45 +9,36 @@ int create_database(sqlite3 *db);
 int SQL(void)
 {
     int rc;
+    unsigned dbex = 1; //database existence
 
-    /* Check if database already exists, if not then initialize the tables */
-    if (access("stockdata.db", R_OK | W_OK) == -1)
-    {
-        log_it("Database does not exist, creating database and initialising tables");
+    if (access("../stockdata.db", R_OK | W_OK) == 1)
+        dbex = 0;
 
-        /* Initialize database */
-        rc = sqlite3_open("stockdata.db", &db);
-        if (rc)
-        {
-            perror("Unable to create or open database");
-            log_it("Unable to create or open database");
-            return 200;
-        }
+    rc = sqlite3_open("../stockdata.db", &db);
+    if (rc){
+        perror("Unable to create or open database");
+        log_it("Unable to create or open database");
+        return 200;
+    }
+    log_it("Opening Database, checking for initialisation");
 
+    if (!dbex){
+        log_it("Creating database and initialising tables");
         rc = create_database(db);
-        if (rc)
-        {
+        if (rc){
             perror("Unable to initialize tables");
             return 201;
         }
         log_it("Successfully created and initialised tables");
-    }
-    else
-    {
-        log_it("Database found, opening database");
-
-        rc = sqlite3_open("stockdata.db", &db);
-        if (rc)
-        {
-            perror("Unable to create or open database");
-            log_it("Unable to create or open database");
-            return 203;
-        }
-        log_it("Successfully opened database");
+        return 0;
     }
 
+    log_it("Database already initialised");
     return 0;
+
+ 
 }
+
 
 /* Function to create the database and initialize tables */
 int create_database(sqlite3 *db)

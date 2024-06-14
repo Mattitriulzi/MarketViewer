@@ -6,17 +6,17 @@ stock active_stocks[LENGTH_STOCKS];
 
 char *date = NULL;
 
-int fdelete(const char* filename[], unsigned int arraylen);
+int fdelete(const char* filename[], unsigned arraylen);
 
 
 /*temporary files were created in the header file, respectively stock_data_active and stock_data_sentiment*/
 /*structs were created in the header, respectively (stock) active_stocks and (news) sentiments*/
 
 int json(void)
-{
+{  
     int error_return;
-    const char *filename[] = {"stock_data_active.json", "stock_data_sentiment.json"};
-    unsigned int arraylen = 2;
+    const char *filename[] = {"../stock_data_active.json", "../stock_data_sentiment.json"};
+    unsigned arraylen = 2;
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
     json_t *root_active = json_loadf(stock_data_active, 0, &error);
@@ -29,17 +29,18 @@ int json(void)
         return 301;
     }
 
+
     // time to delete the temporary files!
     log_it("Successfully loaded the json files, closing files");
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
-    /*int error_return = fdelete(filename, arraylen);
+    error_return = fdelete(filename, arraylen);
     if (error_return){
         perror("Unable to delete file");
         log_it("Unable to delete file");
         return 301;
     }
-    log_it("Successfully deleted the temporary files"); */
+    log_it("Successfully deleted the temporary files");  
     
 
     log_it("Successfully closed temporary files");
@@ -65,6 +66,7 @@ int json(void)
         return 303;
     }
     log_it("Successfully opened json objects");
+
 
     const char* last_updated = json_string_value(last_updated_json);
     /*Read the last_updated string to be able to check for the first space and keep
@@ -124,15 +126,14 @@ int json(void)
         root_news = NULL;
     }
 
-    //fclose(stock_data_active);
-    //fclose(stock_data_sentiment);
+
 
     log_it("Successfully freed the json objects");
     return 0;
 }
 
 
-int fdelete(const char* filename[], unsigned int arraylen){
+int fdelete(const char* filename[], unsigned arraylen){
 
     for(int i = 0; i < arraylen; i++){
         if (remove(filename[i])){

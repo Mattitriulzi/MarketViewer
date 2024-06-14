@@ -17,12 +17,17 @@ FILE *stock_data_sentiment = NULL;
 // Function to fetch stock data
 int Stock_Data(void)
 {
-    stock_data_active = fopen("stock_data_active.json", "r+");
-    stock_data_sentiment = fopen("stock_data_sentiment.json", "r+");
-    if (!stock_data_active || !stock_data_sentiment){
-        printf("bye bye");
+    curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
+
+    stock_data_active = fopen("../stock_data_active.json", "w+");
+    stock_data_sentiment = fopen("../stock_data_sentiment.json", "w+");
+    if (!stock_data_sentiment || !stock_data_active) {
+        perror("Unable to create temporary file, probably missing memory");
+        log_it("Unable to create temporary file, stopping");
+        return 100;
     }
 
-    log_it("Successfully prepared files for reading"); 
+    log_it("Correctly opened temporary files");
+    log_it("Successfully prepared files for reading");
     return 0;
 }

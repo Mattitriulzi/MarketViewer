@@ -11,13 +11,15 @@ extern "C" {
 }
 #endif
 
+// https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
+
 
 
 int interface(void)
 {
     //creating the application and its main window
     int argc = 1;
-    char *argv[] = {NULL, NULL};
+    char *argv[] = {(char *) "StockFetch"};
     QApplication app(argc,argv);
     QMainWindow mainwindow;
 
@@ -79,5 +81,11 @@ int interface(void)
     log_it("Successfully started Application GUI");
 
     // starting the app loop
-    return app.exec();
+    int execution = app.exec();
+
+    if (argv[0]){
+        free(argv[0]);
+        argv[0] = NULL;
+    }
+    return execution;
 }

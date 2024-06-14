@@ -19,7 +19,7 @@ int SQL_read(void)
     const char *table_news = "News";
 
     log_it("Checking if the table is empty");
-
+    
     // Check if the table 'Most_active' is empty
     if (!is_table_empty(db, table_active))
     {
@@ -35,7 +35,9 @@ int SQL_read(void)
         }
     } 
     log_it("Table is empty, checking if app was already opened today");
-    // Check the date of the last entry to avoid duplicate entries
+
+
+
     if(!already_opened) goto Stock_read;
 
     log_it("App was already opened today, no need to update database");
@@ -126,6 +128,7 @@ int callback(void *p, int argc, char** argv, char** azColName)
     return 0;
 }
 
+
 // Function to check if a table is empty
 int is_table_empty(sqlite3 *db, const char *table_name)
 {
@@ -153,6 +156,7 @@ int is_table_empty(sqlite3 *db, const char *table_name)
     if (!count) return 1;
     return 0;
 }
+
 
 // Callback function for the SQL query to count the number of rows in a table
 int callback_empty(void *count, int argc, char **argv, char **azColName)

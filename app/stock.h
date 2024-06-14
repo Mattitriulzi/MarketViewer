@@ -46,6 +46,8 @@ extern FILE *stock_data_sentiment;
 
 extern FILE *stock_data_active;
 
+extern FILE *log_file;
+
 extern sqlite3 *db;
 
 extern char *date;
@@ -77,3 +79,5 @@ int json_parse_sentiment(json_t*root_news);
 }
 #endif
 int interface(void);
+
+#define check(a, b) do{ if(!a) return b;} while(0)

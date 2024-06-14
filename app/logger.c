@@ -28,13 +28,14 @@ easy debugging
 
 */
 
-void log_it(const char *msg) {
+void log_it(const char *msg)
+{
     // int i is there as a flag if it is the beginning or end of program to prind newlines
 
 
 
     // open file
-    FILE *log_file = fopen("logs.txt", "a");
+    FILE *log_file = fopen("../logs.txt", "a");
     if (!log_file) {
         perror("Unable to create or open log file");
         return;
