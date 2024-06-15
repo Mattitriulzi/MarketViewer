@@ -9,6 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_OSX_ARCHITECTURES arm64)
 set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -g -O1 -fno-omit-frame-pointer")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g -O1 -fno-omit-frame-pointer")
 
 #Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)

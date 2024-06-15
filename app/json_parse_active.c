@@ -15,7 +15,7 @@ int json_parse_active(json_t* root_active)
     // array of stock structs is declared in the header file "stock.h"
     // iterate over the object array and store the data inside our arrays of stock
     
-    for (int i = 0; i < json_array_size(most_actively_traded); i++)
+    for (int i = 0; i < LENGTH_STOCKS; i++)
     {
         /*read the array, array contains objects (key value pairs) that must be read (with already known keys) and then stored into
         the predisposed structs, there are 20 most_active stocks theoretically ordered in their activity in the API
