@@ -7,6 +7,7 @@ extern "C" {
 #endif
 
 
+
 int main(void)
 {
     // order of which functions to perform
@@ -25,7 +26,11 @@ int main(void)
         return 800; 
     }
     log_it("(MAIN) Successfully fetched Stock Data");
+
+
     log_it(" ");
+
+
     log_it("(MAIN) Starting json file parsing");
     err = json(); 
     if (err)
@@ -36,7 +41,11 @@ int main(void)
         return 802; 
     }
     log_it("(MAIN) Successfully parsed json file");
+
+
     log_it(" ");
+
+
     log_it("(MAIN) Checking the database's existence");
     err = SQL(); 
     if(err)
@@ -47,7 +56,11 @@ int main(void)
         return 801; 
     }
     log_it("(MAIN) Successfully created SQL database");
+
+
     log_it(" ");
+
+
     log_it("(MAIN) Starting database update process");
     err = SQL_read(); 
     if(err)
@@ -57,11 +70,14 @@ int main(void)
         log_it("(MAIN) Error when reading SQL database, exiting");
         return 803; 
     }
-
     log_it("(MAIN) Successfully updated database if necessary");
+
+
     log_it(" ");
+
+
     log_it("(MAIN) Starting Application GUI");
-    err = interface(); 
+    err = app(); 
     if(err)
     {
         perror("Error when starting interface"); 
@@ -70,6 +86,8 @@ int main(void)
         return 804; 
     }
     log_it("(MAIN) Successfully closed application GUI");
+
+
     log_it(" ");
     
     log_it("(MAIN) Starting the freeing process");

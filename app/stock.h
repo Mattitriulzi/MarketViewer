@@ -52,9 +52,6 @@ extern sqlite3 *db;
 
 extern char *date;
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 // old read file function
 //char *read_file(FILE *file, int length);
 
@@ -75,9 +72,6 @@ int json_parse_active(json_t *root_active);
 
 int json_parse_sentiment(json_t*root_news);
 
-#ifdef __cplusplus
-}
-#endif
-int interface(void);
+int app(void);
 
 #define check(a, b) do{ if(!a) return b;} while(0)
