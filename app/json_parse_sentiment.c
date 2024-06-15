@@ -17,7 +17,7 @@ int json_parse_sentiment(json_t *root_news)
     char *tickers;
 
 
-    for (int i = 0; i < json_array_size(feed_array); i++)
+    for (int i = 0; i < LENGTH_NEWS; i++)
     {
         const char *title, *url, *summary, *sentiment; // tickers is a special case, hence will initialise later
         json_t *feed = json_array_get(feed_array, i);
@@ -81,7 +81,7 @@ int json_parse_sentiment(json_t *root_news)
 
 
 
-        tickers = (char *) calloc(13, sizeof(char)); /*initially give it a size of 15 as tickers cannot have more than 5
+        tickers = (char *) calloc(15, sizeof(char)); /*initially give it a size of 15 as tickers cannot have more than 5
         + coma + space + null terminator letters P.S. Had to add possibility for CRYPTO:BTC */
         for (int j = 0; j < json_array_size(tickers_array); j++)
         {
@@ -123,7 +123,7 @@ int json_parse_sentiment(json_t *root_news)
             }
             else
             {
-                tickers = realloc(tickers, sizeof(tickers) + 13);
+                tickers = realloc(tickers, strlen(tickers) + 15);
                 if (!tickers)
                 {
                     perror("Unable to allocate memory");
