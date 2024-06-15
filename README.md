@@ -40,5 +40,7 @@ It is therefore possible to access the database using sqlite3 in the terminal to
 **Better-looking interface** \
 **possibly more requests on the API**\
 **Crypto Information**\
-**Forex Information**
+**Forex Information** \
+**News, Stocks, Crypto and Forex will be shown in pair by 5 with buttons to show next/previous 5 on the bottom**
+
         
