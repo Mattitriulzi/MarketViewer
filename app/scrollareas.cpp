@@ -1,36 +1,19 @@
-#include <QApplication>
-#include <QMainWindow>
-#include <QLabel>
-#include <QGridLayout>
-#include <QScrollArea>
-#ifdef __cplusplus
-extern "C" {
-#endif 
-#include "stock.h"
-#ifdef __cplusplus
-}
-#endif
-
-// https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
+#include "interface.hpp"
 
 
 
-int interface(void)
+int createScrollAreas(QMainWindow *mainwindow)
 {
-    log_it("Starting the GUI creation process");
-    //creating the application and its main window
-    int argc = 1;
-    char *argv[] = {(char *) "StockFetch"};
-    QApplication app(argc,argv);
-    QMainWindow mainwindow;
-
+    check(mainwindow, 900);
     //create a central widget to hold the layout
-    QWidget *centralwidget = new QWidget(&mainwindow);
+    QWidget *centralwidget = new QWidget(mainwindow);
+    check(centralwidget, 901);
 
     /*Create a QGridLayout for the variables
     It should have probably 2 columns, one for stock information
     and one for news information, one column each*/
     QGridLayout *layout = new QGridLayout(centralwidget);
+    check(layout, 902);
 
     /*sentiments[0 -> 9]
     active_stocks[0 -> 19]
@@ -61,9 +44,13 @@ int interface(void)
 
     // Initiate the two different labels and then create two scrollable areas
    QLabel *stock_info = new QLabel(ticker);
+   check(stock_info, 903);
    QLabel *news_info = new QLabel(news);
+   check(news_info, 904);
    QScrollArea *scroll_stock = new QScrollArea;
+   check(scroll_stock, 905);
    QScrollArea *scroll_news = new QScrollArea;
+   check(scroll_news, 906);
 
    log_it("Successfully created the labels and scroll areas");
 
@@ -75,15 +62,9 @@ int interface(void)
    layout->addWidget(scroll_stock, 0, 0);
    layout->addWidget(scroll_news, 0, 1);
 
-   mainwindow.setCentralWidget(centralwidget);
+   mainwindow->setCentralWidget(centralwidget);
 
-   mainwindow.show();
-
-    log_it("Successfully added the scroll areas to the layout");
-    log_it("Successfully started Application GUI");
-
-    // starting the app loop
-    int execution = app.exec();
-
-    return execution;
+   mainwindow->show();
+   
+   return 0;
 }

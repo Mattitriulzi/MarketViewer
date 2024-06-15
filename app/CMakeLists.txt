@@ -32,13 +32,13 @@ if(NOT JANSSON_LIBRARY)
     message(FATAL_ERROR "Jansson library not found")
 endif()
 
-#Tell Cmake to create the executable executable
+#Tell Cmake to create the executable 
 add_executable(StockFetch order.cpp json.c
                SQL_create.c SQL_read.c free.c
-               Stock_Data.c interface.cpp logger.c
-               json_parse_active.c json_parse_sentiment.c)
+               Stock_Data.c app.cpp logger.c
+               json_parse_active.c json_parse_sentiment.c
+               scrollareas.cpp)
 
 #Link the Widgets module from Qt6 
 link_directories(/usr/local/lib)
 target_link_libraries(StockFetch Qt6::Widgets ${CURL_LIBRARIES} ${JANSSON_LIBRARY} ${SQLite3_LIBRARIES})
-message(STATUS "Jansson library: ${JANSSON_LIBRARY}")

@@ -14,6 +14,8 @@ int json_parse_sentiment(json_t *root_news)
         return 311;
     }
 
+    char *tickers;
+
 
     for (int i = 0; i < json_array_size(feed_array); i++)
     {
@@ -79,7 +81,7 @@ int json_parse_sentiment(json_t *root_news)
 
 
 
-        char *tickers = (char *) calloc(13, sizeof(char)); /*initially give it a size of 15 as tickers cannot have more than 5
+        tickers = (char *) calloc(13, sizeof(char)); /*initially give it a size of 15 as tickers cannot have more than 5
         + coma + space + null terminator letters P.S. Had to add possibility for CRYPTO:BTC */
         for (int j = 0; j < json_array_size(tickers_array); j++)
         {
@@ -146,7 +148,7 @@ int json_parse_sentiment(json_t *root_news)
         sentiments[i].tickers = strdup(tickers);
         check(sentiments[i].tickers, 313);
         
-        if(tickers) free(tickers);
     }
+    if (tickers) free(tickers);
     return 0;
 }
