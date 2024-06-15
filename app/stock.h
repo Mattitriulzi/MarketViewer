@@ -8,7 +8,7 @@
 #include <unistd.h>
 
 #define LENGTH_STOCKS  20
-#define LENGTH_NEWS 10
+#define LENGTH_NEWS 20
 #define buffer_len 4096
 
 // Structs for the stock and news data
