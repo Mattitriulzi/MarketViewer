@@ -5,7 +5,25 @@
 #include <QGridLayout>
 #include <QScrollArea>
 #include <QTabWidget>
+#include <QDockWidget>
+#include <QListWidget>
+#include <QPushButton>
+#include <QStackedWidget>
+#include <QPropertyAnimation>
 
+#define VERSION "v2.2-beta"
+
+int createScrollAreas(QMainWindow *mainwindow);
+
+int createSideBar(QMainWindow *mainwindow);
+
+extern QScrollArea *stockWidget;
+
+extern QScrollArea *newsWidget;
+
+extern QDockWidget *dock;
+
+extern QGridLayout *layout;
 
 #ifdef __cplusplus
 extern "C" {
@@ -14,7 +32,3 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
-
-#define VERSION "v2.2-beta"
-
-int createScrollAreas(QMainWindow *mainwindow);

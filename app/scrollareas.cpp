@@ -1,25 +1,26 @@
 #include "interface.hpp"
 
 
+QScrollArea *stockWidget = NULL;
+
+QScrollArea *newsWidget = NULL;
+
+QGridLayout *layout = NULL;
+
 
 int createScrollAreas(QMainWindow *mainwindow)
 {
+    log_it("Successfully created main window");
+    log_it("Beginning to create widgets");
+
     check(mainwindow, 900);
-    //create a central widget to hold the layout
-    QWidget *centralwidget = new QWidget(mainwindow);
-    check(centralwidget, 901);
 
-    /*Create a QGridLayout for the variables
-    It should have probably 2 columns, one for stock information
-    and one for news information, one column each*/
-    QGridLayout *layout = new QGridLayout(centralwidget);
-    check(layout, 902);
+    QWidget *centralWidget = new QWidget(mainwindow);
+    check(centralWidget, 903);
 
-    /*sentiments[0 -> 9]
-    active_stocks[0 -> 19]
-    these are the two struct variables holding all information*/
- 
-    log_it("Successfully created Main App Window");
+    layout = new QGridLayout(centralWidget);
+    check(layout, 904);
+
 
     log_it("Fetching the data to add to QLabel");
     QString ticker;
@@ -41,30 +42,32 @@ int createScrollAreas(QMainWindow *mainwindow)
     }
 
     log_it("Successfully concatenated all information into a QString");
+    
+    QLabel *stockInfo = new QLabel(ticker);
+    check(stockInfo, 903);
+    stockInfo->setStyleSheet("QLabel { color : #dcd6f7}");
 
-    // Initiate the two different labels and then create two scrollable areas
-   QLabel *stock_info = new QLabel(ticker);
-   check(stock_info, 903);
-   QLabel *news_info = new QLabel(news);
-   check(news_info, 904);
-   QScrollArea *scroll_stock = new QScrollArea;
-   check(scroll_stock, 905);
-   QScrollArea *scroll_news = new QScrollArea;
-   check(scroll_news, 906);
+    QLabel *newsInfo = new QLabel(news);
+    check(newsInfo, 904);
+    newsInfo->setStyleSheet("QLabel { color : #dcd6f7}");
 
-   log_it("Successfully created the labels and scroll areas");
+    //create two scrollable areas for each Tab Page
+    stockWidget = new QScrollArea();
+    check(stockWidget, 905);
 
-   //Put the labels inside of the scrollable are
-   scroll_stock->setWidget(stock_info);
-   scroll_news->setWidget(news_info);
+    newsWidget = new QScrollArea();
+    check(newsWidget, 906);
 
-   //add the scroll areas to the layout
-   layout->addWidget(scroll_stock, 0, 0);
-   layout->addWidget(scroll_news, 0, 1);
+    //set the Labels into the Scroll Areas
+    stockWidget->setWidget(stockInfo);
 
-   mainwindow->setCentralWidget(centralwidget);
+    newsWidget->setWidget(newsInfo);
 
-   mainwindow->show();
-   
-   return 0;
+    //set the widget for the scroll areas
+
+    mainwindow->setCentralWidget(centralWidget);
+
+    log_it("Set all Widgets into the main window");
+
+    return 0;
 }

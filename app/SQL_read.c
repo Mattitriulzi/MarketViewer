@@ -59,6 +59,9 @@ int SQL_read(void)
     Stock_Read:
         log_it("Starting the database update process");
         log_it("Reading data from the structure arrays");
+
+        log_it("Starting to insert Active Stocks array in database");
+
         for (int i = 0; i < LENGTH_STOCKS; i++)
         {
             // Create a sqlite3 formatted string for the command to insert data into the 'Most_active' table
@@ -82,6 +85,8 @@ int SQL_read(void)
             }
         }
         log_it("Successfully inserted the Active Stock structure array in database");
+
+        log_it("Starting to insert News structure array in database");
         
         for (int i = 0; i < LENGTH_NEWS; i++)
         {

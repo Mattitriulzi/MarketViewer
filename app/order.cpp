@@ -7,6 +7,7 @@ extern "C" {
 #endif
 
 
+
 int main(void)
 {
     // order of which functions to perform
@@ -56,7 +57,7 @@ int main(void)
     }
     log_it("(MAIN) Successfully created SQL database");
 
-    
+
     log_it(" ");
 
 
@@ -76,7 +77,7 @@ int main(void)
 
 
     log_it("(MAIN) Starting Application GUI");
-    err = interface(); 
+    err = app(); 
     if(err)
     {
         perror("Error when starting interface"); 
