@@ -20,7 +20,7 @@ int SQL_read(void)
 
     log_it("Checking if the database is empty");
     
-    if (table_is_empty(db, table_active)) {
+    if (is_table_empty(db, table_active)) {
         log_it("Database is empty");
         goto Stock_Read;
     }
