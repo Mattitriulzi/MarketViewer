@@ -8,8 +8,14 @@
 #include <unistd.h>
 
 #define LENGTH_STOCKS  20
+
 #define LENGTH_NEWS 20
+
 #define buffer_len 4096
+
+#define VERSION "v2.3-beta"
+
+#define check(a, b) do{ if(!a) return b;} while(0)
 
 // Structs for the stock and news data
 typedef struct stock
@@ -73,5 +79,3 @@ int json_parse_active(json_t *root_active);
 int json_parse_sentiment(json_t*root_news);
 
 int app(void);
-
-#define check(a, b) do{ if(!a) return b;} while(0)

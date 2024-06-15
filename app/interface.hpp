@@ -11,8 +11,6 @@
 #include <QStackedWidget>
 #include <QPropertyAnimation>
 
-#define VERSION "v2.2-beta"
-
 int createScrollAreas(QMainWindow *mainwindow);
 
 int createSideBar(QMainWindow *mainwindow);

@@ -2,10 +2,7 @@
 
 
 // https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
-
-#define VERSION "v2.2-beta"
-
-
+// https://github.com/KDE/labplot/commit/3ef13eed12d03ca6f4026f4217b986010096e597
 
 
 int app(void)
