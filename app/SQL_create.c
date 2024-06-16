@@ -48,20 +48,20 @@ int SQL(void)
 int create_database(sqlite3 *db)
 {
     char *zErrMsg;
-    char *table_active = "CREATE TABLE Most_Active("
-                         "Ticker TEXT NOT NULL,"
-                         "Price FLOAT NOT NULL,"
-                         "Price_Change FLOAT NOT NULL,"
-                         "Change_Percentage TEXT NOT NULL,"
-                         "Volume LONG NOT NULL,"
+    char *table_active = "CREATE TABLE Most_Active(" \
+                         "Ticker TEXT NOT NULL," \
+                         "Price FLOAT NOT NULL," \
+                         "Price_Change FLOAT NOT NULL," \
+                         "Change_Percentage TEXT NOT NULL," \
+                         "Volume LONG NOT NULL," \
                          "Date TEXT NOT NULL)";
 
-    char *table_news = "CREATE TABLE News("
-                       "Title TEXT NOT NULL,"
-                       "URL TEXT NOT NULL,"
-                       "Summary TEXT NOT NULL, "
-                       "Sentiment TEXT NOT NULL, "
-                       "Tickers TEXT NOT NULL, "
+    char *table_news = "CREATE TABLE News(" \
+                       "Title TEXT NOT NULL," \
+                       "URL TEXT NOT NULL," \
+                       "Summary TEXT NOT NULL, " \
+                       "Sentiment TEXT NOT NULL, " \
+                       "Tickers TEXT NOT NULL, " \
                        "Date TEXT NOT NULL)";
 
     /* Execute the creation of the tables in the database */

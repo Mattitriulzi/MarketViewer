@@ -15,14 +15,14 @@ int app(void)
     QCoreApplication::setApplicationName("Stocks Viewer");
     QCoreApplication::setApplicationVersion(VERSION);
     QMainWindow mainwindow;
-    mainwindow.resize(1640, 980);
+    mainwindow.resize(900, 500 );
     QString title = QString("Stocks Viewer - Version %1")
                     .arg(QCoreApplication::applicationVersion());
     mainwindow.setWindowTitle(title);
 
     log_it("Start the Widget Creation process");
 
-    int error = createScrollAreas(&mainwindow);
+    int error = createMainWindow(&mainwindow);
     if (error) {
         perror("Unable to create Mainwindow");
         log_it("Unable to create MainWindow");
