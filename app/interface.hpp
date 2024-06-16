@@ -3,23 +3,23 @@
 #include <QMainWindow>
 #include <QLabel>
 #include <QGridLayout>
-#include <QScrollArea>
-#include <QTabWidget>
 #include <QDockWidget>
 #include <QListWidget>
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QPropertyAnimation>
+#include <QHBoxLayout>
+#include <QScrollArea>
+#include <QPixMap>
 
-#define VERSION "v2.2-beta"
 
-int createScrollAreas(QMainWindow *mainwindow);
+int createMainWindow(QMainWindow *mainwindow);
 
 int createSideBar(QMainWindow *mainwindow);
 
-extern QScrollArea *stockWidget;
+extern QStackedWidget *stockWidget;
 
-extern QScrollArea *newsWidget;
+extern QStackedWidget *newsWidget;
 
 extern QDockWidget *dock;
 

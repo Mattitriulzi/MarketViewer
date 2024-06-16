@@ -4,6 +4,10 @@ QDockWidget *dock = NULL;
 
 void setMiddleDock(QListWidget *listWidget);
 
+void modifyActive(QStackedWidget **active, QStackedWidget *allWidgets[]);
+
+QStackedWidget *activeStack = NULL;
+
 int createSideBar(QMainWindow *mainwindow)
 {
     log_it("Creating Sidebar");
@@ -38,6 +42,8 @@ int createSideBar(QMainWindow *mainwindow)
 
     dock->setFeatures(QDockWidget::NoDockWidgetFeatures);
 
+    dock->setVisible(0);
+
     mainwindow->addDockWidget(Qt::LeftDockWidgetArea, dock);
 
     log_it("Added SideBar onto main window");
@@ -71,17 +77,74 @@ int createSideBar(QMainWindow *mainwindow)
     choiceStack->addWidget(newsWidget);
     //stackedWidget->addWidget(cryptoWidget);
     //StackedWidget->addWidget(forexWidget);
+    
+    
+
+    QStackedWidget *allWidgets[2] = {stockWidget, newsWidget};
+    
+    activeStack = allWidgets[0];    
+
 
     // connect the clicking of an item in the sidebar list to changing the content being shown
     QObject::connect(list, &QListWidget::currentItemChanged,
-    [choiceStack] (QListWidgetItem *current, QListWidgetItem *previous) {
+    [choiceStack, allWidgets] (QListWidgetItem *current, QListWidgetItem *previous) mutable {
         if (current) {
-            choiceStack->setCurrentIndex(current->listWidget()->row(current));
+            int currentIndex = current->listWidget()->row(current);
+            choiceStack->setCurrentIndex(currentIndex);
+            activeStack = allWidgets[currentIndex];
+
         }
     });
     // listWidget is a method of QListWidgetItem that returns a pointer to the QListWidget the item belongs to.
+    // currentItemChanged returns 2, but we are only interested in the current one
 
     layout->addWidget(choiceStack, 1, 0);
+
+    //Buttons to modify the current Stack
+    // + Horizontal layout to place the buttons
+
+    QHBoxLayout *buttonLayout = new QHBoxLayout();
+    check(buttonLayout, 930);
+
+    
+
+    QPushButton *next = new QPushButton("N");
+    check(next, 924);
+    next->setFixedSize(25, 25);
+    next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}");
+
+    QIcon nextIcon("../arrowRight.png");
+    next->setIcon(nextIcon);
+    next->setIconSize(QSize(20, 20));
+
+    QPushButton *previous = new QPushButton("P");
+    check(previous, 925);
+    previous->setFixedSize(25, 25);
+    previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }");
+
+    QIcon previousIcon("../arrowLeft.png");
+    previous->setIcon(previousIcon);
+    previous->setIconSize(QSize(20, 20));
+
+    buttonLayout->addWidget(previous);
+    buttonLayout->addWidget(next);
+
+
+    QObject::connect(next, &QPushButton::clicked, []() {
+            int currentIndex = activeStack->currentIndex();
+            if (currentIndex < activeStack->count() - 1) {
+                activeStack->setCurrentIndex(currentIndex + 1);
+            }
+    });
+
+    QObject::connect(previous, &QPushButton::clicked, []() {
+        int currentIndex = activeStack->currentIndex();
+        if (currentIndex > 0) {
+            activeStack->setCurrentIndex(currentIndex - 1);
+        }
+    });
+
+    layout->addLayout(buttonLayout, 2, 0);
 
     
     return 0;
@@ -94,7 +157,8 @@ void setMiddleDock(QListWidget *listWidget)
     QVBoxLayout *dockLayout = new QVBoxLayout(widget);
 
     if (!widget || !dockLayout) perror("Unable to allocate memory");
-    
+
+    dock->setStyleSheet("background-color : #000000");
 
     dockLayout->addStretch();
 
@@ -103,5 +167,4 @@ void setMiddleDock(QListWidget *listWidget)
     dockLayout->addStretch();
 
     dock->setWidget(widget);
-
 }
