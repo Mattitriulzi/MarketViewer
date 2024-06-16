@@ -13,7 +13,7 @@
 
 #define buffer_len 4096
 
-#define VERSION "v2.3-beta"
+#define VERSION "v2.4-beta"
 
 #define check(a, b) do{ if(!a) return b;} while(0)
 
