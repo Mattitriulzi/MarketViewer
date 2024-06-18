@@ -58,6 +58,9 @@ extern sqlite3 *db;
 
 extern char *date;
 
+extern bool FIRST_TIME_FLAG;
+// Flag that will decide whether it is the first time the file is being opened
+
 // old read file function
 //char *read_file(FILE *file, int length);
 

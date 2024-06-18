@@ -36,6 +36,8 @@ int createSideBar(QMainWindow *mainwindow)
     //list->addItem("Crypto");
     //list->addItem("Forex");
 
+    list->setStyleSheet("QListWidget {background: transparent; border: 0}");
+
     setMiddleDock(list);
 
     log_it("SideBar created");
@@ -108,23 +110,23 @@ int createSideBar(QMainWindow *mainwindow)
 
     
 
-    QPushButton *next = new QPushButton("N");
+    QPushButton *next = new QPushButton();
     check(next, 924);
     next->setFixedSize(25, 25);
     next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}");
 
     QIcon nextIcon("../arrowRight.png");
     next->setIcon(nextIcon);
-    next->setIconSize(QSize(20, 20));
+    next->setIconSize(QSize(21, 21));
 
-    QPushButton *previous = new QPushButton("P");
+    QPushButton *previous = new QPushButton();
     check(previous, 925);
     previous->setFixedSize(25, 25);
     previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }");
 
     QIcon previousIcon("../arrowLeft.png");
     previous->setIcon(previousIcon);
-    previous->setIconSize(QSize(20, 20));
+    previous->setIconSize(QSize(21, 21));
 
     buttonLayout->addWidget(previous);
     buttonLayout->addWidget(next);
@@ -158,7 +160,8 @@ void setMiddleDock(QListWidget *listWidget)
 
     if (!widget || !dockLayout) perror("Unable to allocate memory");
 
-    dock->setStyleSheet("background-color : #000000");
+    dock->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, "
+                    "stop:0 #ADD8E6, stop:1 #8A2BE2);");
 
     dockLayout->addStretch();
 

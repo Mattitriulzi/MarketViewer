@@ -3,7 +3,7 @@
 
 // https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
 // https://github.com/KDE/labplot/commit/3ef13eed12d03ca6f4026f4217b986010096e597
-
+// https://doc.qt.io/qt-5/stylesheet-reference.html
 
 int app(void)
 {
@@ -16,7 +16,8 @@ int app(void)
     QCoreApplication::setApplicationVersion(VERSION);
     QMainWindow mainwindow;
     mainwindow.resize(900, 500 );
-    QString title = QString("Stocks Viewer - Version %1")
+
+    QString title = QString("Stocks Viewer %1")
                     .arg(QCoreApplication::applicationVersion());
     mainwindow.setWindowTitle(title);
 
@@ -49,6 +50,7 @@ int app(void)
     mainwindow.setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:1, y2:1, \
      stop:0 #0f0c29, stop:0.5 #302b63, stop:1 #24243e);");
     mainwindow.show();
+
     // starting the app loop
     int execution = app.exec();
 
