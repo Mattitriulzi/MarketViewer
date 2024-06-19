@@ -53,7 +53,9 @@ int createSideBar(QMainWindow *mainwindow)
     toggleDock->setIcon(sidebarIcon);
     toggleDock->setIconSize(QSize(23, 23));
 
-    toggleDock->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px}");
+    toggleDock->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px}"
+                                "QPushButton:hover { background-color: #dcd6f7; }"
+                                "QPushButton:pressed { background-color: #a8a2b1; }");
     toggleDock->setFixedSize(30, 30);
 
     // Connect the Button click to hide/show the Sidebar, with animation
@@ -110,7 +112,9 @@ int createSideBar(QMainWindow *mainwindow)
     check(next, 924);
     next->setMinimumSize(20, 20);
     next->setMaximumSize(50, 50);
-    next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}");
+    next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}"
+                        "QPushButton:hover { background-color: #dcd6f7; }"
+                        "QPushButton:pressed { background-color: #a8a2b1; }");
 
     QIcon nextIcon("../arrowRight.png");
     next->setIcon(nextIcon);
@@ -120,7 +124,9 @@ int createSideBar(QMainWindow *mainwindow)
     check(previous, 925);
     previous->setMinimumSize(25, 25);
     previous->setMaximumSize(50, 50);
-    previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }");
+    previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }"
+                            "QPushButton:hover { background-color: #dcd6f7; }"
+                            "QPushButton:pressed { background-color: #a8a2b1; }");
 
     QIcon previousIcon("../arrowLeft.png");
     previous->setIcon(previousIcon);
@@ -167,7 +173,7 @@ void setMiddleDock(QListWidget *listWidget)
     if (!widget || !dockLayout) perror("Unable to allocate memory");
 
     dock->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, "
-                    "stop:0 #ADD8E6, stop:1 #8A2BE2);");
+                    "stop:0 #FFD1DC, stop:1 #8A2BE2);");
 
     dockLayout->addStretch();
 

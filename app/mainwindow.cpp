@@ -48,7 +48,7 @@ int createMainWindow(QMainWindow *mainwindow)
         tempActiveLabel[i] = new QLabel(active);
         check(tempActiveLabel[i], 903);
         tempActiveLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
-                                            "background: white; font-size: 20px;}" );
+                                            "background: white; font-size: 22px;}" );
         //tempActiveLabel[i]->setFont(font);
         tempActiveLabel[i]->setAlignment(Qt::AlignCenter);
         tempActiveLabel[i]->setMinimumWidth(450);
@@ -86,7 +86,8 @@ int createMainWindow(QMainWindow *mainwindow)
 
         tempNewsLabel[i] = new QLabel(news);
         check(tempNewsLabel[i], 904);
-        tempNewsLabel[i]->setStyleSheet("QLabel { background:transparent;color : #000000; border: 0;}");
+        tempNewsLabel[i]->setStyleSheet("QLabel { background:transparent;color : #000000; border: 0;"
+                                        " font-size: 22px;}");
 
         newsLabel[i] = new QScrollArea;
         check(newsLabel[i], 905);

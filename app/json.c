@@ -34,12 +34,12 @@ int json(void)
     log_it("Successfully loaded the json files, closing files");
     fclose(stock_data_active);
     fclose(stock_data_sentiment);
-    error_return = fdelete(filename, arraylen);
+    /*error_return = fdelete(filename, arraylen);
     if (error_return) {
         perror("Unable to delete file");
         log_it("Unable to delete file");
         return 301;
-    }
+    }*/
   
     log_it("Successfully closed temporary files");
     log_it("Successfully deleted the temporary files");
