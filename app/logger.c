@@ -26,18 +26,28 @@ for now major operations are:
 any errors will also be output precisely inside the log.txt file to allow for 
 easy debugging
 
+NULL for two line space
+" " for a single line space
+
 */
+
+int checkFileLength(FILE * file);
+
+bool FIRST_TIME_FLAG;
 
 void log_it(const char *msg)
 {
-    // int i is there as a flag if it is the beginning or end of program to prind newlines
-
-
-
     // open file
-    FILE *log_file = fopen("../logs.txt", "a");
+    FILE *log_file = fopen("../logs.txt", "a+");
     if (!log_file) {
         perror("Unable to create or open log file");
+        return;
+    }
+    
+    // Flag to check whether the file is too long
+    if (msg && strcasecmp(msg, "Test LogFile Length") == 0) {
+        int errorReturn = checkFileLength(log_file);
+        if (errorReturn) printf("Error when deleting log file \n");
         return;
     }
 
@@ -76,4 +86,49 @@ void log_it(const char *msg)
         
     return;
 
+}
+
+
+#define bufferSize 2048
+
+
+int checkFileLength(FILE *file)
+{
+    unsigned lineCounter = 0;
+
+    char buffer[bufferSize];
+
+    rewind(file);
+
+    while (1) {
+        size_t line = fread(buffer, sizeof(char), bufferSize, file);
+        if (lineCounter > 10000)
+            break;
+
+        if (ferror(file)) 
+            return -1;
+    
+
+        for (int i = 0; i < line; i++) {
+            if (buffer[i] == '\n')
+                lineCounter++;
+        }
+
+        if (feof(file)) 
+            break;
+    }
+    fclose(file);
+
+    if (!lineCounter)
+        FIRST_TIME_FLAG = 1;
+
+    if (lineCounter < 10000)
+        return 0;
+        
+    if (remove("../logs.txt")) 
+        return -1;
+
+    FIRST_TIME_FLAG = 1;
+
+    return 0;
 }

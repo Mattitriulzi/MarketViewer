@@ -24,6 +24,7 @@ int SQL(void)
         log_it("Unable to create or open database");
         return 200;
     }
+    log_it("Database exists");
     log_it("Opening Database, checking for initialisation");
 
     if (!dbex){

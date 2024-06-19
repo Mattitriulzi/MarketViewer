@@ -11,7 +11,9 @@ extern "C" {
 int main(void)
 {
     // order of which functions to perform
-    log_it(NULL);
+    log_it("Test LogFile Length");
+    if (!FIRST_TIME_FLAG)
+        log_it(NULL);
     log_it("---------------------------------------------------");
     log_it(" ");
     log_it("(MAIN) Starting Application");
@@ -102,8 +104,6 @@ int main(void)
     log_it("(MAIN) Successfully stopped the Application");
     log_it(" ");
     log_it("---------------------------------------------------");
-    log_it(NULL);
-    
 
     return 0; 
 }

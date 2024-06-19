@@ -36,9 +36,9 @@ int createSideBar(QMainWindow *mainwindow)
     //list->addItem("Crypto");
     //list->addItem("Forex");
 
-    setMiddleDock(list);
+    list->setStyleSheet("QListWidget {background: transparent; border: 0}");
 
-    log_it("SideBar created");
+    setMiddleDock(list);
 
     dock->setFeatures(QDockWidget::NoDockWidgetFeatures);
 
@@ -53,10 +53,10 @@ int createSideBar(QMainWindow *mainwindow)
 
     QIcon sidebarIcon("../sidebar.png");
     toggleDock->setIcon(sidebarIcon);
-    toggleDock->setIconSize(QSize(20, 20));
+    toggleDock->setIconSize(QSize(23, 23));
 
     toggleDock->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px}");
-    toggleDock->setFixedSize(25, 25);
+    toggleDock->setFixedSize(30, 30);
 
     // Connect the Button click to hide/show the Sidebar, with animation
     /*QPropertyAnimation *animation = new QPropertyAnimation(dock, "geometry");
@@ -108,23 +108,25 @@ int createSideBar(QMainWindow *mainwindow)
 
     
 
-    QPushButton *next = new QPushButton("N");
+    QPushButton *next = new QPushButton();
     check(next, 924);
-    next->setFixedSize(25, 25);
+    next->setMinimumSize(20, 20);
+    next->setMaximumSize(50, 50);
     next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}");
 
     QIcon nextIcon("../arrowRight.png");
     next->setIcon(nextIcon);
-    next->setIconSize(QSize(20, 20));
+    next->setIconSize(QSize(21, 21));
 
-    QPushButton *previous = new QPushButton("P");
+    QPushButton *previous = new QPushButton();
     check(previous, 925);
-    previous->setFixedSize(25, 25);
+    previous->setMinimumSize(25, 25);
+    previous->setMaximumSize(50, 50);
     previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }");
 
     QIcon previousIcon("../arrowLeft.png");
     previous->setIcon(previousIcon);
-    previous->setIconSize(QSize(20, 20));
+    previous->setIconSize(QSize(21, 21));
 
     buttonLayout->addWidget(previous);
     buttonLayout->addWidget(next);
@@ -144,6 +146,14 @@ int createSideBar(QMainWindow *mainwindow)
         }
     });
 
+    QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect;
+    shadow->setBlurRadius(3);
+    shadow->setOffset(5, 5);
+
+    next->setGraphicsEffect(shadow);
+    previous->setGraphicsEffect(shadow);
+    toggleDock->setGraphicsEffect(shadow);
+
     layout->addLayout(buttonLayout, 2, 0);
 
     
@@ -158,7 +168,8 @@ void setMiddleDock(QListWidget *listWidget)
 
     if (!widget || !dockLayout) perror("Unable to allocate memory");
 
-    dock->setStyleSheet("background-color : #000000");
+    dock->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, "
+                    "stop:0 #ADD8E6, stop:1 #8A2BE2);");
 
     dockLayout->addStretch();
 
