@@ -4,8 +4,6 @@ QDockWidget *dock = NULL;
 
 void setMiddleDock(QListWidget *listWidget);
 
-void modifyActive(QStackedWidget **active, QStackedWidget *allWidgets[]);
-
 QStackedWidget *activeStack = NULL;
 
 int createSideBar(QMainWindow *mainwindow)
