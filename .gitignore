@@ -3,3 +3,4 @@
 *.cmake
 /app/build/Makefile
 /app/build/*
+/app/Stock_data.c
