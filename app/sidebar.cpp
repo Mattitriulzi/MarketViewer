@@ -40,8 +40,6 @@ int createSideBar(QMainWindow *mainwindow)
 
     setMiddleDock(list);
 
-    log_it("SideBar created");
-
     dock->setFeatures(QDockWidget::NoDockWidgetFeatures);
 
     dock->setVisible(0);
@@ -55,10 +53,10 @@ int createSideBar(QMainWindow *mainwindow)
 
     QIcon sidebarIcon("../sidebar.png");
     toggleDock->setIcon(sidebarIcon);
-    toggleDock->setIconSize(QSize(20, 20));
+    toggleDock->setIconSize(QSize(23, 23));
 
     toggleDock->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px}");
-    toggleDock->setFixedSize(25, 25);
+    toggleDock->setFixedSize(30, 30);
 
     // Connect the Button click to hide/show the Sidebar, with animation
     /*QPropertyAnimation *animation = new QPropertyAnimation(dock, "geometry");
@@ -112,7 +110,8 @@ int createSideBar(QMainWindow *mainwindow)
 
     QPushButton *next = new QPushButton();
     check(next, 924);
-    next->setFixedSize(25, 25);
+    next->setMinimumSize(20, 20);
+    next->setMaximumSize(50, 50);
     next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}");
 
     QIcon nextIcon("../arrowRight.png");
@@ -121,7 +120,8 @@ int createSideBar(QMainWindow *mainwindow)
 
     QPushButton *previous = new QPushButton();
     check(previous, 925);
-    previous->setFixedSize(25, 25);
+    previous->setMinimumSize(25, 25);
+    previous->setMaximumSize(50, 50);
     previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }");
 
     QIcon previousIcon("../arrowLeft.png");
@@ -145,6 +145,14 @@ int createSideBar(QMainWindow *mainwindow)
             activeStack->setCurrentIndex(currentIndex - 1);
         }
     });
+
+    QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect;
+    shadow->setBlurRadius(3);
+    shadow->setOffset(5, 5);
+
+    next->setGraphicsEffect(shadow);
+    previous->setGraphicsEffect(shadow);
+    toggleDock->setGraphicsEffect(shadow);
 
     layout->addLayout(buttonLayout, 2, 0);
 

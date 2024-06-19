@@ -7,11 +7,13 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QStackedWidget>
-#include <QPropertyAnimation>
 #include <QHBoxLayout>
 #include <QScrollArea>
-#include <QPixMap>
-
+#include <QWidget>
+#include <QFontDatabase>
+#include <QDir>
+#include <QFont>
+#include <QGraphicsDropShadowEffect>
 
 int createMainWindow(QMainWindow *mainwindow);
 

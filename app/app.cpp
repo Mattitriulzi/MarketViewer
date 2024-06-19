@@ -1,4 +1,5 @@
 #include "interface.hpp"
+#include <iostream>
 
 
 // https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
@@ -16,6 +17,15 @@ int app(void)
     QCoreApplication::setApplicationVersion(VERSION);
     QMainWindow mainwindow;
     mainwindow.resize(900, 500 );
+
+    int fontId = QFontDatabase::addApplicationFont("spaceGrotesk.ttf");
+    if (fontId == -1) 
+        log_it("Failed to load font Space Grotesk, default system font will be used");
+    
+    QFont defaultFont("Space Grotesk", 16);
+    
+    QApplication::setFont(defaultFont);
+
 
     QString title = QString("Stocks Viewer %1")
                     .arg(QCoreApplication::applicationVersion());
@@ -40,8 +50,6 @@ int app(void)
         log_it("Unable to create SideBar");
         return 1001;
     }
-
-    log_it("SideBar created");
     
     log_it("Successfully started Application GUI");
 
@@ -52,7 +60,5 @@ int app(void)
     mainwindow.show();
 
     // starting the app loop
-    int execution = app.exec();
-
-    return execution;
+    return app.exec();
 }
