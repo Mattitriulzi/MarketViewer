@@ -11,9 +11,11 @@
 #include <QScrollArea>
 #include <QWidget>
 #include <QFontDatabase>
-#include <QDir>
 #include <QFont>
 #include <QGraphicsDropShadowEffect>
+#include <QPropertyAnimation>
+#include <QGraphicsOpacityEffect>
+#include <QRect>
 
 int createMainWindow(QMainWindow *mainwindow);
 

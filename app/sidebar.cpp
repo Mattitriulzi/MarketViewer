@@ -6,6 +6,10 @@ void setMiddleDock(QListWidget *listWidget);
 
 QStackedWidget *activeStack = NULL;
 
+int visibleDock = 1;
+
+void toggleDockVisibility();
+
 int createSideBar(QMainWindow *mainwindow)
 {
     log_it("Creating Sidebar");
@@ -40,7 +44,7 @@ int createSideBar(QMainWindow *mainwindow)
 
     dock->setFeatures(QDockWidget::NoDockWidgetFeatures);
 
-    dock->setVisible(0);
+    dock->setVisible(1);
 
     mainwindow->addDockWidget(Qt::LeftDockWidgetArea, dock);
 
@@ -58,18 +62,11 @@ int createSideBar(QMainWindow *mainwindow)
                                 "QPushButton:pressed { background-color: #a8a2b1; }");
     toggleDock->setFixedSize(30, 30);
 
-    /*//Connect the Button click to hide/show the Sidebar, with animation
-    QPropertyAnimation *animation = new QPropertyAnimation(dock, "geometry");
-    check(animation, 940);
-    animation->setDuration(1000)
+    QObject::connect(toggleDock, &QPushButton::clicked, toggleDockVisibility);
 
-    OObject::connect(toggleDock, &QPushButton::clicked, []() {
-
-    } );*/
-    
-    QObject::connect(toggleDock, &QPushButton::clicked, []() {
+    /*QObject::connect(toggleDock, &QPushButton::clicked, []() {
         dock->setVisible(!dock->isVisible());
-    });
+    });*/
     
     layout->addWidget(toggleDock, 0, 0);
 
@@ -92,7 +89,7 @@ int createSideBar(QMainWindow *mainwindow)
     // connect the clicking of an item in the sidebar list to changing the content being shown
     QObject::connect(list, &QListWidget::currentItemChanged,
     [choiceStack, allWidgets] (QListWidgetItem *current, QListWidgetItem *previous) mutable {
-        if (current) {
+ 	   if (current) {
             int currentIndex = current->listWidget()->row(current);
             choiceStack->setCurrentIndex(currentIndex);
             activeStack = allWidgets[currentIndex];
@@ -186,4 +183,48 @@ void setMiddleDock(QListWidget *listWidget)
     dockLayout->addStretch();
 
     dock->setWidget(widget);
+}
+
+
+void toggleDockVisibility()
+{
+    if (!dock) return;
+
+    //create an opacity effect to be able to make the dock "transparent"
+    static QGraphicsOpacityEffect *opacityEffect = new QGraphicsOpacityEffect(dock);
+    if (!opacityEffect) return;
+    dock->setGraphicsEffect(opacityEffect);
+
+    //create an animation to animate the dock's closing/opening
+    static QPropertyAnimation *dockEffect = new QPropertyAnimation(dock, "geometry");
+    if (!dockEffect) return;
+    dockEffect->setDuration(750);
+
+    static const QRect dockGeometry = dock->geometry();
+
+    QObject::disconnect(dockEffect, &QPropertyAnimation::finished, nullptr, nullptr);
+
+    //global variable visibleDock is used to keep track of the dock's visibility
+    if (dock->isVisible()) {
+        // Animate to a geometry with 0 width and 0 height to hide
+        
+        QObject::connect(dockEffect, &QPropertyAnimation::finished, []() {
+            dock->setVisible(0);
+            opacityEffect->setOpacity(0.0);
+        });
+
+        dockEffect->setStartValue(dock->geometry());
+        dockEffect->setEndValue(QRect(-dockGeometry.width(), dockGeometry.y(), 0, dockGeometry.height()));
+        
+    } else if (!dock->isVisible()){
+
+        dock->setVisible(1);
+        // Animate back to a visible state
+        dockEffect->setStartValue(QRect(-dockGeometry.width(), dockGeometry.y(), 0, dockGeometry.height()));
+        dockEffect->setEndValue(dockGeometry);
+        opacityEffect->setOpacity(1.0);
+        
+    }
+    dockEffect->start();
+    return;
 }
