@@ -58,10 +58,14 @@ int createSideBar(QMainWindow *mainwindow)
                                 "QPushButton:pressed { background-color: #a8a2b1; }");
     toggleDock->setFixedSize(30, 30);
 
-    // Connect the Button click to hide/show the Sidebar, with animation
-    /*QPropertyAnimation *animation = new QPropertyAnimation(dock, "geometry");
+    /*//Connect the Button click to hide/show the Sidebar, with animation
+    QPropertyAnimation *animation = new QPropertyAnimation(dock, "geometry");
     check(animation, 940);
-    animation->setDuration(1000)*/
+    animation->setDuration(1000)
+
+    OObject::connect(toggleDock, &QPushButton::clicked, []() {
+
+    } );*/
     
     QObject::connect(toggleDock, &QPushButton::clicked, []() {
         dock->setVisible(!dock->isVisible());
