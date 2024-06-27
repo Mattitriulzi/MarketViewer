@@ -1,10 +1,12 @@
 #include "interface.hpp"
 
-QDockWidget *dock = NULL;
+QDockWidget *dock = nullptr;
 
 void setMiddleDock(QListWidget *listWidget);
 
-QStackedWidget *activeStack = NULL;
+QStackedWidget *activeStack = nullptr;
+
+QPropertyAnimation *dockSize = nullptr;
 
 void toggleDockVisibility();
 
@@ -12,18 +14,21 @@ int createSideBar(QMainWindow *mainwindow)
 {
     log_it("Creating Sidebar");
 
-    dock = new QDockWidget(mainwindow);
+    dock = new (std::nothrow) QDockWidget(mainwindow);
     check(dock, 920);
-    dock->setTitleBarWidget(new QWidget());
+    dock->setTitleBarWidget(new (std::nothrow) QWidget());
 
-    QListWidget *list = new QListWidget(dock);
+    QListWidget *list = new (std::nothrow) QListWidget(dock);
     check(list, 921);
+    list->setMinimumWidth(0);
+    list->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    list->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    //Add the options to the list
-    QListWidgetItem *stockItem = new QListWidgetItem("Stocks");
+    // Add the options to the list
+    QListWidgetItem *stockItem = new (std::nothrow) QListWidgetItem("Stocks");
     check(stockItem, 930);
 
-    QListWidgetItem *newsItem = new QListWidgetItem("News");
+    QListWidgetItem *newsItem = new (std::nothrow) QListWidgetItem("News");
     check(newsItem, 931);
 
     stockItem->setTextAlignment(Qt::AlignCenter);
@@ -33,8 +38,8 @@ int createSideBar(QMainWindow *mainwindow)
 
     list->addItem(stockItem);
     list->addItem(newsItem);
-    //list->addItem("Crypto");
-    //list->addItem("Forex");
+    // list->addItem("Crypto");
+    // list->addItem("Forex");
 
     list->setStyleSheet("QListWidget {background: transparent; border: 0}");
 
@@ -42,13 +47,13 @@ int createSideBar(QMainWindow *mainwindow)
 
     dock->setFeatures(QDockWidget::NoDockWidgetFeatures);
 
-    dock->setVisible(0);
+    dock->setVisible(false);
 
     mainwindow->addDockWidget(Qt::LeftDockWidgetArea, dock);
 
     log_it("Added SideBar onto main window");
 
-    QPushButton *toggleDock = new QPushButton();
+    QPushButton *toggleDock = new (std::nothrow) QPushButton();
     check(toggleDock, 922);
 
     QIcon sidebarIcon("../sidebar.png");
@@ -60,22 +65,25 @@ int createSideBar(QMainWindow *mainwindow)
                                 "QPushButton:pressed { background-color: #a8a2b1; }");
     toggleDock->setFixedSize(30, 30);
 
-    QObject::connect(toggleDock, &QPushButton::clicked, toggleDockVisibility);
+    dockSize = new (std::nothrow) QPropertyAnimation(dock, "maximumWidth");
+    // Pre-load Animation to make it smoother
+    dockSize->setDuration(700);
+    dockSize->setStartValue(0);
+    dockSize->setEndValue(0);
+    dockSize->start();
 
-    /*QObject::connect(toggleDock, &QPushButton::clicked, []() {
-        dock->setVisible(!dock->isVisible());
-    });*/
+    QObject::connect(toggleDock, &QPushButton::clicked, toggleDockVisibility);
     
     layout->addWidget(toggleDock, 0, 0);
 
-    // create a Stack with all of the widgets that there are to display
-    QStackedWidget *choiceStack = new QStackedWidget;
+    // Create a Stack with all of the widgets that there are to display
+    QStackedWidget *choiceStack = new (std::nothrow) QStackedWidget;
     check(choiceStack, 923);
 
     choiceStack->addWidget(stockWidget);
     choiceStack->addWidget(newsWidget);
-    //stackedWidget->addWidget(cryptoWidget);
-    //StackedWidget->addWidget(forexWidget);
+    // stackedWidget->addWidget(cryptoWidget);
+    // StackedWidget->addWidget(forexWidget);
     
     
 
@@ -84,10 +92,10 @@ int createSideBar(QMainWindow *mainwindow)
     activeStack = allWidgets[0];    
 
 
-    // connect the clicking of an item in the sidebar list to changing the content being shown
+    // Connect the clicking of an item in the sidebar list to changing the content being shown
     QObject::connect(list, &QListWidget::currentItemChanged,
     [choiceStack, allWidgets] (QListWidgetItem *current, QListWidgetItem *previous) mutable {
- 	   if (current) {
+       if (current) {
             int currentIndex = current->listWidget()->row(current);
             choiceStack->setCurrentIndex(currentIndex);
             activeStack = allWidgets[currentIndex];
@@ -99,15 +107,15 @@ int createSideBar(QMainWindow *mainwindow)
 
     layout->addWidget(choiceStack, 1, 0);
 
-    //Buttons to modify the current Stack
+    // Buttons to modify the current Stack
     // + Horizontal layout to place the buttons
 
-    QHBoxLayout *buttonLayout = new QHBoxLayout();
+    QHBoxLayout *buttonLayout = new (std::nothrow) QHBoxLayout();
     check(buttonLayout, 930);
 
     
 
-    QPushButton *next = new QPushButton();
+    QPushButton *next = new (std::nothrow) QPushButton();
     check(next, 924);
     next->setMinimumSize(20, 20);
     next->setMaximumSize(50, 50);
@@ -119,7 +127,7 @@ int createSideBar(QMainWindow *mainwindow)
     next->setIcon(nextIcon);
     next->setIconSize(QSize(21, 21));
 
-    QPushButton *previous = new QPushButton();
+    QPushButton *previous = new (std::nothrow) QPushButton();
     check(previous, 925);
     previous->setMinimumSize(25, 25);
     previous->setMaximumSize(50, 50);
@@ -149,7 +157,8 @@ int createSideBar(QMainWindow *mainwindow)
         }
     });
 
-    QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect;
+    QGraphicsDropShadowEffect *shadow = new (std::nothrow) QGraphicsDropShadowEffect;
+    check(shadow, 926);
     shadow->setBlurRadius(3);
     shadow->setOffset(5, 5);
 
@@ -166,8 +175,8 @@ int createSideBar(QMainWindow *mainwindow)
 
 void setMiddleDock(QListWidget *listWidget)
 {
-    QWidget *widget = new QWidget();
-    QVBoxLayout *dockLayout = new QVBoxLayout(widget);
+    QWidget *widget = new (std::nothrow) QWidget();
+    QVBoxLayout *dockLayout = new (std::nothrow) QVBoxLayout(widget);
 
     if (!widget || !dockLayout) perror("Unable to allocate memory");
 
@@ -186,62 +195,26 @@ void setMiddleDock(QListWidget *listWidget)
 
 void toggleDockVisibility()
 {
-    if (!dock) return;
+    static const QRect wantedGeom = QRect(0, 0, 300, 500);
 
-    //create an opacity effect to be able to make the dock "transparent"
-    static QGraphicsOpacityEffect *opacityEffect = new QGraphicsOpacityEffect(dock);
-    if (!opacityEffect) return;
-    dock->setGraphicsEffect(opacityEffect);
 
-    //create an animation to animate the dock's closing/opening
-    static QPropertyAnimation *dockEffect = new QPropertyAnimation(dock, "geometry");
-    if (!dockEffect) return;
-    dockEffect->setDuration(750);
+    dock->setMinimumWidth(0);
 
-    static QPropertyAnimation *dockSizeEffect = new QPropertyAnimation(dock, "maximumWidth");
-    if (!dockSizeEffect) return;
-    dockSizeEffect->setDuration(750);
-
-    static const QRect wantedGeometry = QRect(0, 0, 200, 500);
-
-    QParallelAnimationGroup *animationGroup = new QParallelAnimationGroup(dock);
-    if (!animationGroup) return;
-
-    animationGroup->addAnimation(dockEffect);
-    animationGroup->addAnimation(dockSizeEffect);
-
-    QObject::disconnect(animationGroup, &QParallelAnimationGroup::finished, nullptr, nullptr);
 
     if (dock->isVisible()) {
-        dock->setMinimumWidth(0);
-        // Animate to a geometry with 0 width and 0 height to hide
-        
-        QObject::connect(animationGroup, &QParallelAnimationGroup::finished, []() {
-            dock->setVisible(0);
-            //opacityEffect->setOpacity(0.0);
+        QObject::connect(dockSize, &QPropertyAnimation::finished, []() {
+            dock->setVisible(false);
         });
 
-        dockEffect->setStartValue(dock->geometry());
-        dockEffect->setEndValue(QRect(-wantedGeometry.width(), wantedGeometry.y(), 0, wantedGeometry.height()));
+        dockSize->setStartValue(dock->maximumWidth());
+        dockSize->setEndValue(0);
+    } else if (!dock->isVisible()) {
+        QObject::disconnect(dockSize, &QPropertyAnimation::finished, nullptr, nullptr);
 
-        dockSizeEffect->setStartValue(dock->maximumWidth());
-        dockSizeEffect->setEndValue(0);
+        dock->setVisible(true);
+        dockSize->setStartValue(0);
 
-    } else if (!dock->isVisible()){
-
-        dock->setVisible(1);
-        //dock->setMaximumWidth(0);
-        //dock->setGeometry(wantedGeometry.x(), wantedGeometry.y(), 0, wantedGeometry.height());
-
-        // Animate back to a visible state
-        dockEffect->setStartValue(QRect(-wantedGeometry.width(), wantedGeometry.y(), 0, wantedGeometry.height()));
-        dockEffect->setEndValue(wantedGeometry);
-        //opacityEffect->setOpacity(1.0);
-
-        dockSizeEffect->setStartValue(0);
-        dockSizeEffect->setEndValue(wantedGeometry.width());
-        
+        dockSize->setEndValue(wantedGeom.width());
     }
-    animationGroup->start(QAbstractAnimation::DeleteWhenStopped);
-    return;
+    dockSize->start();
 }

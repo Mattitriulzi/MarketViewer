@@ -1,10 +1,4 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
-    #include "stock.h" 
-#ifdef __cplusplus
-}
-#endif
+#include "interface.hpp"
 
 
 

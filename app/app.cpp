@@ -1,5 +1,4 @@
 #include "interface.hpp"
-#include <iostream>
 
 
 // https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
