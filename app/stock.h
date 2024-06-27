@@ -14,7 +14,7 @@
 #define buffer_len 4096
 
 
-#define VERSION "v1.0"
+#define VERSION "v1.1"
 
 
 #define check(a, b) do{ if(!a) return b;} while(0)
@@ -63,9 +63,6 @@ extern char *date;
 extern bool FIRST_TIME_FLAG;
 // Flag that will decide whether it is the first time the file is being opened
 
-// old read file function
-//char *read_file(FILE *file, int length);
-
 int Stock_Data(void);
 
 int SQL_read(void);
@@ -81,6 +78,6 @@ int free_structs(void);
 
 int json_parse_active(json_t *root_active);
 
-int json_parse_sentiment(json_t*root_news);
+int json_parse_sentiment(json_t *root_news);
 
 int app(void);

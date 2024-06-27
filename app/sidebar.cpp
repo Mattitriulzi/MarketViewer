@@ -38,8 +38,6 @@ int createSideBar(QMainWindow *mainwindow)
 
     list->addItem(stockItem);
     list->addItem(newsItem);
-    // list->addItem("Crypto");
-    // list->addItem("Forex");
 
     list->setStyleSheet("QListWidget {background: transparent; border: 0}");
 
@@ -82,8 +80,6 @@ int createSideBar(QMainWindow *mainwindow)
 
     choiceStack->addWidget(stockWidget);
     choiceStack->addWidget(newsWidget);
-    // stackedWidget->addWidget(cryptoWidget);
-    // StackedWidget->addWidget(forexWidget);
     
     
 
@@ -113,7 +109,6 @@ int createSideBar(QMainWindow *mainwindow)
     QHBoxLayout *buttonLayout = new (std::nothrow) QHBoxLayout();
     check(buttonLayout, 930);
 
-    
 
     QPushButton *next = new (std::nothrow) QPushButton();
     check(next, 924);
