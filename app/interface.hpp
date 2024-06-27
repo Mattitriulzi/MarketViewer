@@ -16,6 +16,7 @@
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <QRect>
+#include <QParallelAnimationGroup>
 
 int createMainWindow(QMainWindow *mainwindow);
 

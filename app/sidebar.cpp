@@ -6,8 +6,6 @@ void setMiddleDock(QListWidget *listWidget);
 
 QStackedWidget *activeStack = NULL;
 
-int visibleDock = 1;
-
 void toggleDockVisibility();
 
 int createSideBar(QMainWindow *mainwindow)
@@ -44,7 +42,7 @@ int createSideBar(QMainWindow *mainwindow)
 
     dock->setFeatures(QDockWidget::NoDockWidgetFeatures);
 
-    dock->setVisible(1);
+    dock->setVisible(0);
 
     mainwindow->addDockWidget(Qt::LeftDockWidgetArea, dock);
 
@@ -200,31 +198,50 @@ void toggleDockVisibility()
     if (!dockEffect) return;
     dockEffect->setDuration(750);
 
-    static const QRect dockGeometry = dock->geometry();
+    static QPropertyAnimation *dockSizeEffect = new QPropertyAnimation(dock, "maximumWidth");
+    if (!dockSizeEffect) return;
+    dockSizeEffect->setDuration(750);
 
-    QObject::disconnect(dockEffect, &QPropertyAnimation::finished, nullptr, nullptr);
+    static const QRect wantedGeometry = QRect(0, 0, 200, 500);
 
-    //global variable visibleDock is used to keep track of the dock's visibility
+    QParallelAnimationGroup *animationGroup = new QParallelAnimationGroup(dock);
+    if (!animationGroup) return;
+
+    animationGroup->addAnimation(dockEffect);
+    animationGroup->addAnimation(dockSizeEffect);
+
+    QObject::disconnect(animationGroup, &QParallelAnimationGroup::finished, nullptr, nullptr);
+
     if (dock->isVisible()) {
+        dock->setMinimumWidth(0);
         // Animate to a geometry with 0 width and 0 height to hide
         
-        QObject::connect(dockEffect, &QPropertyAnimation::finished, []() {
+        QObject::connect(animationGroup, &QParallelAnimationGroup::finished, []() {
             dock->setVisible(0);
-            opacityEffect->setOpacity(0.0);
+            //opacityEffect->setOpacity(0.0);
         });
 
         dockEffect->setStartValue(dock->geometry());
-        dockEffect->setEndValue(QRect(-dockGeometry.width(), dockGeometry.y(), 0, dockGeometry.height()));
-        
+        dockEffect->setEndValue(QRect(-wantedGeometry.width(), wantedGeometry.y(), 0, wantedGeometry.height()));
+
+        dockSizeEffect->setStartValue(dock->maximumWidth());
+        dockSizeEffect->setEndValue(0);
+
     } else if (!dock->isVisible()){
 
         dock->setVisible(1);
+        //dock->setMaximumWidth(0);
+        //dock->setGeometry(wantedGeometry.x(), wantedGeometry.y(), 0, wantedGeometry.height());
+
         // Animate back to a visible state
-        dockEffect->setStartValue(QRect(-dockGeometry.width(), dockGeometry.y(), 0, dockGeometry.height()));
-        dockEffect->setEndValue(dockGeometry);
-        opacityEffect->setOpacity(1.0);
+        dockEffect->setStartValue(QRect(-wantedGeometry.width(), wantedGeometry.y(), 0, wantedGeometry.height()));
+        dockEffect->setEndValue(wantedGeometry);
+        //opacityEffect->setOpacity(1.0);
+
+        dockSizeEffect->setStartValue(0);
+        dockSizeEffect->setEndValue(wantedGeometry.width());
         
     }
-    dockEffect->start();
+    animationGroup->start(QAbstractAnimation::DeleteWhenStopped);
     return;
 }
