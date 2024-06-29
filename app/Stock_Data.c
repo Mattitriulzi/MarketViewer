@@ -55,6 +55,7 @@ int Stock_Data(void)
             return 90;
         }
     }
+	if (temppointer) free(temppointer);
 
     log_it("Correctly opened temporary files");
 
@@ -128,7 +129,6 @@ int Stock_Data(void)
 
     // Flush the buffers
     log_it("Correctly cleaned up memory");
-
     // flush all buffers and set the file reader to the beginning of the files
     for (int i = 0; i < NUM_FILES; i++) {
 	    fflush(allPointers[i]);
