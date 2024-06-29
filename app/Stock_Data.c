@@ -55,7 +55,7 @@ int Stock_Data(void)
             return 90;
         }
     }
-	if (temppointer) free(temppointer);
+    if (temppointer) free(temppointer);
 
     log_it("Correctly opened temporary files");
 
