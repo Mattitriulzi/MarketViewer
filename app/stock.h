@@ -50,21 +50,9 @@ extern stock active_stocks[LENGTH_STOCKS];
 // extern news *sentiments;
 extern news sentiments[LENGTH_NEWS];
 
-extern FILE *stock_data_sentiment;
+extern FILE *allFilePointers[NUM_FILES];
 
-extern FILE *stock_data_active;
-
-extern FILE *chfjpy;
-
-extern FILE *chfeur;
-
-extern FILE *chfusd;
-
-extern FILE *btcusd;
-
-extern FILE *ethusd;
-
-extern FILE *solusd;
+extern char *filepaths[NUM_FILES];
 
 extern FILE *log_file;
 

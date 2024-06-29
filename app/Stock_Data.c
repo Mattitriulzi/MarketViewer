@@ -5,15 +5,7 @@
 // API KEY: VVHPQ5BU5N72PSWX. 
 // CLJKYVQVRT3K2MTG
 
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=CHF&to_currency=JPY&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=CHF&to_currency=EUR&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=CHF&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=ETH&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=SOL&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-
-// Callback function to write data received from the API to a file
-
+// // Callback function to write data received from the API to a file
 size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_file)
 {
     size_t write = fwrite(buffer, size, nmemb, storing_file);
