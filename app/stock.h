@@ -54,6 +54,18 @@ extern FILE *stock_data_sentiment;
 
 extern FILE *stock_data_active;
 
+extern FILE *chfjpy;
+
+extern FILE *chfeur;
+
+extern FILE *chfusd;
+
+extern FILE *btcusd;
+
+extern FILE *ethusd;
+
+extern FILE *solusd;
+
 extern FILE *log_file;
 
 extern sqlite3 *db;

@@ -1,0 +1,13 @@
+{
+    "Realtime Currency Exchange Rate": {
+        "1. From_Currency Code": "CHF",
+        "2. From_Currency Name": "Swiss Franc",
+        "3. To_Currency Code": "JPY",
+        "4. To_Currency Name": "Japanese Yen",
+        "5. Exchange Rate": "179.03100000",
+        "6. Last Refreshed": "2024-06-29 17:39:05",
+        "7. Time Zone": "UTC",
+        "8. Bid Price": "179.02810000",
+        "9. Ask Price": "179.03380000"
+    }
+}

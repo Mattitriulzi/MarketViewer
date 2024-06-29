@@ -1,0 +1,13 @@
+{
+    "Realtime Currency Exchange Rate": {
+        "1. From_Currency Code": "ETH",
+        "2. From_Currency Name": "Ethereum",
+        "3. To_Currency Code": "USD",
+        "4. To_Currency Name": "United States Dollar",
+        "5. Exchange Rate": "3382.04000000",
+        "6. Last Refreshed": "2024-06-29 17:39:05",
+        "7. Time Zone": "UTC",
+        "8. Bid Price": "3381.87500000",
+        "9. Ask Price": "3382.05300000"
+    }
+}
