@@ -13,6 +13,8 @@
 
 #define buffer_len 4096
 
+#define NUM_FILES 8
+
 
 #define VERSION "v1.0"
 
@@ -41,6 +43,18 @@ typedef struct news
 
 } news;
 
+enum fileorder {
+    ACTIVE,
+    NEWS,
+    CHFJPY,
+    CHFEUR,
+    CHFUSD,
+    BTCUSD,
+    ETHUSD,
+    SOLUSD
+};
+
+
 /* Change between pointer and array, same behaviors but it will be created in the stack rather
 than the heap, allowing for faster software and no need to free after*/
 
@@ -50,27 +64,15 @@ extern stock active_stocks[LENGTH_STOCKS];
 // extern news *sentiments;
 extern news sentiments[LENGTH_NEWS];
 
-extern FILE *stock_data_sentiment;
-
-extern FILE *stock_data_active;
-
-extern FILE *chfjpy;
-
-extern FILE *chfeur;
-
-extern FILE *chfusd;
-
-extern FILE *btcusd;
-
-extern FILE *ethusd;
-
-extern FILE *solusd;
-
 extern FILE *log_file;
 
 extern sqlite3 *db;
 
 extern char *date;
+
+extern char *filePaths[];
+
+extern FILE *allFilePointers[NUM_FILES];
 
 extern bool FIRST_TIME_FLAG;
 // Flag that will decide whether it is the first time the file is being opened
