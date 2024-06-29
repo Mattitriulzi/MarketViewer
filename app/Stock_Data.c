@@ -21,41 +21,21 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
 }
 
 // File pointers for storing the stock data
-FILE *stock_data_active = NULL;
+FILE *allFilePointers[NUM_FILES];
 
-FILE *stock_data_sentiment = NULL;
-
-FILE *chfjpy = NULL;
-
-FILE *chfeur = NULL;
-
-FILE *chfusd = NULL;
-
-FILE *btcusd = NULL;
-
-FILE *ethusd = NULL;
-
-FILE *solusd = NULL;
+char *filepaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
 
 // Function to fetch stock data
 int Stock_Data(void)
 {
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
-
-    // set a temporary file pointer to NULL to open the files
-    FILE **temppointer = NULL;
-    // keep track of all pointers that will be useful later on
-    FILE *allPointers[NUM_FILES] = {stock_data_active, stock_data_sentiment, chfjpy, chfeur, chfusd, btcusd, ethusd, solusd};
-    char *filepaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
-
+				       
     for (int i = 0; i < NUM_FILES; i++) {
-        temppointer = &allPointers[i];
-        if (!(*temppointer = fopen(filepaths[i], "w+"))) {
-            log_it("Error when opening file");
-            return 90;
+	if (!(allFilePointers[i] = fopen(filepaths[i], "w+"))) {
+	    log_it("Unable to create files");
+	    return 99;
         }
     }
-    if (temppointer) free(temppointer);
 
     log_it("Correctly opened temporary files");
 
