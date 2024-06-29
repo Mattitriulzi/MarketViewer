@@ -51,5 +51,20 @@ int free_structs(void)
     }
 
     log_it("Successfully freed Active Stock structure array");
+
+    for (int i = 0; i < numCurrencies; i++) {
+        if (exchangeRates[i].fromCurrency) {
+            free(exchangeRates[i].fromCurrency);
+            exchangeRates[i].fromCurrency = NULL;
+        }
+        if (exchangeRates[i].toCurrency) {
+            free(exchangeRates[i].toCurrency);
+            exchangeRates[i].toCurrency = NULL;
+        }
+        if (exchangeRates[i].price) {
+            free(exchangeRates[i].price);
+            exchangeRates[i].price = NULL;
+        }
+    }
     return 0;
 }

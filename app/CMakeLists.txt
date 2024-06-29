@@ -39,7 +39,7 @@ add_executable(StockFetch order.cpp json.c
                SQL_create.c SQL_read.c free.c
                Stock_Data.c app.cpp logger.c
                json_parse_active.c json_parse_sentiment.c
-               mainwindow.cpp sidebar.cpp)
+               mainwindow.cpp sidebar.cpp jsonParseCurrencies.c)
 
 #Link the Widgets module from Qt6 
 link_directories(/usr/local/lib)

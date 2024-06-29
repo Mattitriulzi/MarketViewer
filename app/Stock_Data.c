@@ -12,23 +12,6 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
     return write;
 }
 
-// File pointers for storing the stock data
-FILE *stock_data_active;
-
-FILE *stock_data_sentiment;
-
-FILE *chfjpy;
-
-FILE *chfeur;
-
-FILE *chfusd;
-
-FILE *btcusd;
-
-FILE *ethusd;
-
-FILE *solusd;
-
 char *filepaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
 
 FILE *allFilePointers[NUM_FILES];
