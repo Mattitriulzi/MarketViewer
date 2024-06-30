@@ -33,13 +33,13 @@ int json(void)
 
     // time to delete the temporary files!
     log_it("Successfully loaded the json files, closing files");
-    for (int i = 0; i < NUM_FILES; i ++) 
+    /*for (int i = 0; i < NUM_FILES; i ++) 
 	    fclose(allFilePointers[i]);
     error_return = fdelete(filePaths, NUM_FILES);
     if (error_return) {
         log_it("Unable to delete file");
         return 301;
-    }
+    }*/
   
     log_it("Successfully deleted the temporary files");
 
