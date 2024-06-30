@@ -111,5 +111,3 @@ int Stock_Data(void)
     log_it("Successfully prepared files for reading");
     return 0;
 }
-    return 0;
-}
