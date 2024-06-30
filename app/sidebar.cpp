@@ -126,7 +126,6 @@ int createSideBar(QMainWindow *mainwindow)
     QHBoxLayout *buttonLayout = new (std::nothrow) QHBoxLayout();
     check(buttonLayout, 930);
 
-    
 
     QPushButton *next = new (std::nothrow) QPushButton();
     check(next, 924);

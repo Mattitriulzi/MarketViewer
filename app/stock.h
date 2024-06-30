@@ -101,7 +101,7 @@ int free_structs(void);
 
 int json_parse_active(json_t *root_active);
 
-int json_parse_sentiment(json_t*root_news);
+int json_parse_sentiment(json_t *root_news);
 
 int parseCurrencies(json_t *root, int currencyPair);
 

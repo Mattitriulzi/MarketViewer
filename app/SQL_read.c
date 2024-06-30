@@ -27,7 +27,7 @@ int SQL_read(void)
     
     log_it("Database is not empty, checking if app was already opened today");
     
-    int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1", callback, 0, &errmsg);
+    int rd = sqlite3_exec(db, "SELECT date FROM Most_active ORDER BY Date DESC LIMIT 1", callback, 0, &errmsg);
     if (rd){
         perror("Unable to access database");
         log_it("Unable to access database");
