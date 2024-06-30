@@ -17,9 +17,10 @@ int app(void)
     QMainWindow mainwindow;
     mainwindow.resize(900, 500 );
 
-    int fontId = QFontDatabase::addApplicationFont("spaceGrotesk.ttf");
+    int fontId = QFontDatabase::addApplicationFont(QString("../spaceGrotesk.ttf"));
     if (fontId == -1) 
         log_it("Failed to load font Space Grotesk, default system font will be used");
+    else log_it("Font: Space Grotesk, other fonts may be available in the future ;)");
     
     QFont defaultFont("Space Grotesk", 16);
     

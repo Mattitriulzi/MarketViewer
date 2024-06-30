@@ -1,16 +1,8 @@
 #include "stock.h"
 
-#define NUM_FILES 8
-
 // API KEY: VVHPQ5BU5N72PSWX. 
 // CLJKYVQVRT3K2MTG
 
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=CHF&to_currency=JPY&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=CHF&to_currency=EUR&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=CHF&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=ETH&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
-// https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=SOL&to_currency=USD&apikey=VVHPQ5BU5N72PSWX
 
 // Callback function to write data received from the API to a file
 
@@ -20,43 +12,21 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
     return write;
 }
 
-// File pointers for storing the stock data
-FILE *stock_data_active = NULL;
+char *filepaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
 
-FILE *stock_data_sentiment = NULL;
-
-FILE *chfjpy = NULL;
-
-FILE *chfeur = NULL;
-
-FILE *chfusd = NULL;
-
-FILE *btcusd = NULL;
-
-FILE *ethusd = NULL;
-
-FILE *solusd = NULL;
+FILE *allFilePointers[NUM_FILES];
 
 // Function to fetch stock data
 int Stock_Data(void)
 {
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
 
-    // set a temporary file pointer to NULL to open the files
-    FILE **temppointer = NULL;
-    // keep track of all pointers that will be useful later on
-    FILE *allPointers[NUM_FILES] = {stock_data_active, stock_data_sentiment, chfjpy, chfeur, chfusd, btcusd, ethusd, solusd};
-    char *filepaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
-
     for (int i = 0; i < NUM_FILES; i++) {
-        temppointer = &allPointers[i];
-        if (!(*temppointer = fopen(filepaths[i], "w+"))) {
-            log_it("Error when opening file");
-            return 90;
-        }
+	if (!(allFilePointers[i] = fopen(filepaths[i], "w+"))) {
+		log_it("Unable to create files");
+		return 90;
+	    }
     }
-    if (temppointer) free(temppointer);
-
     log_it("Correctly opened temporary files");
 
     CURLM *multi_curl = curl_multi_init();
@@ -139,5 +109,7 @@ int Stock_Data(void)
     }
 
     log_it("Successfully prepared files for reading");
+    return 0;
+}
     return 0;
 }

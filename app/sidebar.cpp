@@ -31,15 +31,28 @@ int createSideBar(QMainWindow *mainwindow)
     QListWidgetItem *newsItem = new (std::nothrow) QListWidgetItem("News");
     check(newsItem, 931);
 
+    QListWidgetItem *forexItem = new (std::nothrow) QListWidgetItem("Forex");
+    check(forexItem, 9311);
+
+    QListWidgetItem *cryptoItem = new (std::nothrow) QListWidgetItem("Crypto");
+    check(cryptoItem, 9312);
+
     stockItem->setTextAlignment(Qt::AlignCenter);
     stockItem->setForeground(QBrush(QColor("#dcd6f7")));
+
     newsItem->setForeground(QBrush(QColor("#dcd6f7")));
     newsItem->setTextAlignment(Qt::AlignCenter);
 
+    forexItem->setForeground(QBrush(QColor("#dcd6f7")));
+    forexItem->setTextAlignment(Qt::AlignCenter);
+
+    cryptoItem->setForeground(QBrush(QColor("#dcd6f7")));
+    cryptoItem->setTextAlignment(Qt::AlignCenter);
+    
     list->addItem(stockItem);
+    list->addItem(forexItem);
+    list->addItem(cryptoItem);
     list->addItem(newsItem);
-    // list->addItem("Crypto");
-    // list->addItem("Forex");
 
     list->setStyleSheet("QListWidget {background: transparent; border: 0}");
 
@@ -81,13 +94,13 @@ int createSideBar(QMainWindow *mainwindow)
     check(choiceStack, 923);
 
     choiceStack->addWidget(stockWidget);
+    choiceStack->addWidget(forexWidget);
+    choiceStack->addWidget(cryptoWidget);
     choiceStack->addWidget(newsWidget);
-    // stackedWidget->addWidget(cryptoWidget);
-    // StackedWidget->addWidget(forexWidget);
     
     
 
-    QStackedWidget *allWidgets[2] = {stockWidget, newsWidget};
+    QStackedWidget *allWidgets[4] = {stockWidget, forexWidget, cryptoWidget, newsWidget};
     
     activeStack = allWidgets[0];    
 
@@ -195,7 +208,7 @@ void setMiddleDock(QListWidget *listWidget)
 
 void toggleDockVisibility()
 {
-    static const QRect wantedGeom = QRect(0, 0, 300, 500);
+    static const QRect wantedGeom = QRect(0, 0, 250, 500);
 
 
     dock->setMinimumWidth(0);

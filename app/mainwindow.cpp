@@ -1,8 +1,16 @@
 #include "interface.hpp"
 
+#define numForexPairs 3
+
+#define numCryptoPairs 3
+
 QStackedWidget *stockWidget = nullptr;
 
 QStackedWidget *newsWidget = nullptr;
+
+QStackedWidget *forexWidget = nullptr;
+
+QStackedWidget *cryptoWidget = nullptr;
 
 QGridLayout *layout = nullptr;
 
@@ -26,19 +34,25 @@ int createMainWindow(QMainWindow *mainwindow)
     newsWidget = new (std::nothrow) QStackedWidget();
     check(newsWidget, 912);
 
+    forexWidget = new (std::nothrow) QStackedWidget();
+    check(forexWidget, 9121);
+
+    cryptoWidget = new (std::nothrow) QStackedWidget();
+    check(cryptoWidget, 9122);
+
     log_it("Getting the Data from the structure arrays");
 
-    QString active;
+    QString tempString;
     QLabel *tempActiveLabel[LENGTH_STOCKS];
     QWidget *activeWidget[LENGTH_STOCKS];
     QHBoxLayout *activeLabel[LENGTH_STOCKS];
     for (int i = 0; i < LENGTH_STOCKS; i++) {
-        active = QString("Ticker: %1 \n Price: %2 \n Price Change: %3 \n Change Percentage: %4 \n Volume: %5 \n\n")
+        tempString = QString("Ticker: %1 \n Price: %2 \n Price Change: %3 \n Change Percentage: %4 \n Volume: %5 \n\n")
         .arg(active_stocks[i].ticker).arg(active_stocks[i].price)
         .arg(active_stocks[i].price_change).arg(active_stocks[i].change_percentage)
         .arg(active_stocks[i].volume);
 
-        tempActiveLabel[i] = new (std::nothrow) QLabel(active);
+        tempActiveLabel[i] = new (std::nothrow) QLabel(tempString);
         check(tempActiveLabel[i], 903);
         tempActiveLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
                                             "background: white; font-size: 22px;}" );
@@ -63,16 +77,14 @@ int createMainWindow(QMainWindow *mainwindow)
 
     stockWidget->setStyleSheet("QWidget { background:transparent; border : 0}");
 
-    QString news;
     QScrollArea *newsLabel[LENGTH_NEWS];
     QLabel *tempNewsLabel[LENGTH_NEWS];
-    QWidget *newWidget[LENGTH_NEWS];
     for (int i = 0; i < LENGTH_NEWS; i++) {
-        news = QString("Title: %1 \n URL: %2 \n Summary: %3 \n Sentiment: %4 \n Tickers: %5 \n\n")
+        tempString = QString("Title: %1 \n URL: %2 \n Summary: %3 \n Sentiment: %4 \n Tickers: %5 \n\n")
         .arg(sentiments[i].title).arg(sentiments[i].URL)
         .arg(sentiments[i].summary).arg(sentiments[i].sentiment).arg(sentiments[i].tickers);
 
-        tempNewsLabel[i] = new (std::nothrow) QLabel(news);
+        tempNewsLabel[i] = new (std::nothrow) QLabel(tempString);
         check(tempNewsLabel[i], 904);
         tempNewsLabel[i]->setStyleSheet("QLabel { background:transparent;color : #000000; border: 0;"
                                         " font-size: 22px;}");
@@ -111,10 +123,72 @@ int createMainWindow(QMainWindow *mainwindow)
     }
 
     log_it("All data found");
+    
+    QLabel *tempCurrencyLabel[numForexPairs];
+    QWidget *currencywidget[numForexPairs];
+    QHBoxLayout *currencyLayout[numForexPairs];
+    for (int i = 0; i < numForexPairs; i++) {
+        tempString = QString("From: %1 \n To: %2 \n Exchange Rate: %3 \n").arg(exchangeRates[i].fromCurrency)
+            .arg(exchangeRates[i].toCurrency).arg(exchangeRates[i].price);
+
+        tempCurrencyLabel[i] = new (std::nothrow) QLabel(tempString);
+        check(tempCurrencyLabel[i], 906);
+        tempCurrencyLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
+                                            "background: white; font-size: 22px;}" );
+
+        tempCurrencyLabel[i]->setAlignment(Qt::AlignCenter);
+        tempCurrencyLabel[i]->setMinimumWidth(450);
+        tempCurrencyLabel[i]->setMaximumWidth(1000);
+        tempCurrencyLabel[i]->setMinimumHeight(270);
+        tempCurrencyLabel[i]->setMaximumHeight(450);
+
+        currencyLayout[i] = new (std::nothrow) QHBoxLayout();
+        check(currencyLayout[i], 903);
+        currencyLayout[i]->addStretch(1);
+        currencyLayout[i]->addWidget(tempCurrencyLabel[i]);
+        currencyLayout[i]->addStretch(1);
+
+        currencywidget[i] = new (std::nothrow) QWidget();
+        check(currencywidget[i], 903);
+        currencywidget[i]->setLayout(currencyLayout[i]);
+
+        forexWidget->addWidget(currencywidget[i]);
+    }
+
+    QLabel *tempCryptoLabel[numCryptoPairs];
+    QWidget *tempcryptoWidget[numCryptoPairs];
+    QHBoxLayout *cryptoLayout[numCryptoPairs];
+    for (int i = 0; i < numCryptoPairs; i++) {
+        tempString = QString("From: %1 \n To: %2 \n Exchange Rate: %3 \n").arg(exchangeRates[i + numForexPairs].fromCurrency)
+            .arg(exchangeRates[i + numForexPairs].toCurrency).arg(exchangeRates[i + numForexPairs].price);
+
+        tempCryptoLabel[i] = new (std::nothrow) QLabel(tempString);
+        check(tempCryptoLabel[i], 906);
+        tempCryptoLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
+                                            "background: white; font-size: 22px;}" );
+
+        tempCryptoLabel[i]->setAlignment(Qt::AlignCenter);
+        tempCryptoLabel[i]->setMinimumWidth(450);
+        tempCryptoLabel[i]->setMaximumWidth(1000);
+        tempCryptoLabel[i]->setMinimumHeight(270);
+        tempCryptoLabel[i]->setMaximumHeight(450);
+
+        cryptoLayout[i] = new (std::nothrow) QHBoxLayout();
+        check(cryptoLayout[i], 903);
+        cryptoLayout[i]->addStretch(1);
+        cryptoLayout[i]->addWidget(tempCryptoLabel[i]);
+        cryptoLayout[i]->addStretch(1);
+
+        tempcryptoWidget[i] = new (std::nothrow) QWidget();
+        check(tempcryptoWidget[i], 903);
+        tempcryptoWidget[i]->setLayout(cryptoLayout[i]);
+
+        cryptoWidget->addWidget(tempcryptoWidget[i]);
+    }
 
     mainwindow->setCentralWidget(centralwidget);
 
-    log_it("MainWindow succcessfully created");
+    log_it("MainWindow successfully created");
 
     return 0;
 }
