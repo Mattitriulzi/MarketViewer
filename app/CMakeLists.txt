@@ -23,16 +23,15 @@ include_directories(/opt/**, /opt/local/libexec/qt6/lib/QtWidgets.framework/Vers
 include_directories(${CURL_INCLUDE_DIRS})
 include_directories(${SQLITE3_INCLUDE_DIRS})
 include_directories(${JANSSON_INCLUDE_DIRS})
+include_directories(./libs, ./libs/**)
 
 #Find the QtWidgets library
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(CURL REQUIRED)
 find_package(SQLite3 REQUIRED)
 #find_package(Jansson REQUIRED)
+#find_package(JANSSON_LIBRARY NAMES jansson PATHS ./libs)
 find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
-if(NOT JANSSON_LIBRARY)
-    message(FATAL_ERROR "Jansson library not found")
-endif()
 
 #Tell Cmake to create the executable 
 add_executable(StockFetch order.cpp json.c

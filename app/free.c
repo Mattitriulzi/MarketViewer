@@ -66,5 +66,7 @@ int free_structs(void)
             exchangeRates[i].price = NULL;
         }
     }
+
+    log_it("Successfully freed the Currencies Array");
     return 0;
 }

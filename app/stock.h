@@ -17,7 +17,7 @@
 
 #define numCurrencies 6
 
-#define VERSION "v1.0"
+#define VERSION "2"
 
 
 #define check(a, b) do{ if(!a) return b;} while(0)

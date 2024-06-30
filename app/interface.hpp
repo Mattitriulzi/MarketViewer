@@ -26,6 +26,10 @@ extern QStackedWidget *stockWidget;
 
 extern QStackedWidget *newsWidget;
 
+extern QStackedWidget *forexWidget;
+
+extern QStackedWidget *cryptoWidget;
+
 extern QDockWidget *dock;
 
 extern QGridLayout *layout;
