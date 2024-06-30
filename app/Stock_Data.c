@@ -12,7 +12,7 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
     return write;
 }
 
-char *filepaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
+char *filePaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
 
 FILE *allFilePointers[NUM_FILES];
 
@@ -22,7 +22,7 @@ int Stock_Data(void)
     curl_global_init(CURL_GLOBAL_ALL); // initialise libcurl
 
     for (int i = 0; i < NUM_FILES; i++) {
-	if (!(allFilePointers[i] = fopen(filepaths[i], "w+"))) {
+	if (!(allFilePointers[i] = fopen(filePaths[i], "w+"))) {
 		log_it("Unable to create files");
 		return 90;
 	    }
@@ -55,7 +55,7 @@ int Stock_Data(void)
     for (int i = 0 ; i < NUM_FILES; i++) {
 	curl_easy_setopt(curls[i], CURLOPT_URL, apiLinks[i]);
 	curl_easy_setopt(curls[i], CURLOPT_WRITEFUNCTION, write_callback);
-	curl_easy_setopt(curls[i], CURLOPT_WRITEDATA, allPointers[i]);
+	curl_easy_setopt(curls[i], CURLOPT_WRITEDATA, allFilePointers[i]);
 	curl_multi_add_handle(multi_curl, curls[i]);
     }
 
@@ -101,8 +101,8 @@ int Stock_Data(void)
     log_it("Correctly cleaned up memory");
     // flush all buffers and set the file reader to the beginning of the files
     for (int i = 0; i < NUM_FILES; i++) {
-	    fflush(allPointers[i]);
-	    if (fseek(allPointers[i], 0, SEEK_SET)) {
+	    fflush(allFilePointers[i]);
+	    if (fseek(allFilePointers[i], 0, SEEK_SET)) {
 		    log_it("Unable to move file pointer to the beginning of file");
 		    return 105;
 	    }
