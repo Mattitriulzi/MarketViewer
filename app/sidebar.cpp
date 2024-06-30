@@ -194,7 +194,7 @@ void setMiddleDock(QListWidget *listWidget)
     if (!widget || !dockLayout) perror("Unable to allocate memory");
 
     dock->setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, "
-                    "stop:0 #FFD1DC, stop:1 #8A2BE2);");
+                    "stop:0 #660033, stop:1 #8A2BE2);");
 
     dockLayout->addStretch();
 
