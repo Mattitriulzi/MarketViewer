@@ -12,7 +12,7 @@ size_t write_callback(void *buffer, size_t size, size_t nmemb, FILE *storing_fil
     return write;
 }
 
-char *filePaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
+const char *filePaths[NUM_FILES] = {"../stock_data_active.json", "../stock_data_sentiment.json", "../chfjpy.json", "../chfeur.json", "../chfusd.json", "../btcusd.json", "../ethusd.json", "../solusd.json"};
 
 FILE *allFilePointers[NUM_FILES];
 

@@ -77,7 +77,7 @@ extern sqlite3 *db;
 
 extern char *date;
 
-extern char *filePaths[];
+extern const char *filePaths[];
 
 extern FILE *allFilePointers[NUM_FILES];
 
