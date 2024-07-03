@@ -29,8 +29,8 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(CURL REQUIRED)
 find_package(SQLite3 REQUIRED)
 #find_package(Jansson REQUIRED)
-#find_package(JANSSON_LIBRARY NAMES jansson PATHS ./libs)
-#find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
+find_package(JANSSON_LIBRARY NAMES jansson PATHS ./libs)
+find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
 
 #Tell Cmake to create the executable 
 add_executable(StockFetch order.cpp json.c
