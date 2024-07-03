@@ -14,7 +14,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g -O1 -fno-omit-fram
 
 #Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-#set(Jansson_DIR "/usr/local/lib")
 
 
 #add additional include directories
@@ -31,7 +30,7 @@ find_package(CURL REQUIRED)
 find_package(SQLite3 REQUIRED)
 #find_package(Jansson REQUIRED)
 #find_package(JANSSON_LIBRARY NAMES jansson PATHS ./libs)
-find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
+#find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
 
 #Tell Cmake to create the executable 
 add_executable(StockFetch order.cpp json.c
@@ -41,5 +40,5 @@ add_executable(StockFetch order.cpp json.c
                mainwindow.cpp sidebar.cpp jsonParseCurrencies.c)
 
 #Link the Widgets module from Qt6 
-link_directories(/usr/local/lib)
+#link_directories(/usr/local/lib)
 target_link_libraries(StockFetch Qt6::Widgets ${CURL_LIBRARIES} ${JANSSON_LIBRARY} ${SQLite3_LIBRARIES})
