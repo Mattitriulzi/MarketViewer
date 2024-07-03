@@ -13,6 +13,7 @@ set (Jansson_DIR "/usr/local/lib")
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
 include_directories(./libs, /opt/local/libexec/qt6/lib/QtWidgets.framework/Versions/A, 
                     /opt/local/**, /usr/local/lib)
+include_directories(${JANSSON_INCLUDE_DIR})
 
 #set app icon
 set (MACOSX_BUNDLE_ICON_FILE icon.icns)
@@ -36,6 +37,8 @@ add_executable(StockViewer MACOSX_BUNDLE order.cpp json.c
                 ${StockViewer_src} ${app_icon_macos})
 
 set_target_properties(StockViewer PROPERTIES MACOSXBUNDLE ON)
+
+link_directories(/usr/local/lib)
 
 target_link_libraries(StockViewer Qt6::Widgets ${CURL_LIBRARIES} ${JANSSON_LIBRARY} ${SQLite3_LIBRARIES})
 
