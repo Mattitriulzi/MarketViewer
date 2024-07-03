@@ -38,7 +38,7 @@ bool FIRST_TIME_FLAG;
 void log_it(const char *msg)
 {
     // open file
-    FILE *log_file = fopen("../logs.txt", "a+");
+    FILE *log_file = fopen("../logs/logs.txt", "a+");
     if (!log_file) {
         perror("Unable to create or open log file");
         return;

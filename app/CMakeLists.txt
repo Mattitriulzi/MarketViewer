@@ -13,7 +13,7 @@ set (Jansson_DIR "/usr/local/lib")
 #find includes
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
 include_directories(./libs, /opt/local/libexec/qt6/lib/QtWidgets.framework/Versions/A, 
-                    /opt/local/**, /usr/local/lib)
+                    /opt/local/**, /usr/local/lib, /usr/local/include)
 include_directories(${JANSSON_INCLUDE_DIR})
 include_directories(./libs/**)
 
@@ -29,7 +29,7 @@ find_package (SQLite3 REQUIRED)
 #find_package (jansson REQUIRED)
 #jansson is always special for some reason
 #find_library (JANSSON_LIBRARY NAMES jansson PATHS ./libs)
-#find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
+find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
 
 add_executable(StockViewer MACOSX_BUNDLE order.cpp json.c
                 SQL_CREATE.c SQL_READ.c free.c
@@ -41,7 +41,7 @@ add_executable(StockViewer MACOSX_BUNDLE order.cpp json.c
 set_target_properties(StockViewer PROPERTIES MACOSXBUNDLE ON)
 
 link_directories(/usr/local/lib)
-
+link_directories(./libs)
 target_link_libraries(StockViewer Qt6::Widgets ${CURL_LIBRARIES} ${JANSSON_LIBRARY} ${SQLite3_LIBRARIES})
 
 get_target_property(_qmake_executable Qt6::qmake IMPORTED_LOCATION)

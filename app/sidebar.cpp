@@ -69,7 +69,7 @@ int createSideBar(QMainWindow *mainwindow)
     QPushButton *toggleDock = new (std::nothrow) QPushButton();
     check(toggleDock, 922);
 
-    QIcon sidebarIcon("../sidebar.png");
+    QIcon sidebarIcon("../Resources/sidebar.png");
     toggleDock->setIcon(sidebarIcon);
     toggleDock->setIconSize(QSize(23, 23));
 
@@ -136,7 +136,7 @@ int createSideBar(QMainWindow *mainwindow)
                         "QPushButton:hover { background-color: #dcd6f7; }"
                         "QPushButton:pressed { background-color: #a8a2b1; }");
 
-    QIcon nextIcon("../arrowRight.png");
+    QIcon nextIcon("../Resources/arrowRight.png");
     next->setIcon(nextIcon);
     next->setIconSize(QSize(21, 21));
 
@@ -148,7 +148,7 @@ int createSideBar(QMainWindow *mainwindow)
                             "QPushButton:hover { background-color: #dcd6f7; }"
                             "QPushButton:pressed { background-color: #a8a2b1; }");
 
-    QIcon previousIcon("../arrowLeft.png");
+    QIcon previousIcon("../Resources/arrowLeft.png");
     previous->setIcon(previousIcon);
     previous->setIconSize(QSize(21, 21));
 
