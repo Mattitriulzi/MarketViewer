@@ -5,6 +5,7 @@ project(StockViewer)
 set (CMAKE AUTO_MOC ON)
 set (CMAKE_AUTORCC ON)
 set (CMAKE_AUTOUIC ON)
+set (CMAKE_OSX_ARCHITECTURES arm64)
 
 set (CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
 set (Jansson_DIR "/usr/local/lib")
@@ -14,6 +15,7 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 include_directories(./libs, /opt/local/libexec/qt6/lib/QtWidgets.framework/Versions/A, 
                     /opt/local/**, /usr/local/lib)
 include_directories(${JANSSON_INCLUDE_DIR})
+include_directories(./libs/**)
 
 #set app icon
 set (MACOSX_BUNDLE_ICON_FILE icon.icns)
@@ -27,7 +29,7 @@ find_package (SQLite3 REQUIRED)
 #find_package (jansson REQUIRED)
 #jansson is always special for some reason
 #find_library (JANSSON_LIBRARY NAMES jansson PATHS ./libs)
-find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
+#find_library(JANSSON_LIBRARY NAMES jansson PATHS /usr/local/lib)
 
 add_executable(StockViewer MACOSX_BUNDLE order.cpp json.c
                 SQL_CREATE.c SQL_READ.c free.c
