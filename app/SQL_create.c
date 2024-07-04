@@ -5,6 +5,8 @@ sqlite3 *db = NULL;
 /* Function to create the database and initialize tables */
 int create_database(sqlite3 *db);
 
+const char *dbPath = "../Resources/stockdata.db";
+
 /* Function to perform SQL operations */
 int SQL(void)
 {
@@ -12,13 +14,13 @@ int SQL(void)
     unsigned dbex = 1; //database existence
 
     log_it("Checking if database already exists");
-    if (access("../stockdata.db", R_OK | W_OK) == -1) {
+    if (access(dbPath, R_OK | W_OK) == -1) {
         log_it("Database does not exist, will be created");
         dbex = 0;
     }
         
 
-    rc = sqlite3_open("../stockdata.db", &db);
+    rc = sqlite3_open(dbPath, &db);
     if (rc){
         perror("Unable to create or open database");
         log_it("Unable to create or open database");

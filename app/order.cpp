@@ -1,9 +1,27 @@
 #include "interface.hpp"
+#include <unistd.h>
+#include <mach-o/dyld.h>
+#include <limits.h>
+#include <libgen.h>
 
 
 
 int main(void)
-{
+{   
+    char buf[PATH_MAX];
+    uint32_t bufsize = (uint32_t) PATH_MAX;
+    if (_NSGetExecutablePath(buf, &bufsize)){
+        printf("1: Error when trying to find the executable Path");
+        return 1;
+    }
+    
+    char *dir = dirname(buf);
+
+    if (chdir(dir)) {
+        printf("2: Unable to modify working directory");
+        return 2;
+    }
+ 
     // order of which functions to perform
     log_it("Test LogFile Length");
     if (!FIRST_TIME_FLAG)
