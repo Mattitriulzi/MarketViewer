@@ -24,7 +24,7 @@ int Stock_Data(void)
     for (int i = 0; i < NUM_FILES; i++) {
 	if (!(allFilePointers[i] = fopen(filePaths[i], "w+"))) {
 		log_it("Unable to create files");
-		return 90;
+		return 2000;
 	    }
     }
     log_it("Correctly opened temporary files");
@@ -35,7 +35,7 @@ int Stock_Data(void)
         curls[i] = curl_easy_init();
         if (!curls[i]) {
             log_it("unable to initiate research, probably missing memory");
-            return 91;
+            return 2001;
         }
 
     }
@@ -76,7 +76,7 @@ int Stock_Data(void)
         {
             perror("curl_multi_poll function was unable to perform transfers");
             log_it("curl_multi_poll function was unable to perform transfers");
-            return 103;
+            return 2002;
         }
     } while(still_running);
 
@@ -104,7 +104,7 @@ int Stock_Data(void)
 	    fflush(allFilePointers[i]);
 	    if (fseek(allFilePointers[i], 0, SEEK_SET)) {
 		    log_it("Unable to move file pointer to the beginning of file");
-		    return 105;
+		    return 2003;
 	    }
     }
 

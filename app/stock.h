@@ -6,7 +6,7 @@
 #include <sqlite3.h>
 #include <curl/curl.h>
 #include <unistd.h>
-#include <string.h>
+#include <errno.h>
 
 #define LENGTH_STOCKS  20
 
@@ -107,3 +107,5 @@ int json_parse_sentiment(json_t*root_news);
 int parseCurrencies(json_t *root, int currencyPair);
 
 int app(void);
+
+char *int_to_char(int n);

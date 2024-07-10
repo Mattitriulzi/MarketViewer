@@ -1,5 +1,6 @@
 #include "interface.hpp"
 
+#define log_errnum(errnum) do{if(errnum) log_it(int_to_char(errnum));}while(0);
 
 // https://doc.qt.io/qt-6/qtdoc-demos-documentviewer-example.html
 // https://github.com/KDE/labplot/commit/3ef13eed12d03ca6f4026f4217b986010096e597
@@ -35,9 +36,9 @@ int app(void)
 
     int error = createMainWindow(&mainwindow);
     if (error) {
-        perror("Unable to create Mainwindow");
+        log_errnum(error);
         log_it("Unable to create MainWindow");
-        return 1000;
+        return 9000;
     }
 
     log_it("Widgets created");
@@ -46,9 +47,9 @@ int app(void)
 
     error = createSideBar(&mainwindow);
     if (error) {
-        perror("Unable to create Sidebar");
+        log_errnum(error);
         log_it("Unable to create SideBar");
-        return 1001;
+        return 9001;
     }
     
     log_it("Successfully started Application GUI");

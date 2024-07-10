@@ -19,26 +19,26 @@ int createMainWindow(QMainWindow *mainwindow)
     log_it("Successfully created Main Window");
     log_it("Beginning to create Widgets");
 
-    check(mainwindow, 900);
+    check(mainwindow, 1100);
 
     QWidget *centralwidget = new (std::nothrow) QWidget(mainwindow);
-    check(centralwidget, 901);
+    check(centralwidget, 1101);
     centralwidget->setStyleSheet("QWidget {background: transparent; border: 0}");
 
     layout = new (std::nothrow) QGridLayout(centralwidget);
-    check(layout, 902);
+    check(layout, 1102);
 
     stockWidget = new (std::nothrow) QStackedWidget();
-    check(stockWidget, 911);
+    check(stockWidget, 1103);
 
     newsWidget = new (std::nothrow) QStackedWidget();
-    check(newsWidget, 912);
+    check(newsWidget, 1104);
 
     forexWidget = new (std::nothrow) QStackedWidget();
-    check(forexWidget, 9121);
+    check(forexWidget, 1105);
 
     cryptoWidget = new (std::nothrow) QStackedWidget();
-    check(cryptoWidget, 9122);
+    check(cryptoWidget, 1106);
 
     log_it("Getting the Data from the structure arrays");
 
@@ -53,7 +53,7 @@ int createMainWindow(QMainWindow *mainwindow)
         .arg(active_stocks[i].volume);
 
         tempActiveLabel[i] = new (std::nothrow) QLabel(tempString);
-        check(tempActiveLabel[i], 903);
+        check(tempActiveLabel[i], 1107);
         tempActiveLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
                                             "background: white; font-size: 22px;}" );
         tempActiveLabel[i]->setAlignment(Qt::AlignCenter);
@@ -63,13 +63,13 @@ int createMainWindow(QMainWindow *mainwindow)
         tempActiveLabel[i]->setMaximumHeight(450);
 
         activeLabel[i] = new (std::nothrow) QHBoxLayout();
-        check(activeLabel[i], 903);
+        check(activeLabel[i], 1108);
         activeLabel[i]->addStretch(1);
         activeLabel[i]->addWidget(tempActiveLabel[i]);
         activeLabel[i]->addStretch(1);
 
         activeWidget[i] = new (std::nothrow) QWidget();
-        check(activeWidget[i], 903);
+        check(activeWidget[i], 1109);
         activeWidget[i]->setLayout(activeLabel[i]);
 
         stockWidget->addWidget(activeWidget[i]);
@@ -85,12 +85,12 @@ int createMainWindow(QMainWindow *mainwindow)
         .arg(sentiments[i].summary).arg(sentiments[i].sentiment).arg(sentiments[i].tickers);
 
         tempNewsLabel[i] = new (std::nothrow) QLabel(tempString);
-        check(tempNewsLabel[i], 904);
+        check(tempNewsLabel[i], 1110);
         tempNewsLabel[i]->setStyleSheet("QLabel { background:transparent;color : #000000; border: 0;"
                                         " font-size: 22px;}");
 
         newsLabel[i] = new (std::nothrow) QScrollArea;
-        check(newsLabel[i], 905);
+        check(newsLabel[i], 1111);
         newsLabel[i]->setWidget(tempNewsLabel[i]);
         newsLabel[i]->setAlignment(Qt::AlignCenter);
         newsLabel[i]->setStyleSheet(" QScrollArea {background: white; border: 0; border-radius: 20px;}"
@@ -132,7 +132,7 @@ int createMainWindow(QMainWindow *mainwindow)
             .arg(exchangeRates[i].toCurrency).arg(exchangeRates[i].price);
 
         tempCurrencyLabel[i] = new (std::nothrow) QLabel(tempString);
-        check(tempCurrencyLabel[i], 906);
+        check(tempCurrencyLabel[i], 1112);
         tempCurrencyLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
                                             "background: white; font-size: 22px;}" );
 
@@ -143,13 +143,13 @@ int createMainWindow(QMainWindow *mainwindow)
         tempCurrencyLabel[i]->setMaximumHeight(450);
 
         currencyLayout[i] = new (std::nothrow) QHBoxLayout();
-        check(currencyLayout[i], 903);
+        check(currencyLayout[i], 1113);
         currencyLayout[i]->addStretch(1);
         currencyLayout[i]->addWidget(tempCurrencyLabel[i]);
         currencyLayout[i]->addStretch(1);
 
         currencywidget[i] = new (std::nothrow) QWidget();
-        check(currencywidget[i], 903);
+        check(currencywidget[i], 1114);
         currencywidget[i]->setLayout(currencyLayout[i]);
 
         forexWidget->addWidget(currencywidget[i]);
@@ -163,7 +163,7 @@ int createMainWindow(QMainWindow *mainwindow)
             .arg(exchangeRates[i + numForexPairs].toCurrency).arg(exchangeRates[i + numForexPairs].price);
 
         tempCryptoLabel[i] = new (std::nothrow) QLabel(tempString);
-        check(tempCryptoLabel[i], 906);
+        check(tempCryptoLabel[i], 1115);
         tempCryptoLabel[i]->setStyleSheet("QLabel { color : #000000; border : 2px solid white; border-radius : 20px;"
                                             "background: white; font-size: 22px;}" );
 
@@ -174,13 +174,13 @@ int createMainWindow(QMainWindow *mainwindow)
         tempCryptoLabel[i]->setMaximumHeight(450);
 
         cryptoLayout[i] = new (std::nothrow) QHBoxLayout();
-        check(cryptoLayout[i], 903);
+        check(cryptoLayout[i], 1116);
         cryptoLayout[i]->addStretch(1);
         cryptoLayout[i]->addWidget(tempCryptoLabel[i]);
         cryptoLayout[i]->addStretch(1);
 
         tempcryptoWidget[i] = new (std::nothrow) QWidget();
-        check(tempcryptoWidget[i], 903);
+        check(tempcryptoWidget[i], 1117);
         tempcryptoWidget[i]->setLayout(cryptoLayout[i]);
 
         cryptoWidget->addWidget(tempcryptoWidget[i]);

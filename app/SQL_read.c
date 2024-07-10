@@ -29,9 +29,8 @@ int SQL_read(void)
     
     int rd = sqlite3_exec(db, "SELECT date FROM Most_active LIMIT 1", callback, 0, &errmsg);
     if (rd){
-        perror("Unable to access database");
         log_it("Unable to access database");
-        return 400;
+        return 8000;
     }
 
 
@@ -77,7 +76,7 @@ int SQL_read(void)
             {
                 perror("Unable to access database");
                 log_it("Unable to access database");
-                return 20;
+                return 8001;
             }
             if (command) {
                 sqlite3_free(command);
@@ -102,9 +101,8 @@ int SQL_read(void)
             if (rc)
             {
                 printf("Error: %s\n", errmsg);
-                perror("Unable to access database");
                 log_it("Unable to access database");
-                return 20;
+                return 8002;
             }
             if (command) {
                 sqlite3_free(command);
@@ -156,7 +154,6 @@ int is_table_empty(sqlite3 *db, const char *table_name)
     int rc = sqlite3_exec(db, "SELECT Count (*) FROM Most_active", callback_empty, &count, &errmsg);
     if (rc != SQLITE_OK)
     {
-        perror("cannot execute demand (table_empty_check)");
         log_it("cannot execute demand (table_empty_check)");
         if (command) sqlite3_free(command);
         return -1;

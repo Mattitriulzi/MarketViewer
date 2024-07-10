@@ -1,5 +1,4 @@
 #include "interface.hpp"
-#include <unistd.h>
 #include <mach-o/dyld.h>
 #include <limits.h>
 #include <libgen.h>
@@ -11,14 +10,12 @@ int main(void)
     char buf[PATH_MAX];
     uint32_t bufsize = (uint32_t) PATH_MAX;
     if (_NSGetExecutablePath(buf, &bufsize)){
-        printf("1: Error when trying to find the executable Path");
         return 1;
     }
     
     char *dir = dirname(buf);
 
     if (chdir(dir)) {
-        printf("2: Unable to modify working directory");
         return 2;
     }
  
@@ -34,10 +31,10 @@ int main(void)
     err = Stock_Data(); 
     if(err)
     {
-        perror("Error when fetching Stock Data"); 
-        printf("Error code: %d\n", err); 
+        log_it(int_to_char(err));
+        log_it(strerror(errno)); // Replaced errnum with errno
         log_it("(MAIN) Error when fetching Stock Data, exiting");
-        return 800; 
+        return 1011; 
     }
     log_it("(MAIN) Successfully fetched Stock Data");
 
@@ -49,10 +46,10 @@ int main(void)
     err = json(); 
     if (err)
     {
-        perror("Error when parsing json file"); 
-        printf("Error code: %d\n", err); 
+        log_it(int_to_char(err));
+        log_it(strerror(errno)); // Replaced errnum with errno
         log_it("(MAIN) Error when parsing json file, exiting");
-        return 802; 
+        return 1011; 
     }
     log_it("(MAIN) Successfully parsed json file");
 
@@ -64,10 +61,10 @@ int main(void)
     err = SQL(); 
     if(err)
     {
-        perror("Error when creating SQL database"); 
-        printf("Error code: %d\n", err); 
+        log_it(int_to_char(err));
+        log_it(strerror(errno)); // Replaced errnum with errno
         log_it("(MAIN) Error when creating SQL database, exiting");
-        return 801; 
+        return 1011; 
     }
     log_it("(MAIN) Successfully created SQL database");
 
@@ -79,10 +76,10 @@ int main(void)
     err = SQL_read(); 
     if(err)
     {
-        perror("Error when reading SQL database"); 
-        printf("Error code: %d\n", err); 
+        log_it(int_to_char(err));
+        log_it(strerror(errno)); // Replaced errnum with errno
         log_it("(MAIN) Error when reading SQL database, exiting");
-        return 803; 
+        return 1011; 
     }
     log_it("(MAIN) Successfully updated database if necessary");
 
@@ -94,10 +91,10 @@ int main(void)
     err = app(); 
     if(err)
     {
-        perror("Error when starting interface"); 
-        printf("Error code: %d\n", err); 
+        log_it(int_to_char(err));
+        log_it(strerror(errno)); // Replaced errnum with errno
         log_it("(MAIN) Error when starting interface");
-        return 804; 
+        return 1011; 
     }
     log_it("(MAIN) Successfully closed application GUI");
 
@@ -108,9 +105,10 @@ int main(void)
     err = free_structs();
     if (err)
     {
-        perror("Error when freeing the structs");
+        log_it(int_to_char(err));
+        log_it(strerror(errno)); // Replaced errnum with errno
         log_it("(MAIN) Error when freeing the structs");
-        return 805;
+        return 1011;
     }
     log_it("(MAIN) Successfully freed all structure arrays");
     log_it("(MAIN) Successfully stopped the Application");
@@ -119,3 +117,15 @@ int main(void)
 
     return 0; 
 }
+
+
+char *int_to_char(int n) 
+{
+    //maximum error length is 1 000
+    char string[5];
+
+    snprintf(string, sizeof(string), "%d", n);
+
+    return string;
+}
+

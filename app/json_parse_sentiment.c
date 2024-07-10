@@ -8,10 +8,9 @@ int json_parse_sentiment(json_t *root_news)
     json_t *feed_array = json_object_get(root_news, "feed"); // extract the feed from the json giant object
     if (!json_is_array(feed_array))
     {
-        perror("Feed is not an object");
         log_it("Feed is not an object");
         json_decref(root_news);
-        return 311;
+        return 5000;
     }
 
     char *tickers;
@@ -23,60 +22,54 @@ int json_parse_sentiment(json_t *root_news)
         json_t *feed = json_array_get(feed_array, i);
         if (!json_is_object(feed))
         {
-            perror("Error when reading object array");
             log_it("Error when reading object array");
             json_decref(root_news);
-            return 312;
+            return 5001;
         }
 
 
         json_t *title_json = json_object_get(feed, "title");
         if (!json_is_string(title_json))
         {
-            perror("Error when reading object array");
             log_it("Error when reading object array");
             json_decref(root_news);
-            return 313;
+            return 5002;
         }
 
 
         json_t *url_json = json_object_get(feed, "url");
         if(!json_is_string(url_json))
         {
-            perror("Error when reading object array");
             log_it("Error when reading object array");
             json_decref(root_news);
-            return 314;
+            return 5003;
         }
 
 
         json_t *summary_json = json_object_get(feed, "summary");
         if(!json_is_string(summary_json))
         {
-            perror("Error when reading object array");
             log_it("Error when reading object array");
             json_decref(root_news);
-            return 315;
+            return 5004;
         }
 
 
         json_t *sentiment_json = json_object_get(feed, "overall_sentiment_label");
         if(!json_is_string(sentiment_json))
         {
-            perror("Error when reading object array");
             log_it("Error when reading object array");
             json_decref(root_news);
-            return 316;
+            return 5005;
         }
 
 
         json_t *tickers_array = json_object_get(feed, "ticker_sentiment");
         if (!json_is_array(tickers_array))
         {
-            perror("Error when reading object array");
             log_it("Error when reading object array");
             json_decref(root_news);
-            return 317;
+            return 5006;
         }
 
 
@@ -90,10 +83,9 @@ int json_parse_sentiment(json_t *root_news)
             json_t *current_ticker = json_array_get(tickers_array, j);
             if (!json_is_object(current_ticker))
             {
-                perror("Error when readng object array");
                 log_it("Error when readng object array");
                 json_decref(root_news);
-                return 318;
+                return 5007;
             }
             
 
@@ -101,10 +93,9 @@ int json_parse_sentiment(json_t *root_news)
             json_t *temp_ticker_json = json_object_get(current_ticker, "ticker");
             if (!json_is_string(temp_ticker_json))
             {
-                perror("Error when reading object array");
                 log_it("Error when reading object array");
                 json_decref(root_news);
-                return 319;
+                return 5008;
             }
             const char *temp_ticker = json_string_value(temp_ticker_json);
 
@@ -128,7 +119,7 @@ int json_parse_sentiment(json_t *root_news)
                 {
                     perror("Unable to allocate memory");
                     log_it("Unable to allocate memory");
-                    return 320;
+                    return 5009;
                 }
                 strcat(tickers, ", ");
                 strcat(tickers, temp_ticker); 
@@ -138,15 +129,15 @@ int json_parse_sentiment(json_t *root_news)
 
 
         sentiments[i].title = strdup(json_string_value(title_json));
-        check(sentiments[i].title, 313);
+        check(sentiments[i].title, 5010);
         sentiments[i].URL = strdup(json_string_value(url_json));
-        check(sentiments[i].URL, 313);
+        check(sentiments[i].URL, 5011);
         sentiments[i].summary = strdup(json_string_value(summary_json));
-        check(sentiments[i].summary, 313);
+        check(sentiments[i].summary, 5012);
         sentiments[i].sentiment = strdup(json_string_value(sentiment_json));
-        check(sentiments[i].sentiment, 313);
+        check(sentiments[i].sentiment, 5013);
         sentiments[i].tickers = strdup(tickers);
-        check(sentiments[i].tickers, 313);
+        check(sentiments[i].tickers, 5014);
         
     }
     if (tickers) free(tickers);

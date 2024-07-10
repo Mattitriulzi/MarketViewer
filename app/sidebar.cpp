@@ -15,27 +15,27 @@ int createSideBar(QMainWindow *mainwindow)
     log_it("Creating Sidebar");
 
     dock = new (std::nothrow) QDockWidget(mainwindow);
-    check(dock, 920);
+    check(dock, 1200);
     dock->setTitleBarWidget(new (std::nothrow) QWidget());
 
     QListWidget *list = new (std::nothrow) QListWidget(dock);
-    check(list, 921);
+    check(list, 1201);
     list->setMinimumWidth(0);
     list->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     list->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // Add the options to the list
     QListWidgetItem *stockItem = new (std::nothrow) QListWidgetItem("Stocks");
-    check(stockItem, 930);
+    check(stockItem, 1202);
 
     QListWidgetItem *newsItem = new (std::nothrow) QListWidgetItem("News");
-    check(newsItem, 931);
+    check(newsItem, 1203);
 
     QListWidgetItem *forexItem = new (std::nothrow) QListWidgetItem("Forex");
-    check(forexItem, 9311);
+    check(forexItem, 1204);
 
     QListWidgetItem *cryptoItem = new (std::nothrow) QListWidgetItem("Crypto");
-    check(cryptoItem, 9312);
+    check(cryptoItem, 1205);
 
     stockItem->setTextAlignment(Qt::AlignCenter);
     stockItem->setForeground(QBrush(QColor("#dcd6f7")));
@@ -67,7 +67,7 @@ int createSideBar(QMainWindow *mainwindow)
     log_it("Added SideBar onto main window");
 
     QPushButton *toggleDock = new (std::nothrow) QPushButton();
-    check(toggleDock, 922);
+    check(toggleDock, 1206);
 
     QIcon sidebarIcon("../Resources/sidebar.png");
     toggleDock->setIcon(sidebarIcon);
@@ -79,6 +79,7 @@ int createSideBar(QMainWindow *mainwindow)
     toggleDock->setFixedSize(30, 30);
 
     dockSize = new (std::nothrow) QPropertyAnimation(dock, "maximumWidth");
+    check(dockSize, 1207);
     // Pre-load Animation to make it smoother
     dockSize->setDuration(700);
     dockSize->setStartValue(0);
@@ -91,7 +92,7 @@ int createSideBar(QMainWindow *mainwindow)
 
     // Create a Stack with all of the widgets that there are to display
     QStackedWidget *choiceStack = new (std::nothrow) QStackedWidget;
-    check(choiceStack, 923);
+    check(choiceStack, 1208);
 
     choiceStack->addWidget(stockWidget);
     choiceStack->addWidget(forexWidget);
@@ -124,12 +125,12 @@ int createSideBar(QMainWindow *mainwindow)
     // + Horizontal layout to place the buttons
 
     QHBoxLayout *buttonLayout = new (std::nothrow) QHBoxLayout();
-    check(buttonLayout, 930);
+    check(buttonLayout, 1209);
 
     
 
     QPushButton *next = new (std::nothrow) QPushButton();
-    check(next, 924);
+    check(next, 1210);
     next->setMinimumSize(20, 20);
     next->setMaximumSize(50, 50);
     next->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center}"
@@ -141,7 +142,7 @@ int createSideBar(QMainWindow *mainwindow)
     next->setIconSize(QSize(21, 21));
 
     QPushButton *previous = new (std::nothrow) QPushButton();
-    check(previous, 925);
+    check(previous, 1211);
     previous->setMinimumSize(25, 25);
     previous->setMaximumSize(50, 50);
     previous->setStyleSheet("QPushButton { background-color : #eeeeee; border-radius: 5px; text-align: center; }"
@@ -171,7 +172,7 @@ int createSideBar(QMainWindow *mainwindow)
     });
 
     QGraphicsDropShadowEffect *shadow = new (std::nothrow) QGraphicsDropShadowEffect;
-    check(shadow, 926);
+    check(shadow, 1212);
     shadow->setBlurRadius(3);
     shadow->setOffset(5, 5);
 

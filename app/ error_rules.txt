@@ -1,0 +1,35 @@
+In this file the error numbers will be given so that debugging and understanding where the error is can become easier
+Errors will be sent via perror but also via the log file.
+
+Errno String is printed in the log file, each error has a thousandth and hundredth allocated for the different files, the errors are counted starting from 0
+
+Template for an error:
+[date] StockViewer error number
+[date] errno string
+
+**There are two errors that start before the log file is even opened, those errors are not counted into this file, they are simply 1 and 2**
+
+For errors that happen when opening the log file, perror will be used as (obviously) the log file is unable to be opened.
+
+logger does not return error numbers, it only returns
+
+
+
+
+
+
+File hundredths:
+1: main always returns 1011
+2: Stock_Data
+3: json
+4: json parse active
+5: json parse sentiment
+6: json parse currencies
+7: SQL Create
+8: SQL Read
+9: app
+11: mainwindow
+12: sidebar
+
+
+There was an error when coding for the first time: error functions require an int return but the only int return possible is 0, making the return useless. Won't fix

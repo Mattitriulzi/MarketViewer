@@ -1,5 +1,6 @@
 #include "stock.h"
 #include <time.h>
+
 /*This function will log all of the apps operations inside a log.txt to be able 
 to check in the future for any errors
 
@@ -47,7 +48,10 @@ void log_it(const char *msg)
     // Flag to check whether the file is too long
     if (msg && strcasecmp(msg, "Test LogFile Length") == 0) {
         int errorReturn = checkFileLength(log_file);
-        if (errorReturn) printf("Error when deleting log file \n");
+        if (errorReturn) {
+            log_it(strerror(errno)); // Replaced strerr with strerror
+            log_it("Error when testing logFile Length");
+        }
         return;
     }
 
@@ -68,7 +72,8 @@ void log_it(const char *msg)
     time_t seconds = time(NULL);
     struct tm *time = localtime(&seconds);
     if (!time) {
-        perror("Unable to get time");
+        log_it(strerror(errno)); // Replaced strerr with strerror
+        log_it("Unable to get time");
         fclose(log_file);
         return;
     }
@@ -132,3 +137,4 @@ int checkFileLength(FILE *file)
 
     return 0;
 }
+

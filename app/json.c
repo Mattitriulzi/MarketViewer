@@ -1,5 +1,7 @@
 #include "stock.h"
 
+#define log_errnum(errnum) do{if (errnum) log_it(int_to_char(errnum));} while(0);
+
 news sentiments[LENGTH_NEWS];
 
 stock active_stocks[LENGTH_STOCKS];
@@ -17,7 +19,7 @@ int freeRoots(json_t *allRoots[], int arrayLen);
 
 int json(void)
 {  
-    int error_return;
+    int error_return = 0;
     // load the json strings via jansson, aka create objects for each file
     json_error_t error;
 
@@ -26,8 +28,9 @@ int json(void)
     for (int i = 0; i < NUM_FILES; i++) {
 	    allRoots[i] = json_loadf(allFilePointers[i], 0, &error);
 	    if (!allRoots[i]) {
+            log_errnum(error_return);
 		    log_it("Unable to load json file");
-		    return 300;
+		    return 3000;
 	    }
     }
 
@@ -37,8 +40,9 @@ int json(void)
 	    fclose(allFilePointers[i]);
     /*error_return = fdelete(filePaths, NUM_FILES);
     if (error_return) {
+        log_errnum(error_return);
         log_it("Unable to delete file");
-        return 301;
+        return 3001;
     }*/
   
     log_it("Successfully deleted the temporary files");
@@ -47,8 +51,9 @@ int json(void)
     for (int i = 0; i < NUM_FILES; i++) {
 	    if (!json_is_object(allRoots[i])) {
             log_it("Root is not an object");
-            freeRoots(allRoots, NUM_FILES);
-            return 302;
+            log_errnum(error_return);
+            int a = freeRoots(allRoots, NUM_FILES);
+            return 3002;
         }
     }
     log_it("Data seems valid");
@@ -57,8 +62,9 @@ int json(void)
 
     json_t *lastUpdatedJson = json_object_get(allRoots[ACTIVE], "last_updated");
     if (!json_is_string(lastUpdatedJson)) {
+        log_errnum(error_return);
         log_it("Error when fetching date");
-        return 303;
+        return 3003;
     }
     
     log_it("Successfully got date");
@@ -86,8 +92,9 @@ int json(void)
 
     error_return = json_parse_active(allRoots[ACTIVE]);
     if (error_return) {
+        log_errnum(error_return);
         log_it("Error when parsing Active Tickers JSON");
-        return 310;
+        return 3004;
     }
 
     log_it("Successfully loaded the Active Tickers");
@@ -96,8 +103,9 @@ int json(void)
 
     error_return = json_parse_sentiment(allRoots[NEWS]);
     if (error_return) {
+        log_errnum(error_return);
         log_it("Error when parsing News JSON");
-        return 311;
+        return 3005;
     }
 
     log_it("Successfully loaded the News");
@@ -110,9 +118,9 @@ int json(void)
         // get the current currency count (or pair) 
         if (error_return) {
             log_it("Error when parsing Currencies JSON");
-            freeRoots(allRoots, NUM_FILES);
-            printf("Error is %d", error_return);
-            return 312;
+            int a = freeRoots(allRoots, NUM_FILES);
+            log_errnum(error_return);
+            return 3006;
         }
     }
     
@@ -122,8 +130,9 @@ int json(void)
     
     error_return = freeRoots(allRoots, NUM_FILES);
     if (error_return) {
+        log_errnum(error_return);
         log_it("Error when trying to free JSON Roots");
-        return 330;
+        return 3007;
     }
     return 0;
 }
@@ -134,7 +143,6 @@ int fdelete(const char* filePath[], unsigned arraylen)
 
     for(int i = 0; i < arraylen; i++){
         if (remove(filePath[i])){
-            perror("Unable to delete file");
             log_it("Unable to delete file");
             return 1;
         }
