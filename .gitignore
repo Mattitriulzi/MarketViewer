@@ -1,4 +1,4 @@
-*.txt
+
 *.dir
 *.cmake
 /app/build/Makefile
