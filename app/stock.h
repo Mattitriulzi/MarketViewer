@@ -6,6 +6,7 @@
 #include <sqlite3.h>
 #include <curl/curl.h>
 #include <unistd.h>
+#include <string.h>
 
 #define LENGTH_STOCKS  20
 
