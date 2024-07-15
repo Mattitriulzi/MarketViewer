@@ -122,7 +122,7 @@ int main(void)
 char *int_to_char(int n) 
 {
     //maximum error length is 1 000
-    char string[5];
+    static char string[5];
 
     snprintf(string, sizeof(string), "%d", n);
 
