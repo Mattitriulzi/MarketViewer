@@ -12,9 +12,9 @@ This app is made in C and C++, the C part is all of the backend while the C++ pa
 
 The following libraries were used:
 
-libcurl,
+libcurl
 
-jansson,
+jansson
 
 QT(C++)
 
