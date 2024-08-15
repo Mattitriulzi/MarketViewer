@@ -1,10 +1,10 @@
+**Before judging, this app was made by a 16 year old with only basic C knowledge**
+
 # App 
 
-This app gets the latest news and the current most active stocks and prints it on an interface. 
+This app gets the latest news, the last day's most active stocks, the main CHF forex pairs, and the three main crypto pairs. 
 
 It allows (me) to avoid having to actually look it up on the internet. 
-
-**It is a self-sufficient application, all that is needed is to download the .dmg**
 
 # Implementation
 
@@ -12,10 +12,13 @@ This app is made in C and C++, the C part is all of the backend while the C++ pa
 
 The following libraries were used:
 
-libcurl\
-jansson \
-QT(C++) \ 
-sqlite3 \
+libcurl,
+
+jansson,
+
+QT(C++)
+
+sqlite3 
 
 # History-Keeping
 
@@ -27,5 +30,10 @@ It is therefore possible to access the database using sqlite3 in the terminal to
 **Buttons on the interface to access the sqlite database, allowing for fast history keeping**
         
    *ex: button that asks for a date, news or stocks and prints all that info*
+
+**Will not be updated any further**
+
+
+
 
         
