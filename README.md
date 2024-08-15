@@ -1,4 +1,4 @@
-**Before judging, this app was made by a 16 year old with only basic C knowledge**
+**Before judging, this app was made by a 16 year old with only prior very basic C knowledge**
 
 # App 
 
