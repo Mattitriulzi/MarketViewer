@@ -76,12 +76,12 @@ int json(void)
     We wish to keep only the date. However we have to first copy the string into another 
     variable as this one is a constant*/ 
     date = strdup(lastUpdated);
-    for (int i = 0; i < strlen(date); i ++) {
-        if (*date == ' ') {
-            *date = '\0';
-            break;
-        }
-    }
+    // char space = strchr(date, ' ');
+    // actually there is no need to cut the string, just compare the long string lol
+    //if (space != NULL) {
+    //    space = '\0';
+    //}
+    log_it(date);
 
     if (lastUpdatedJson)   
         json_decref(lastUpdatedJson);
